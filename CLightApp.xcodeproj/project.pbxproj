@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
+		E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
+		E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C81579A42200342F89 /* CoreGraphics.framework */; };
+		E90BC5CF1579A42200342F89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E90BC5CD1579A42200342F89 /* InfoPlist.strings */; };
+		E90BC5D11579A42200342F89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E90BC5D01579A42200342F89 /* main.m */; };
+		E90BC5D51579A42200342F89 /* CLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E90BC5D41579A42200342F89 /* CLAAppDelegate.m */; };
+		E90BC5D81579A42200342F89 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90BC5D61579A42200342F89 /* MainStoryboard.storyboard */; };
+		E90BC5DB1579A42200342F89 /* CLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90BC5DA1579A42200342F89 /* CLAViewController.m */; };
+		E90BC5E31579A42200342F89 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5E21579A42200342F89 /* SenTestingKit.framework */; };
+		E90BC5E41579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
+		E90BC5E51579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
+		E90BC5ED1579A42200342F89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E90BC5EB1579A42200342F89 /* InfoPlist.strings */; };
+		E90BC5F01579A42200342F89 /* CLightAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E90BC5EF1579A42200342F89 /* CLightAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E90BC5E61579A42200342F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E90BC5B71579A42200342F89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E90BC5BF1579A42200342F89;
+			remoteInfo = CLightApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E90BC5C01579A42200342F89 /* CLightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E90BC5C81579A42200342F89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E90BC5CC1579A42200342F89 /* CLightApp-Info.plist */ = {isa = PBXFileReference; path = "CLightApp-Info.plist"; sourceTree = "<group>"; };
+		E90BC5CE1579A42200342F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E90BC5D01579A42200342F89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E90BC5D21579A42200342F89 /* CLightApp-Prefix.pch */ = {isa = PBXFileReference; path = "CLightApp-Prefix.pch"; sourceTree = "<group>"; };
+		E90BC5D31579A42200342F89 /* CLAAppDelegate.h */ = {isa = PBXFileReference; path = CLAAppDelegate.h; sourceTree = "<group>"; };
+		E90BC5D41579A42200342F89 /* CLAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAAppDelegate.m; sourceTree = "<group>"; };
+		E90BC5D71579A42200342F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E90BC5D91579A42200342F89 /* CLAViewController.h */ = {isa = PBXFileReference; path = CLAViewController.h; sourceTree = "<group>"; };
+		E90BC5DA1579A42200342F89 /* CLAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAViewController.m; sourceTree = "<group>"; };
+		E90BC5E11579A42200342F89 /* CLightAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLightAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90BC5E21579A42200342F89 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E90BC5EA1579A42200342F89 /* CLightAppTests-Info.plist */ = {isa = PBXFileReference; path = "CLightAppTests-Info.plist"; sourceTree = "<group>"; };
+		E90BC5EC1579A42200342F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E90BC5EE1579A42200342F89 /* CLightAppTests.h */ = {isa = PBXFileReference; path = CLightAppTests.h; sourceTree = "<group>"; };
+		E90BC5EF1579A42200342F89 /* CLightAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLightAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E90BC5BD1579A42200342F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */,
+				E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */,
+				E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E90BC5DD1579A42200342F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5E31579A42200342F89 /* SenTestingKit.framework in Frameworks */,
+				E90BC5E41579A42200342F89 /* UIKit.framework in Frameworks */,
+				E90BC5E51579A42200342F89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E90BC5B51579A42200342F89 = {
+			isa = PBXGroup;
+			children = (
+				E90BC5CA1579A42200342F89 /* CLightApp */,
+				E90BC5E81579A42200342F89 /* CLightAppTests */,
+				E90BC5C31579A42200342F89 /* Frameworks */,
+				E90BC5C11579A42200342F89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E90BC5C11579A42200342F89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5C01579A42200342F89 /* CLightApp.app */,
+				E90BC5E11579A42200342F89 /* CLightAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E90BC5C31579A42200342F89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5C41579A42200342F89 /* UIKit.framework */,
+				E90BC5C61579A42200342F89 /* Foundation.framework */,
+				E90BC5C81579A42200342F89 /* CoreGraphics.framework */,
+				E90BC5E21579A42200342F89 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E90BC5CA1579A42200342F89 /* CLightApp */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5D31579A42200342F89 /* CLAAppDelegate.h */,
+				E90BC5D41579A42200342F89 /* CLAAppDelegate.m */,
+				E90BC5D61579A42200342F89 /* MainStoryboard.storyboard */,
+				E90BC5D91579A42200342F89 /* CLAViewController.h */,
+				E90BC5DA1579A42200342F89 /* CLAViewController.m */,
+				E90BC5CB1579A42200342F89 /* Supporting Files */,
+			);
+			path = CLightApp;
+			sourceTree = "<group>";
+		};
+		E90BC5CB1579A42200342F89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5CC1579A42200342F89 /* CLightApp-Info.plist */,
+				E90BC5CD1579A42200342F89 /* InfoPlist.strings */,
+				E90BC5D01579A42200342F89 /* main.m */,
+				E90BC5D21579A42200342F89 /* CLightApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E90BC5E81579A42200342F89 /* CLightAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5EE1579A42200342F89 /* CLightAppTests.h */,
+				E90BC5EF1579A42200342F89 /* CLightAppTests.m */,
+				E90BC5E91579A42200342F89 /* Supporting Files */,
+			);
+			path = CLightAppTests;
+			sourceTree = "<group>";
+		};
+		E90BC5E91579A42200342F89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5EA1579A42200342F89 /* CLightAppTests-Info.plist */,
+				E90BC5EB1579A42200342F89 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E90BC5BF1579A42200342F89 /* CLightApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "CLightApp" */;
+			buildPhases = (
+				E90BC5BC1579A42200342F89 /* Sources */,
+				E90BC5BD1579A42200342F89 /* Frameworks */,
+				E90BC5BE1579A42200342F89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CLightApp;
+			productName = CLightApp;
+			productReference = E90BC5C01579A42200342F89 /* CLightApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E90BC5E01579A42200342F89 /* CLightAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "CLightAppTests" */;
+			buildPhases = (
+				E90BC5DC1579A42200342F89 /* Sources */,
+				E90BC5DD1579A42200342F89 /* Frameworks */,
+				E90BC5DE1579A42200342F89 /* Resources */,
+				E90BC5DF1579A42200342F89 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E90BC5E71579A42200342F89 /* PBXTargetDependency */,
+			);
+			name = CLightAppTests;
+			productName = CLightAppTests;
+			productReference = E90BC5E11579A42200342F89 /* CLightAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E90BC5B71579A42200342F89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "CLightApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E90BC5B51579A42200342F89;
+			productRefGroup = E90BC5C11579A42200342F89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E90BC5BF1579A42200342F89 /* CLightApp */,
+				E90BC5E01579A42200342F89 /* CLightAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E90BC5BE1579A42200342F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5CF1579A42200342F89 /* InfoPlist.strings in Resources */,
+				E90BC5D81579A42200342F89 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E90BC5DE1579A42200342F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5ED1579A42200342F89 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E90BC5DF1579A42200342F89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E90BC5BC1579A42200342F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5D11579A42200342F89 /* main.m in Sources */,
+				E90BC5D51579A42200342F89 /* CLAAppDelegate.m in Sources */,
+				E90BC5DB1579A42200342F89 /* CLAViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E90BC5DC1579A42200342F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5F01579A42200342F89 /* CLightAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E90BC5E71579A42200342F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E90BC5BF1579A42200342F89 /* CLightApp */;
+			targetProxy = E90BC5E61579A42200342F89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E90BC5CD1579A42200342F89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E90BC5CE1579A42200342F89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E90BC5D61579A42200342F89 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E90BC5D71579A42200342F89 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		E90BC5EB1579A42200342F89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E90BC5EC1579A42200342F89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E90BC5F11579A42200342F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E90BC5F21579A42200342F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E90BC5F41579A42200342F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLightApp/CLightApp-Prefix.pch";
+				INFOPLIST_FILE = "CLightApp/CLightApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E90BC5F51579A42200342F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLightApp/CLightApp-Prefix.pch";
+				INFOPLIST_FILE = "CLightApp/CLightApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E90BC5F71579A42200342F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLightApp.app/CLightApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLightApp/CLightApp-Prefix.pch";
+				INFOPLIST_FILE = "CLightAppTests/CLightAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E90BC5F81579A42200342F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLightApp.app/CLightApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLightApp/CLightApp-Prefix.pch";
+				INFOPLIST_FILE = "CLightAppTests/CLightAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "CLightApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E90BC5F11579A42200342F89 /* Debug */,
+				E90BC5F21579A42200342F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "CLightApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E90BC5F41579A42200342F89 /* Debug */,
+				E90BC5F51579A42200342F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "CLightAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E90BC5F71579A42200342F89 /* Debug */,
+				E90BC5F81579A42200342F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E90BC5B71579A42200342F89 /* Project object */;
+}

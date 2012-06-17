@@ -20,6 +20,10 @@
 		E90BC5E51579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
 		E90BC5ED1579A42200342F89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E90BC5EB1579A42200342F89 /* InfoPlist.strings */; };
 		E90BC5F01579A42200342F89 /* CLightAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E90BC5EF1579A42200342F89 /* CLightAppTests.m */; };
+		E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */; };
+		E9DBDA42158D5BE900EE2B9D /* CLAScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBDA41158D5BE900EE2B9D /* CLAScanner.m */; };
+		E9DBDA46158D5C2300EE2B9D /* CLALight.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBDA45158D5C2300EE2B9D /* CLALight.m */; };
+		E9DBDA49158D62F800EE2B9D /* CLAScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBDA48158D62F800EE2B9D /* CLAScannerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +41,28 @@
 		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E90BC5C81579A42200342F89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E90BC5CC1579A42200342F89 /* CLightApp-Info.plist */ = {isa = PBXFileReference; path = "CLightApp-Info.plist"; sourceTree = "<group>"; };
+		E90BC5CC1579A42200342F89 /* CLightApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLightApp-Info.plist"; sourceTree = "<group>"; };
 		E90BC5CE1579A42200342F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E90BC5D01579A42200342F89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E90BC5D21579A42200342F89 /* CLightApp-Prefix.pch */ = {isa = PBXFileReference; path = "CLightApp-Prefix.pch"; sourceTree = "<group>"; };
-		E90BC5D31579A42200342F89 /* CLAAppDelegate.h */ = {isa = PBXFileReference; path = CLAAppDelegate.h; sourceTree = "<group>"; };
+		E90BC5D21579A42200342F89 /* CLightApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLightApp-Prefix.pch"; sourceTree = "<group>"; };
+		E90BC5D31579A42200342F89 /* CLAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAAppDelegate.h; sourceTree = "<group>"; };
 		E90BC5D41579A42200342F89 /* CLAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAAppDelegate.m; sourceTree = "<group>"; };
 		E90BC5D71579A42200342F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E90BC5D91579A42200342F89 /* CLAViewController.h */ = {isa = PBXFileReference; path = CLAViewController.h; sourceTree = "<group>"; };
+		E90BC5D91579A42200342F89 /* CLAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAViewController.h; sourceTree = "<group>"; };
 		E90BC5DA1579A42200342F89 /* CLAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAViewController.m; sourceTree = "<group>"; };
 		E90BC5E11579A42200342F89 /* CLightAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLightAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5E21579A42200342F89 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E90BC5EA1579A42200342F89 /* CLightAppTests-Info.plist */ = {isa = PBXFileReference; path = "CLightAppTests-Info.plist"; sourceTree = "<group>"; };
+		E90BC5EA1579A42200342F89 /* CLightAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLightAppTests-Info.plist"; sourceTree = "<group>"; };
 		E90BC5EC1579A42200342F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E90BC5EE1579A42200342F89 /* CLightAppTests.h */ = {isa = PBXFileReference; path = CLightAppTests.h; sourceTree = "<group>"; };
+		E90BC5EE1579A42200342F89 /* CLightAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLightAppTests.h; sourceTree = "<group>"; };
 		E90BC5EF1579A42200342F89 /* CLightAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLightAppTests.m; sourceTree = "<group>"; };
+		E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E9DBDA40158D5BE900EE2B9D /* CLAScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAScanner.h; sourceTree = "<group>"; };
+		E9DBDA41158D5BE900EE2B9D /* CLAScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAScanner.m; sourceTree = "<group>"; };
+		E9DBDA44158D5C2300EE2B9D /* CLALight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLALight.h; sourceTree = "<group>"; };
+		E9DBDA45158D5C2300EE2B9D /* CLALight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLALight.m; sourceTree = "<group>"; };
+		E9DBDA47158D62F800EE2B9D /* CLAScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAScannerViewController.h; sourceTree = "<group>"; };
+		E9DBDA48158D62F800EE2B9D /* CLAScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAScannerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */,
 				E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */,
 				E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */,
 				E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */,
@@ -81,6 +93,7 @@
 		E90BC5B51579A42200342F89 = {
 			isa = PBXGroup;
 			children = (
+				E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */,
 				E90BC5CA1579A42200342F89 /* CLightApp */,
 				E90BC5E81579A42200342F89 /* CLightAppTests */,
 				E90BC5C31579A42200342F89 /* Frameworks */,
@@ -111,12 +124,15 @@
 		E90BC5CA1579A42200342F89 /* CLightApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9DBDA4F158D683200EE2B9D /* ClightServices */,
 				E90BC5D31579A42200342F89 /* CLAAppDelegate.h */,
 				E90BC5D41579A42200342F89 /* CLAAppDelegate.m */,
 				E90BC5D61579A42200342F89 /* MainStoryboard.storyboard */,
+				E90BC5CB1579A42200342F89 /* Supporting Files */,
+				E9DBDA47158D62F800EE2B9D /* CLAScannerViewController.h */,
+				E9DBDA48158D62F800EE2B9D /* CLAScannerViewController.m */,
 				E90BC5D91579A42200342F89 /* CLAViewController.h */,
 				E90BC5DA1579A42200342F89 /* CLAViewController.m */,
-				E90BC5CB1579A42200342F89 /* Supporting Files */,
 			);
 			path = CLightApp;
 			sourceTree = "<group>";
@@ -149,6 +165,17 @@
 				E90BC5EB1579A42200342F89 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9DBDA4F158D683200EE2B9D /* ClightServices */ = {
+			isa = PBXGroup;
+			children = (
+				E9DBDA40158D5BE900EE2B9D /* CLAScanner.h */,
+				E9DBDA41158D5BE900EE2B9D /* CLAScanner.m */,
+				E9DBDA44158D5C2300EE2B9D /* CLALight.h */,
+				E9DBDA45158D5C2300EE2B9D /* CLALight.m */,
+			);
+			name = ClightServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +287,9 @@
 				E90BC5D11579A42200342F89 /* main.m in Sources */,
 				E90BC5D51579A42200342F89 /* CLAAppDelegate.m in Sources */,
 				E90BC5DB1579A42200342F89 /* CLAViewController.m in Sources */,
+				E9DBDA42158D5BE900EE2B9D /* CLAScanner.m in Sources */,
+				E9DBDA46158D5C2300EE2B9D /* CLALight.m in Sources */,
+				E9DBDA49158D62F800EE2B9D /* CLAScannerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +459,7 @@
 				E90BC5F51579A42200342F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "CLightAppTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +468,7 @@
 				E90BC5F81579A42200342F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

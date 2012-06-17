@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CLALight.h"
 
 @interface CLAViewController : UIViewController
+
+@property (nonatomic, retain) CLALight* clight;
+@property (nonatomic, weak) IBOutlet UISwitch* lampSwitch;
+
+- (IBAction)toggleLamp:(id)sender;
 
 @end

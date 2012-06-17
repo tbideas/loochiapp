@@ -10,51 +10,27 @@
 
 @implementation CLAViewController
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
+@synthesize clight;
+@synthesize lampSwitch;
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    self.navigationItem.title = clight.host;
+    lampSwitch.on = NO;
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
+#pragma mark Methods for UI elements
 
-- (void)viewWillDisappear:(BOOL)animated
+- (IBAction)toggleLamp:(id)sender
 {
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    if (lampSwitch.on) {
+        [clight sendCommand:@"LEDON"];
+    }
+    else {
+        [clight sendCommand:@"LEDOFF"];
+    }
 }
 
 @end

@@ -11,7 +11,9 @@
 @interface CLALight : NSObject
 
 - (id) initWithHost:(NSString*)host;
-- (BOOL) sendCommand:(NSString*) command;
+
+-(void) setLed:(BOOL)on;
+-(void) setRed:(float)red green:(float)green blue:(float) blue;
 
 @property (readonly) NSString *host;
 

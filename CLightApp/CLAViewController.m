@@ -8,6 +8,14 @@
 
 #import "CLAViewController.h"
 
+@interface CLAViewController ()
+
+@property (weak) IBOutlet UISlider *redSlider;
+@property (weak) IBOutlet UISlider *greenSlider;
+@property (weak) IBOutlet UISlider *blueSlider;
+
+@end
+
 @implementation CLAViewController
 
 @synthesize clight;
@@ -25,12 +33,14 @@
 
 - (IBAction)toggleLamp:(id)sender
 {
-    if (lampSwitch.on) {
-        [clight sendCommand:@"LEDON"];
-    }
-    else {
-        [clight sendCommand:@"LEDOFF"];
-    }
+    [clight setLed:lampSwitch.on];
+}
+
+- (IBAction)rgbValueUpdated:(id)sender
+{
+    [clight setRed:self.redSlider.value
+             green:self.greenSlider.value
+              blue:self.blueSlider.value];
 }
 
 @end

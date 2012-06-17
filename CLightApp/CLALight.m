@@ -29,6 +29,24 @@
     return self;
 }
 
+-(void) setLed:(BOOL)on
+{
+    [self sendCommand:on ? @"LEDON" : @"LEDOFF"];
+}
+
+-(void) setRed:(float)red green:(float)green blue:(float) blue
+{
+    NSString *command = [NSString stringWithFormat:@"RGB%02X%02X%02X\n",
+                         (int)(red * 255),
+                         (int)(green * 255),
+                         (int)(blue * 255)
+                         ];
+    
+    [self sendCommand:command];
+}
+
+
+
 - (BOOL) sendCommand:(NSString*) command;
 {
     NSLog(@"Sending command: %@", command);

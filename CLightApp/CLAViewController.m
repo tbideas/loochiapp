@@ -26,7 +26,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationItem.title = clight.host;
-    lampSwitch.on = NO;
 }
 
 #pragma mark Methods for UI elements

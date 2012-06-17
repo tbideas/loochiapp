@@ -32,15 +32,12 @@
     return self;
 }
 
--(void)viewDidLoad
-{
-    self.scanningSwitch.on = NO;
-}
-
 -(void)viewDidAppear:(BOOL)animated
 {
-    [self.scanningSwitch setOn:YES animated:animated];
-    [self updateScanningSwitch:self.scanningSwitch];
+    if (!self.scanningSwitch.on) {
+        [self.scanningSwitch setOn:YES animated:animated];
+        [self updateScanningSwitch:self.scanningSwitch];
+    }
 }
 
 -(IBAction)updateScanningSwitch:(id)sender

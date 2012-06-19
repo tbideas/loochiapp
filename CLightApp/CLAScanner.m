@@ -27,6 +27,8 @@
     NSMutableSet *_foundLights;
 }
 
+@synthesize delegate;
+
 -(id)init
 {
     self = [super init];

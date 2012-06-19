@@ -11,20 +11,15 @@
 #define CLAMP_PORT 2000
 
 
-@interface CLALight ()
-{
-    NSString *_host;
-}
-
-@end
-
 @implementation CLALight
+
+@synthesize host;
 
 - (id) initWithHost:(NSString*)hostname
 {
     self = [super init];
     if (self) {
-        _host = hostname;
+        host = hostname;
     }
     return self;
 }
@@ -54,7 +49,7 @@
     CFWriteStreamRef writeStream;
     
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, 
-                                       (__bridge CFStringRef)_host,
+                                       (__bridge CFStringRef)host,
                                        CLAMP_PORT, 
                                        NULL, &writeStream);
     if (!CFWriteStreamOpen(writeStream)) {

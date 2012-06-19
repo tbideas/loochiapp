@@ -21,7 +21,7 @@
 		E90BC5ED1579A42200342F89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E90BC5EB1579A42200342F89 /* InfoPlist.strings */; };
 		E90BC5F01579A42200342F89 /* CLightAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E90BC5EF1579A42200342F89 /* CLightAppTests.m */; };
 		E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */; };
-		E9C5BD34158D9C9E00B724BF /* IMG_9521_LR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C5BD33158D9C9E00B724BF /* IMG_9521_LR.jpg */; };
+		E98231361590090900DD812B /* checker.png in Resources */ = {isa = PBXBuildFile; fileRef = E98231351590090900DD812B /* checker.png */; };
 		E9C5BD38158DA24E00B724BF /* UIImageView+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5BD37158DA24E00B724BF /* UIImageView+ColorPicker.m */; };
 		E9C5BD3B158DA8CA00B724BF /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5BD3A158DA8CA00B724BF /* UIImageView+GeometryConversion.m */; };
 		E9DBDA42158D5BE900EE2B9D /* CLAScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBDA41158D5BE900EE2B9D /* CLAScanner.m */; };
@@ -60,7 +60,7 @@
 		E90BC5EE1579A42200342F89 /* CLightAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLightAppTests.h; sourceTree = "<group>"; };
 		E90BC5EF1579A42200342F89 /* CLightAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLightAppTests.m; sourceTree = "<group>"; };
 		E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		E9C5BD33158D9C9E00B724BF /* IMG_9521_LR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9521_LR.jpg; sourceTree = "<group>"; };
+		E98231351590090900DD812B /* checker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checker.png; sourceTree = "<group>"; };
 		E9C5BD36158DA24E00B724BF /* UIImageView+ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ColorPicker.h"; sourceTree = "<group>"; };
 		E9C5BD37158DA24E00B724BF /* UIImageView+ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ColorPicker.m"; sourceTree = "<group>"; };
 		E9C5BD39158DA8CA00B724BF /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GeometryConversion.h"; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		E90BC5CA1579A42200342F89 /* CLightApp */ = {
 			isa = PBXGroup;
 			children = (
+				E98231351590090900DD812B /* checker.png */,
 				E9C5BD35158DA23300B724BF /* Categories */,
-				E9C5BD33158D9C9E00B724BF /* IMG_9521_LR.jpg */,
 				E9DBDA4F158D683200EE2B9D /* ClightServices */,
 				E90BC5D31579A42200342F89 /* CLAAppDelegate.h */,
 				E90BC5D41579A42200342F89 /* CLAAppDelegate.m */,
@@ -244,7 +244,7 @@
 		E90BC5B71579A42200342F89 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "CLightApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -271,7 +271,7 @@
 			files = (
 				E90BC5CF1579A42200342F89 /* InfoPlist.strings in Resources */,
 				E90BC5D81579A42200342F89 /* MainStoryboard.storyboard in Resources */,
-				E9C5BD34158D9C9E00B724BF /* IMG_9521_LR.jpg in Resources */,
+				E98231361590090900DD812B /* checker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +416,7 @@
 				INFOPLIST_FILE = "CLightApp/CLightApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,6 +429,7 @@
 				INFOPLIST_FILE = "CLightApp/CLightApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

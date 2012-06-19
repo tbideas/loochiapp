@@ -23,6 +23,9 @@
 
 @implementation CLAScannerViewController
 
+@synthesize tableView;
+@synthesize scanningSwitch;
+
 -(id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -42,8 +45,6 @@
 
 -(IBAction)updateScanningSwitch:(id)sender
 {
-    UISwitch *scanningSwitch = (UISwitch*) sender;
-    
     if (_scanner == nil) {
         _scanner = [[CLAScanner alloc] init];
         _scanner.delegate = self;
@@ -71,11 +72,11 @@
     return _lights.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"clightCell"];
     
-    CLALight *l = _lights[indexPath.row];
+    CLALight *l = [_lights objectAtIndex:indexPath.row];
     cell.textLabel.text = l.host;
 
     return cell;
@@ -88,7 +89,7 @@
     if ([@"switch" isEqualToString:segue.identifier]) {
         CLAViewController *vc = (CLAViewController*)segue.destinationViewController;
         
-        vc.clight = _lights[self.tableView.indexPathForSelectedRow.row];
+        vc.clight = [_lights objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     }
     else {
         NSLog(@"Should not happen. Unrecognized segue: %@", segue.identifier);

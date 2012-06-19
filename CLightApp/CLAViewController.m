@@ -24,6 +24,11 @@
 @synthesize clight;
 @synthesize lampSwitch;
 
+@synthesize redSlider;
+@synthesize greenSlider;
+@synthesize blueSlider;
+@synthesize imageView;
+
 #pragma mark - View lifecycle
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,14 +55,12 @@
 -(IBAction) imageTapped:(UIGestureRecognizer*) gestureRecognizer
 {
     CGPoint viewPoint = [gestureRecognizer locationInView:self.imageView];
-    CGPoint imagePoint = [self.imageView convertPoint:viewPoint toView:self.imageView];
     CGPoint hackedPoint = [self.imageView convertPointFromView:viewPoint];
     
-    NSLog(@"View: %f/%f\nImage: %f/%fHacked: %f/%f", viewPoint.x, viewPoint.y, imagePoint.x, imagePoint.y,
-          hackedPoint.x, hackedPoint.y);
+    NSLog(@"View: %f/%f", viewPoint.x, viewPoint.y);
+    NSLog(@"Hacked: %f/%f", hackedPoint.x, hackedPoint.y);
 
-    /*
-    UIColor *color = [self.imageView pixelColorAtLocation:viewPoint];
+    UIColor *color = [self.imageView pixelColorAtLocation:hackedPoint];
     
     float red, green, blue, alpha;
     if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
@@ -65,10 +68,11 @@
         self.redSlider.value = red;
         self.greenSlider.value = green;
         self.blueSlider.value = blue;
+        [self rgbValueUpdated:nil];
     }
     else {
         NSLog(@"Unable to convert color to rgb. Color=%@", color);
-    }*/
+    }
 }
 
 -(IBAction) imageLongTapped:(UIGestureRecognizer*) gestureRecognizer

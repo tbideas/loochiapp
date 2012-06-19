@@ -45,8 +45,8 @@
             imagePoint.x /= scale;
             imagePoint.y /= scale;
             
-            viewPoint.x -= (viewSize.width  - imageSize.width  * scale) / 2.0f;
-            viewPoint.y -= (viewSize.height - imageSize.height * scale) / 2.0f;
+            imagePoint.x -= (viewSize.width  - imageSize.width  * scale) / 2.0f;
+            imagePoint.y -= (viewSize.height - imageSize.height * scale) / 2.0f;
             
             break;
         }
@@ -119,6 +119,10 @@
             break;
         }
     }
+    
+    NSLog(@"Converting point from view coordinates: %f/%f to image coordinates: %f/%f",
+          viewPoint.x, viewPoint.y,
+          imagePoint.x, imagePoint.y);
     
     return imagePoint;
 }

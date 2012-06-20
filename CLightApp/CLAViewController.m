@@ -36,6 +36,18 @@
     self.navigationItem.title = clight.host;
 }
 
+-(void)viewDidLoad
+{
+    UIGestureRecognizer *gestureTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
+    [imageView addGestureRecognizer:gestureTap];
+    
+    UIGestureRecognizer *gestureLongTap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(imageLongTapped:)];
+    [imageView addGestureRecognizer:gestureLongTap];
+
+    UIGestureRecognizer *gestureSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(imageSwiped:)];
+    [imageView addGestureRecognizer:gestureSwipe];
+}
+
 #pragma mark Methods for UI elements
 
 - (IBAction)toggleLamp:(id)sender
@@ -55,30 +67,41 @@
 -(IBAction) imageTapped:(UIGestureRecognizer*) gestureRecognizer
 {
     CGPoint viewPoint = [gestureRecognizer locationInView:self.imageView];
-    CGPoint hackedPoint = [self.imageView convertPointFromView:viewPoint];
+    CGPoint imagePoint = [self.imageView convertPointFromView:viewPoint];
     
     NSLog(@"View: %f/%f", viewPoint.x, viewPoint.y);
-    NSLog(@"Hacked: %f/%f", hackedPoint.x, hackedPoint.y);
+    NSLog(@"Image: %f/%f", imagePoint.x, imagePoint.y);
 
-    UIColor *color = [self.imageView pixelColorAtLocation:hackedPoint];
-    
-    float red, green, blue, alpha;
-    if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
-        NSLog(@"Successful conversion: %f %f %f", red, green, blue);
-        self.redSlider.value = red;
-        self.greenSlider.value = green;
-        self.blueSlider.value = blue;
-        [self rgbValueUpdated:nil];
+    if (imageView.image &&
+        imagePoint.x >= 0 && imagePoint.y >= 0 
+        && imagePoint.x < imageView.image.size.width
+        && imagePoint.y < imageView.image.size.height)
+    {
+        UIColor *color = [self.imageView pixelColorAtLocation:imagePoint];
+        
+        float red, green, blue, alpha;
+        if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
+            UILabel *titleLabel = (UILabel*) self.navigationItem.titleView;
+            titleLabel.textColor = color;
+            
+            //NSLog(@"Successful conversion: %f %f %f", red, green, blue);
+            self.redSlider.value = red;
+            self.greenSlider.value = green;
+            self.blueSlider.value = blue;
+            [self rgbValueUpdated:nil];
+        }
+        else {
+            NSLog(@"Unable to convert color to rgb. Color=%@", color);
+        }
     }
     else {
-        NSLog(@"Unable to convert color to rgb. Color=%@", color);
+        NSLog(@"Tap out of image");
     }
 }
 
 -(IBAction) imageLongTapped:(UIGestureRecognizer*) gestureRecognizer
 {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-//    imagePicker.mediaTypes = @[kUTTypeImage];
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imagePicker.allowsEditing = NO;
     imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:
@@ -87,6 +110,16 @@
     imagePicker.delegate = self;
     [self presentModalViewController:imagePicker animated:YES];
 }
+
+-(IBAction)imageSwiped:(UIGestureRecognizer*) gestureRecognizer
+{
+    if (imageView.contentMode == UIViewContentModeBottomRight) 
+        imageView.contentMode = UIViewContentModeScaleToFill;
+    else
+        imageView.contentMode++;
+    NSLog(@"imageView contentMode now: %i", imageView.contentMode);
+}
+
 
 #pragma mark UIImagePickerControllerDelegate
 

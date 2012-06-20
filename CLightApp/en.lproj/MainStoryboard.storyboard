@@ -17,10 +17,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="F8p-Rb-yRG" appends="YES" id="rpb-bF-64q"/>
-                                    <outletCollection property="gestureRecognizers" destination="UGr-4m-Svl" appends="YES" id="Jdw-GZ-GyU"/>
-                                </connections>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="sM0-Ia-LYd">
                                 <rect key="frame" x="18" y="314" width="284" height="23"/>
@@ -68,16 +64,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="F8p-Rb-yRG">
-                    <connections>
-                        <action selector="imageTapped:" destination="2" id="ovF-Ig-CNr"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="UGr-4m-Svl">
-                    <connections>
-                        <action selector="imageLongTapped:" destination="2" id="Vkc-1O-8hm"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="895" y="43"/>
         </scene>

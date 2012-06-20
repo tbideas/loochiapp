@@ -11,6 +11,9 @@
 #import "UIImageView+GeometryConversion.h"
 
 @interface CLAViewController ()
+{
+    UIPopoverController *_popoverController;
+}
 
 @property (weak) IBOutlet UISlider *redSlider;
 @property (weak) IBOutlet UISlider *greenSlider;
@@ -69,7 +72,7 @@
 
 #pragma mark Gesture recognizers
 
--(IBAction) imageTapped:(UIGestureRecognizer*) gestureRecognizer
+-(void) imageTapped:(UIGestureRecognizer*) gestureRecognizer
 {
     CGPoint viewPoint = [gestureRecognizer locationInView:self.imageView];
     CGPoint imagePoint = [self.imageView convertPointFromView:viewPoint];
@@ -100,8 +103,9 @@
     }
 }
 
--(IBAction) imageLongTapped:(UIGestureRecognizer*) gestureRecognizer
+-(void) imageLongTapped:(UIGestureRecognizer*) gestureRecognizer
 {
+    
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imagePicker.allowsEditing = NO;
@@ -109,16 +113,32 @@
                               UIImagePickerControllerSourceTypeSavedPhotosAlbum];
 
     imagePicker.delegate = self;
-    [self presentModalViewController:imagePicker animated:YES];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self presentModalViewController:imagePicker animated:YES];
+    }
+    else {
+        // This should not really happen but you never know ...
+        if (_popoverController != nil) {
+            [_popoverController dismissPopoverAnimated:YES];
+            _popoverController = nil;
+        }
+        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        
+        CGPoint touchPoint = [gestureRecognizer locationInView:imageView];
+        CGRect popopOrigin = CGRectMake(touchPoint.x, touchPoint.y, 44, 44);
+        
+        [popover presentPopoverFromRect:popopOrigin inView:imageView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        _popoverController = popover;
+    }
+    
 }
 
--(IBAction)imageSwiped:(UIGestureRecognizer*) gestureRecognizer
+-(void)imageSwiped:(UIGestureRecognizer*) gestureRecognizer
 {
-    if (imageView.contentMode == UIViewContentModeBottomRight) 
+    imageView.contentMode++;
+    if (imageView.contentMode == UIViewContentModeRedraw) 
         imageView.contentMode = UIViewContentModeScaleToFill;
-    else
-        imageView.contentMode++;
-    NSLog(@"imageView contentMode now: %i", imageView.contentMode);
 }
 
 
@@ -138,7 +158,13 @@
     }
     self.imageView.image = imageToUse;
     
-    [self dismissModalViewControllerAnimated: YES];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self dismissModalViewControllerAnimated: YES];
+    }
+    else {
+        [_popoverController dismissPopoverAnimated:YES];
+        _popoverController = nil;
+    }
 }
 
 

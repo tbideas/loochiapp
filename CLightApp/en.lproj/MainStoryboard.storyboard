@@ -94,7 +94,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="2" kind="push" identifier="switch" id="pT0-IW-fLn"/>
+                                    <segue destination="2" kind="push" identifier="openLight" id="pT0-IW-fLn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

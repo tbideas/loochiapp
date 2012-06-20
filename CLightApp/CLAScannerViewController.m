@@ -93,9 +93,8 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([@"switch" isEqualToString:segue.identifier]) {
+    if ([@"openLight" isEqualToString:segue.identifier]) {
         CLAViewController *vc = (CLAViewController*)segue.destinationViewController;
-        
         vc.clight = [_lights objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     }
     else {

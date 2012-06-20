@@ -48,6 +48,11 @@
     [imageView addGestureRecognizer:gestureSwipe];
 }
 
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
 #pragma mark Methods for UI elements
 
 - (IBAction)toggleLamp:(id)sender
@@ -69,9 +74,6 @@
     CGPoint viewPoint = [gestureRecognizer locationInView:self.imageView];
     CGPoint imagePoint = [self.imageView convertPointFromView:viewPoint];
     
-    NSLog(@"View: %f/%f", viewPoint.x, viewPoint.y);
-    NSLog(@"Image: %f/%f", imagePoint.x, imagePoint.y);
-
     if (imageView.image &&
         imagePoint.x >= 0 && imagePoint.y >= 0 
         && imagePoint.x < imageView.image.size.width
@@ -84,7 +86,6 @@
             UILabel *titleLabel = (UILabel*) self.navigationItem.titleView;
             titleLabel.textColor = color;
             
-            //NSLog(@"Successful conversion: %f %f %f", red, green, blue);
             self.redSlider.value = red;
             self.greenSlider.value = green;
             self.blueSlider.value = blue;

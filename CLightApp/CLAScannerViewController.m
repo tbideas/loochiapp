@@ -43,6 +43,13 @@
     }
 }
 
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
+#pragma mark IBActions
+
 -(IBAction)updateScanningSwitch:(id)sender
 {
     if (_scanner == nil) {

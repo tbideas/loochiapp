@@ -8,11 +8,12 @@
 
 #import "CLAViewController.h"
 #import "UIImageView+ColorPicker.h"
-#import "UIImageView+GeometryConversion.h"
+#import "CLATintedView.h"
 
 @interface CLAViewController ()
 {
     UIPopoverController *_popoverController;
+    CLATintedView *_crosshairView;
 }
 
 @property (weak) IBOutlet UISlider *redSlider;
@@ -41,14 +42,17 @@
 
 -(void)viewDidLoad
 {
-    UIGestureRecognizer *gestureTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
-    [imageView addGestureRecognizer:gestureTap];
-    
     UIGestureRecognizer *gestureLongTap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(imageLongTapped:)];
     [imageView addGestureRecognizer:gestureLongTap];
 
     UIGestureRecognizer *gestureSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(imageSwiped:)];
     [imageView addGestureRecognizer:gestureSwipe];
+}
+
+-(void)viewDidUnload
+{
+    [_crosshairView removeFromSuperview];
+    _crosshairView = nil;
 }
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
@@ -71,37 +75,6 @@
 }
 
 #pragma mark Gesture recognizers
-
--(void) imageTapped:(UIGestureRecognizer*) gestureRecognizer
-{
-    CGPoint viewPoint = [gestureRecognizer locationInView:self.imageView];
-    CGPoint imagePoint = [self.imageView convertPointFromView:viewPoint];
-    
-    if (imageView.image &&
-        imagePoint.x >= 0 && imagePoint.y >= 0 
-        && imagePoint.x < imageView.image.size.width
-        && imagePoint.y < imageView.image.size.height)
-    {
-        UIColor *color = [self.imageView pixelColorAtLocation:imagePoint];
-        
-        float red, green, blue, alpha;
-        if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
-            UILabel *titleLabel = (UILabel*) self.navigationItem.titleView;
-            titleLabel.textColor = color;
-            
-            self.redSlider.value = red;
-            self.greenSlider.value = green;
-            self.blueSlider.value = blue;
-            [self rgbValueUpdated:nil];
-        }
-        else {
-            NSLog(@"Unable to convert color to rgb. Color=%@", color);
-        }
-    }
-    else {
-        NSLog(@"Tap out of image");
-    }
-}
 
 -(void) imageLongTapped:(UIGestureRecognizer*) gestureRecognizer
 {
@@ -141,6 +114,60 @@
         imageView.contentMode = UIViewContentModeScaleToFill;
 }
 
+#pragma mark Touch event handlers
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (_crosshairView == nil) {
+        _crosshairView = [[CLATintedView alloc] initWithImage:[UIImage imageNamed:@"crosshair.png"]];
+        _crosshairView.bounds = CGRectMake(0, 0, 50, 50);
+        [self.imageView addSubview:_crosshairView];
+    }
+    UITouch *aTouch = [touches anyObject];
+    CGPoint viewPoint = [aTouch locationInView:self.imageView];
+
+    _crosshairView.hidden = NO;
+    _crosshairView.center = viewPoint;
+    _crosshairView.transform = CGAffineTransformMakeScale(1, 1);
+    _crosshairView.alpha = 1;
+    
+    [UIView beginAnimations:@"crosshairAppears" context:nil];
+    [UIView setAnimationDuration:0.2];
+    
+    CGAffineTransform transformScale = CGAffineTransformMakeScale(3, 3);    
+    _crosshairView.transform = CGAffineTransformRotate(transformScale, M_PI * 3);
+    
+    [UIView commitAnimations];
+    
+    [self updateRgbWithColorAtPoint:viewPoint];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *aTouch = [touches anyObject];
+    CGPoint viewPoint = [aTouch locationInView:self.imageView];
+    
+    _crosshairView.center = viewPoint;
+    
+    [self updateRgbWithColorAtPoint:viewPoint];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _crosshairView.hidden = YES;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{    
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         _crosshairView.transform = CGAffineTransformMakeScale(0.1, 0.1);
+                         _crosshairView.alpha = 0;
+                     }
+                     completion:^(BOOL finished) {
+                     }
+     ];
+}
 
 #pragma mark UIImagePickerControllerDelegate
 
@@ -167,5 +194,26 @@
     }
 }
 
+#pragma mark Useful private functions
+
+- (void)updateRgbWithColorAtPoint:(CGPoint) viewPoint
+{
+    UIColor *color = [self.imageView pixerlColorAtViewLocation:viewPoint];
+    
+    if (color) {
+        float red, green, blue, alpha;
+        if ([color getRed:&red green:&green blue:&blue alpha:&alpha]) {
+            self.redSlider.value = red;
+            self.greenSlider.value = green;
+            self.blueSlider.value = blue;
+            
+            [self rgbValueUpdated:nil];
+        }
+        
+        if (_crosshairView) {
+            _crosshairView.tintColor = color;
+        }
+    }
+}
 
 @end

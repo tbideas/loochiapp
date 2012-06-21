@@ -12,4 +12,6 @@
 
 - (UIColor*) pixelColorAtLocation:(CGPoint)point;
 
+- (UIColor*) pixerlColorAtViewLocation:(CGPoint)viewPoint;
+
 @end

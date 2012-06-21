@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90847071592905F003746E6 /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = E90847051592905F003746E6 /* 74-location.png */; };
+		E90847081592905F003746E6 /* 74-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E90847061592905F003746E6 /* 74-location@2x.png */; };
+		E908470A15929E37003746E6 /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = E908470915929E37003746E6 /* crosshair.png */; };
 		E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
 		E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
 		E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C81579A42200342F89 /* CoreGraphics.framework */; };
@@ -28,6 +31,7 @@
 		E9DBDA42158D5BE900EE2B9D /* CLAScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBDA41158D5BE900EE2B9D /* CLAScanner.m */; };
 		E9DBDA46158D5C2300EE2B9D /* CLALight.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBDA45158D5C2300EE2B9D /* CLALight.m */; };
 		E9DBDA49158D62F800EE2B9D /* CLAScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBDA48158D62F800EE2B9D /* CLAScannerViewController.m */; };
+		E9ED2D571592A4840041B97D /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9ED2D561592A4840041B97D /* CLATintedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E90847051592905F003746E6 /* 74-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "74-location.png"; path = "../../../Documents/Perso/Reference/Glyfish/GlyphishPro/icons/icons-gray/74-location.png"; sourceTree = "<group>"; };
+		E90847061592905F003746E6 /* 74-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "74-location@2x.png"; path = "../../../Documents/Perso/Reference/Glyfish/GlyphishPro/icons/icons-gray/74-location@2x.png"; sourceTree = "<group>"; };
+		E908470915929E37003746E6 /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshair.png; sourceTree = "<group>"; };
 		E90BC5C01579A42200342F89 /* CLightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +80,8 @@
 		E9DBDA45158D5C2300EE2B9D /* CLALight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLALight.m; sourceTree = "<group>"; };
 		E9DBDA47158D62F800EE2B9D /* CLAScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAScannerViewController.h; sourceTree = "<group>"; };
 		E9DBDA48158D62F800EE2B9D /* CLAScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAScannerViewController.m; sourceTree = "<group>"; };
+		E9ED2D551592A4840041B97D /* CLATintedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLATintedView.h; sourceTree = "<group>"; };
+		E9ED2D561592A4840041B97D /* CLATintedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLATintedView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E908470315928FE2003746E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E908470915929E37003746E6 /* crosshair.png */,
+				E90847051592905F003746E6 /* 74-location.png */,
+				E90847061592905F003746E6 /* 74-location@2x.png */,
+				E98231351590090900DD812B /* checker.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		E90BC5B51579A42200342F89 = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +154,7 @@
 		E90BC5CA1579A42200342F89 /* CLightApp */ = {
 			isa = PBXGroup;
 			children = (
-				E98231351590090900DD812B /* checker.png */,
-				E9C5BD35158DA23300B724BF /* Categories */,
+				E9C5BD35158DA23300B724BF /* UIKit */,
 				E9DBDA4F158D683200EE2B9D /* ClightServices */,
 				E90BC5D31579A42200342F89 /* CLAAppDelegate.h */,
 				E90BC5D41579A42200342F89 /* CLAAppDelegate.m */,
@@ -146,6 +165,7 @@
 				E90BC5D91579A42200342F89 /* CLAViewController.h */,
 				E90BC5DA1579A42200342F89 /* CLAViewController.m */,
 				E90BC5CB1579A42200342F89 /* Supporting Files */,
+				E908470315928FE2003746E6 /* Resources */,
 			);
 			path = CLightApp;
 			sourceTree = "<group>";
@@ -189,14 +209,16 @@
 			path = "UIImageView-GeometryConversion";
 			sourceTree = "<group>";
 		};
-		E9C5BD35158DA23300B724BF /* Categories */ = {
+		E9C5BD35158DA23300B724BF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				E9ADB6FF15912E2C0061F79D /* UIImageView-GeometryConversion */,
 				E9C5BD36158DA24E00B724BF /* UIImageView+ColorPicker.h */,
 				E9C5BD37158DA24E00B724BF /* UIImageView+ColorPicker.m */,
+				E9ED2D551592A4840041B97D /* CLATintedView.h */,
+				E9ED2D561592A4840041B97D /* CLATintedView.m */,
 			);
-			name = Categories;
+			name = UIKit;
 			sourceTree = "<group>";
 		};
 		E9DBDA4F158D683200EE2B9D /* ClightServices */ = {
@@ -284,6 +306,9 @@
 				E90BC5D81579A42200342F89 /* MainStoryboard.storyboard in Resources */,
 				E98231361590090900DD812B /* checker.png in Resources */,
 				E9ADB704159188F90061F79D /* LargeStoryboard.storyboard in Resources */,
+				E90847071592905F003746E6 /* 74-location.png in Resources */,
+				E90847081592905F003746E6 /* 74-location@2x.png in Resources */,
+				E908470A15929E37003746E6 /* crosshair.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +351,7 @@
 				E9DBDA49158D62F800EE2B9D /* CLAScannerViewController.m in Sources */,
 				E9C5BD38158DA24E00B724BF /* UIImageView+ColorPicker.m in Sources */,
 				E9ADB70215912E2C0061F79D /* UIImageView+GeometryConversion.m in Sources */,
+				E9ED2D571592A4840041B97D /* CLATintedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

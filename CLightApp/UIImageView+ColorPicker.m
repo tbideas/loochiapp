@@ -12,6 +12,7 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import "UIImageView+ColorPicker.h"
+#import "UIImageView+GeometryConversion.h"
 
 @implementation UIImageView (ColorPicker)
 
@@ -115,4 +116,18 @@
 	return context;
 }
 
+- (UIColor*) pixerlColorAtViewLocation:(CGPoint)viewPoint
+{
+    CGPoint imagePoint = [self convertPointFromView:viewPoint];
+
+    UIColor *pointColor = nil;
+    if (self.image &&
+        imagePoint.x >= 0 && imagePoint.y >= 0 
+        && imagePoint.x < self.image.size.width
+        && imagePoint.y < self.image.size.height)
+    {
+        pointColor = [self pixelColorAtLocation:imagePoint];        
+    }
+    return pointColor;
+}
 @end

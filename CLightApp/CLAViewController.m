@@ -139,7 +139,7 @@
             NSLog(@"First touch started");
             _firstTouch = t;
             
-            [self beginShowingCrossHairView:_crosshairView atPoint:viewPoint];
+            [self beginShowingCrossHairView:_crosshairView atPoint:viewPoint primary:YES];
             [self updateSlidersToCrossHairView:_crosshairView];
         }
         // If we do already have one touch, then the second one will be the secondTouch
@@ -147,7 +147,7 @@
             NSLog(@"And YES! we found a second beginning touch!");
             _secondTouch = t;
             
-            [self beginShowingCrossHairView:_crosshairView2 atPoint:viewPoint];
+            [self beginShowingCrossHairView:_crosshairView2 atPoint:viewPoint primary:NO];
         }
         else {
             NSLog(@"Another touch has begun. We wont track this one.");
@@ -241,7 +241,7 @@
 
 #pragma mark Useful functions to manipulate the crosshairs
 
-- (void) beginShowingCrossHairView:(CLATintedView*) crossHairView atPoint:(CGPoint) viewPoint
+- (void) beginShowingCrossHairView:(CLATintedView*) crossHairView atPoint:(CGPoint) viewPoint primary:(BOOL)primary
 {
     crossHairView.hidden = NO;
     crossHairView.center = viewPoint;
@@ -260,7 +260,14 @@
     [UIView beginAnimations:@"crosshairAppears" context:nil];
     [UIView setAnimationDuration:0.2];
     
-    CGAffineTransform transformScale = CGAffineTransformMakeScale(3, 3);    
+    CGAffineTransform transformScale;
+    if (primary) {
+        transformScale = CGAffineTransformMakeScale(3, 3);
+    }
+    else {
+        transformScale = CGAffineTransformMakeScale(2, 2);
+    }
+    
     crossHairView.transform = CGAffineTransformRotate(transformScale, M_PI * 3);
     
     [UIView commitAnimations];

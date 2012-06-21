@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				E9C5BD35158DA23300B724BF /* UIKit */,
-				E9DBDA4F158D683200EE2B9D /* ClightServices */,
+				E9DBDA4F158D683200EE2B9D /* CLightServices */,
 				E90BC5D31579A42200342F89 /* CLAAppDelegate.h */,
 				E90BC5D41579A42200342F89 /* CLAAppDelegate.m */,
 				E90BC5D61579A42200342F89 /* MainStoryboard.storyboard */,
@@ -221,7 +221,7 @@
 			name = UIKit;
 			sourceTree = "<group>";
 		};
-		E9DBDA4F158D683200EE2B9D /* ClightServices */ = {
+		E9DBDA4F158D683200EE2B9D /* CLightServices */ = {
 			isa = PBXGroup;
 			children = (
 				E9DBDA40158D5BE900EE2B9D /* CLAScanner.h */,
@@ -229,7 +229,7 @@
 				E9DBDA44158D5C2300EE2B9D /* CLALight.h */,
 				E9DBDA45158D5C2300EE2B9D /* CLALight.m */,
 			);
-			name = ClightServices;
+			name = CLightServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

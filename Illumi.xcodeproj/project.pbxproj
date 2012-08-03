@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
+		E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
+		E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C81579A42200342F89 /* CoreGraphics.framework */; };
+		E90BC5E31579A42200342F89 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5E21579A42200342F89 /* SenTestingKit.framework */; };
+		E90BC5E41579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
+		E90BC5E51579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
+		E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */; };
+		E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD315CBA97300C23B8D /* InfoPlist.strings */; };
+		E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */; };
+		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
+		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
+		E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */; };
+		E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4415CBA7DB0035D49C /* CLALight.m */; };
+		E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4615CBA7DB0035D49C /* CLAScanner.m */; };
+		E9E61A5015CBA8010035D49C /* CLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */; };
+		E9E61A5115CBA8010035D49C /* CLAScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4C15CBA8010035D49C /* CLAScannerViewController.m */; };
+		E9E61A5215CBA8010035D49C /* CLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* CLAViewController.m */; };
+		E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */; };
+		E9E61A5815CBA8200035D49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A5615CBA8200035D49C /* main.m */; };
+		E9E61A5F15CBA83F0035D49C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5915CBA83F0035D49C /* background.png */; };
+		E9E61A6015CBA83F0035D49C /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5A15CBA83F0035D49C /* crosshair.png */; };
+		E9E61A6115CBA83F0035D49C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5B15CBA83F0035D49C /* Icon-72.png */; };
+		E9E61A6215CBA83F0035D49C /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */; };
+		E9E61A6315CBA83F0035D49C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5D15CBA83F0035D49C /* Icon.png */; };
+		E9E61A6415CBA83F0035D49C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5E15CBA83F0035D49C /* Icon@2x.png */; };
+		E9E61A6715CBA8AB0035D49C /* CLightAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E90BC5E61579A42200342F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E90BC5B71579A42200342F89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E90BC5BF1579A42200342F89;
+			remoteInfo = CLightApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E90BC5C01579A42200342F89 /* IllumiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IllumiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E90BC5C81579A42200342F89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E90BC5E11579A42200342F89 /* IllumiAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IllumiAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90BC5E21579A42200342F89 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IllumiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = IllumiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
+		E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+GeometryConversion.m"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.m"; sourceTree = SOURCE_ROOT; };
+		E9E61A3D15CBA7C70035D49C /* CLATintedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLATintedView.h; path = IllumiApp/CLATintedView.h; sourceTree = SOURCE_ROOT; };
+		E9E61A3E15CBA7C70035D49C /* CLATintedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLATintedView.m; path = IllumiApp/CLATintedView.m; sourceTree = SOURCE_ROOT; };
+		E9E61A3F15CBA7C70035D49C /* UIImageView+ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ColorPicker.h"; path = "IllumiApp/UIImageView+ColorPicker.h"; sourceTree = SOURCE_ROOT; };
+		E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ColorPicker.m"; path = "IllumiApp/UIImageView+ColorPicker.m"; sourceTree = SOURCE_ROOT; };
+		E9E61A4315CBA7DB0035D49C /* CLALight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLALight.h; path = IllumiApp/CLALight.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4415CBA7DB0035D49C /* CLALight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLALight.m; path = IllumiApp/CLALight.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4515CBA7DB0035D49C /* CLAScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAScanner.h; path = IllumiApp/CLAScanner.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4615CBA7DB0035D49C /* CLAScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAScanner.m; path = IllumiApp/CLAScanner.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4915CBA8010035D49C /* CLAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAAppDelegate.h; path = IllumiApp/CLAAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAAppDelegate.m; path = IllumiApp/CLAAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4B15CBA8010035D49C /* CLAScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAScannerViewController.h; path = IllumiApp/CLAScannerViewController.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4C15CBA8010035D49C /* CLAScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAScannerViewController.m; path = IllumiApp/CLAScannerViewController.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4D15CBA8010035D49C /* CLAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAViewController.h; path = IllumiApp/CLAViewController.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4E15CBA8010035D49C /* CLAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAViewController.m; path = IllumiApp/CLAViewController.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = IllumiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		E9E61A5415CBA8200035D49C /* IllumiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IllumiApp-Info.plist"; path = "IllumiApp/IllumiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E9E61A5515CBA8200035D49C /* IllumiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "IllumiApp-Prefix.pch"; path = "IllumiApp/IllumiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E9E61A5615CBA8200035D49C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = IllumiApp/main.m; sourceTree = SOURCE_ROOT; };
+		E9E61A5915CBA83F0035D49C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = IllumiApp/background.png; sourceTree = SOURCE_ROOT; };
+		E9E61A5A15CBA83F0035D49C /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshair.png; path = IllumiApp/crosshair.png; sourceTree = SOURCE_ROOT; };
+		E9E61A5B15CBA83F0035D49C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "IllumiApp/Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "IllumiApp/Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
+		E9E61A5D15CBA83F0035D49C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = IllumiApp/Icon.png; sourceTree = SOURCE_ROOT; };
+		E9E61A5E15CBA83F0035D49C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "IllumiApp/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		E9E61A6515CBA8AB0035D49C /* CLightAppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLightAppTests.h; path = IllumiAppTests/CLightAppTests.h; sourceTree = SOURCE_ROOT; };
+		E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLightAppTests.m; path = IllumiAppTests/CLightAppTests.m; sourceTree = SOURCE_ROOT; };
+		E9E61A6815CBA8B60035D49C /* IllumiAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IllumiAppTests-Info.plist"; path = "IllumiAppTests/IllumiAppTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E90BC5BD1579A42200342F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */,
+				E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */,
+				E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */,
+				E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E90BC5DD1579A42200342F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90BC5E31579A42200342F89 /* SenTestingKit.framework in Frameworks */,
+				E90BC5E41579A42200342F89 /* UIKit.framework in Frameworks */,
+				E90BC5E51579A42200342F89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E908470315928FE2003746E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9746BD315CBA97300C23B8D /* InfoPlist.strings */,
+				E9E61A5915CBA83F0035D49C /* background.png */,
+				E9E61A5A15CBA83F0035D49C /* crosshair.png */,
+				E9E61A5B15CBA83F0035D49C /* Icon-72.png */,
+				E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */,
+				E9E61A5D15CBA83F0035D49C /* Icon.png */,
+				E9E61A5E15CBA83F0035D49C /* Icon@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E90BC5B51579A42200342F89 = {
+			isa = PBXGroup;
+			children = (
+				E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */,
+				E90BC5CA1579A42200342F89 /* IllumiApp */,
+				E90BC5E81579A42200342F89 /* IllumiAppTests */,
+				E90BC5C31579A42200342F89 /* Frameworks */,
+				E90BC5C11579A42200342F89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E90BC5C11579A42200342F89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5C01579A42200342F89 /* IllumiApp.app */,
+				E90BC5E11579A42200342F89 /* IllumiAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E90BC5C31579A42200342F89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E90BC5C41579A42200342F89 /* UIKit.framework */,
+				E90BC5C61579A42200342F89 /* Foundation.framework */,
+				E90BC5C81579A42200342F89 /* CoreGraphics.framework */,
+				E90BC5E21579A42200342F89 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E90BC5CA1579A42200342F89 /* IllumiApp */ = {
+			isa = PBXGroup;
+			children = (
+				E9C5BD35158DA23300B724BF /* UIKit */,
+				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
+				E9E61A4915CBA8010035D49C /* CLAAppDelegate.h */,
+				E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */,
+				E9E61A4B15CBA8010035D49C /* CLAScannerViewController.h */,
+				E9E61A4C15CBA8010035D49C /* CLAScannerViewController.m */,
+				E9E61A4D15CBA8010035D49C /* CLAViewController.h */,
+				E9E61A4E15CBA8010035D49C /* CLAViewController.m */,
+				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
+				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
+				E90BC5CB1579A42200342F89 /* Supporting Files */,
+				E908470315928FE2003746E6 /* Resources */,
+			);
+			name = IllumiApp;
+			path = CLightApp;
+			sourceTree = "<group>";
+		};
+		E90BC5CB1579A42200342F89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9E61A5415CBA8200035D49C /* IllumiApp-Info.plist */,
+				E9E61A5515CBA8200035D49C /* IllumiApp-Prefix.pch */,
+				E9E61A5615CBA8200035D49C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E90BC5E81579A42200342F89 /* IllumiAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9E61A6515CBA8AB0035D49C /* CLightAppTests.h */,
+				E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */,
+				E90BC5E91579A42200342F89 /* Supporting Files */,
+			);
+			name = IllumiAppTests;
+			path = CLightAppTests;
+			sourceTree = "<group>";
+		};
+		E90BC5E91579A42200342F89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9E61A6815CBA8B60035D49C /* IllumiAppTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9ADB6FF15912E2C0061F79D /* UIImageView-GeometryConversion */ = {
+			isa = PBXGroup;
+			children = (
+				E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */,
+				E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */,
+			);
+			path = "UIImageView-GeometryConversion";
+			sourceTree = "<group>";
+		};
+		E9C5BD35158DA23300B724BF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E9E61A3D15CBA7C70035D49C /* CLATintedView.h */,
+				E9E61A3E15CBA7C70035D49C /* CLATintedView.m */,
+				E9E61A3F15CBA7C70035D49C /* UIImageView+ColorPicker.h */,
+				E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */,
+				E9ADB6FF15912E2C0061F79D /* UIImageView-GeometryConversion */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		E9DBDA4F158D683200EE2B9D /* IllumiServices */ = {
+			isa = PBXGroup;
+			children = (
+				E9E61A4315CBA7DB0035D49C /* CLALight.h */,
+				E9E61A4415CBA7DB0035D49C /* CLALight.m */,
+				E9E61A4515CBA7DB0035D49C /* CLAScanner.h */,
+				E9E61A4615CBA7DB0035D49C /* CLAScanner.m */,
+			);
+			name = IllumiServices;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E90BC5BF1579A42200342F89 /* IllumiApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiApp" */;
+			buildPhases = (
+				E90BC5BC1579A42200342F89 /* Sources */,
+				E90BC5BD1579A42200342F89 /* Frameworks */,
+				E90BC5BE1579A42200342F89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IllumiApp;
+			productName = CLightApp;
+			productReference = E90BC5C01579A42200342F89 /* IllumiApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E90BC5E01579A42200342F89 /* IllumiAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiAppTests" */;
+			buildPhases = (
+				E90BC5DC1579A42200342F89 /* Sources */,
+				E90BC5DD1579A42200342F89 /* Frameworks */,
+				E90BC5DE1579A42200342F89 /* Resources */,
+				E90BC5DF1579A42200342F89 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E90BC5E71579A42200342F89 /* PBXTargetDependency */,
+			);
+			name = IllumiAppTests;
+			productName = CLightAppTests;
+			productReference = E90BC5E11579A42200342F89 /* IllumiAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E90BC5B71579A42200342F89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "Illumi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E90BC5B51579A42200342F89;
+			productRefGroup = E90BC5C11579A42200342F89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E90BC5BF1579A42200342F89 /* IllumiApp */,
+				E90BC5E01579A42200342F89 /* IllumiAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E90BC5BE1579A42200342F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */,
+				E9E61A5F15CBA83F0035D49C /* background.png in Resources */,
+				E9E61A6015CBA83F0035D49C /* crosshair.png in Resources */,
+				E9E61A6115CBA83F0035D49C /* Icon-72.png in Resources */,
+				E9E61A6215CBA83F0035D49C /* Icon-72@2x.png in Resources */,
+				E9E61A6315CBA83F0035D49C /* Icon.png in Resources */,
+				E9E61A6415CBA83F0035D49C /* Icon@2x.png in Resources */,
+				E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */,
+				E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E90BC5DE1579A42200342F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E90BC5DF1579A42200342F89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E90BC5BC1579A42200342F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */,
+				E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */,
+				E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */,
+				E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */,
+				E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */,
+				E9E61A5015CBA8010035D49C /* CLAAppDelegate.m in Sources */,
+				E9E61A5115CBA8010035D49C /* CLAScannerViewController.m in Sources */,
+				E9E61A5215CBA8010035D49C /* CLAViewController.m in Sources */,
+				E9E61A5815CBA8200035D49C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E90BC5DC1579A42200342F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9E61A6715CBA8AB0035D49C /* CLightAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E90BC5E71579A42200342F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E90BC5BF1579A42200342F89 /* IllumiApp */;
+			targetProxy = E90BC5E61579A42200342F89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9746BD315CBA97300C23B8D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9746BD415CBA97300C23B8D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9746BD615CBA97300C23B8D /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E90BC5F11579A42200342F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E90BC5F21579A42200342F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E90BC5F41579A42200342F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
+				INFOPLIST_FILE = "IllumiApp/IllumiApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E90BC5F51579A42200342F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
+				INFOPLIST_FILE = "IllumiApp/IllumiApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E90BC5F71579A42200342F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IllumiApp.app/IllumiApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
+				INFOPLIST_FILE = "IllumiAppTests/IllumiAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E90BC5F81579A42200342F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IllumiApp.app/IllumiApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
+				INFOPLIST_FILE = "IllumiAppTests/IllumiAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "Illumi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E90BC5F11579A42200342F89 /* Debug */,
+				E90BC5F21579A42200342F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E90BC5F41579A42200342F89 /* Debug */,
+				E90BC5F51579A42200342F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E90BC5F71579A42200342F89 /* Debug */,
+				E90BC5F81579A42200342F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E90BC5B71579A42200342F89 /* Project object */;
+}

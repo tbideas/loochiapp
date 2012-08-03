@@ -11,7 +11,7 @@
 #import <arpa/inet.h>
 #import "CLAScanner.h"
 
-#define CLAMP_ADVERTISE_PORT 55555
+#define CLAMP_ADVERTISE_PORT 14484
 #define BUF_LEN 1000
 
 @interface CLAScanner ()

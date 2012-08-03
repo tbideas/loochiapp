@@ -1,3 +1,3 @@
-[submodule "CLightApp/UIImageView-GeometryConversion"]
-	path = CLightApp/UIImageView-GeometryConversion
+[submodule "IllumiApp/UIImageView-GeometryConversion"]
+	path = IllumiApp/UIImageView-GeometryConversion
 	url = https://github.com/sarfata/UIImageView-GeometryConversion.git

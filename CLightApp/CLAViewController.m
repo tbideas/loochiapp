@@ -207,6 +207,13 @@
             NSLog(@"Ended second touch");
             _secondTouch = nil;
             [self dismissCrossHairView:_crosshairView2];
+            
+            // If the user drops the second touch after the first one, then
+            // we animate from the first one to the second one.
+            if (_firstTouch == nil) {
+                NSLog(@"Let's party!");
+                
+            }
         }
         else {
             NSLog(@"Ended another non-tracked touch");

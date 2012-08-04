@@ -10,11 +10,9 @@
 #import "CLALight.h"
 #import "ILConnectionViewController.h"
 
-@interface CLAViewController : UIViewController<UIImagePickerControllerDelegate, ILConnectionDelegate>
+@interface CLAViewController : UIViewController<ILConnectionDelegate>
 
 @property (nonatomic, retain) CLALight* clight;
 @property (nonatomic, weak) IBOutlet UISwitch* lampSwitch;
-
-- (IBAction)toggleLamp:(id)sender;
 
 @end

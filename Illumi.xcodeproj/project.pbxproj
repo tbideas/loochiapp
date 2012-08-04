@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E908CFFE15CCA011002387E1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E908CFFC15CCA011002387E1 /* README.md */; };
 		E908CFFF15CCA011002387E1 /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = E908CFFD15CCA011002387E1 /* TODO.md */; };
+		E908D00B15CCA382002387E1 /* ILConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E908D00A15CCA382002387E1 /* ILConnectionViewController.m */; };
+		E908D00F15CCA3A0002387E1 /* low_contrast_linen_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */; };
+		E908D01015CCA3A0002387E1 /* low_contrast_linen.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */; };
 		E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
 		E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
 		E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C81579A42200342F89 /* CoreGraphics.framework */; };
@@ -24,7 +27,6 @@
 		E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4415CBA7DB0035D49C /* CLALight.m */; };
 		E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4615CBA7DB0035D49C /* CLAScanner.m */; };
 		E9E61A5015CBA8010035D49C /* CLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */; };
-		E9E61A5115CBA8010035D49C /* CLAScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4C15CBA8010035D49C /* CLAScannerViewController.m */; };
 		E9E61A5215CBA8010035D49C /* CLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* CLAViewController.m */; };
 		E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */; };
 		E9E61A5815CBA8200035D49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A5615CBA8200035D49C /* main.m */; };
@@ -50,6 +52,10 @@
 /* Begin PBXFileReference section */
 		E908CFFC15CCA011002387E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E908CFFD15CCA011002387E1 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
+		E908D00915CCA382002387E1 /* ILConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILConnectionViewController.h; path = IllumiApp/ILConnectionViewController.h; sourceTree = SOURCE_ROOT; };
+		E908D00A15CCA382002387E1 /* ILConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILConnectionViewController.m; path = IllumiApp/ILConnectionViewController.m; sourceTree = SOURCE_ROOT; };
+		E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "low_contrast_linen_@2X.png"; sourceTree = SOURCE_ROOT; };
+		E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = low_contrast_linen.png; sourceTree = SOURCE_ROOT; };
 		E90BC5C01579A42200342F89 /* IllumiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IllumiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,8 +77,6 @@
 		E9E61A4615CBA7DB0035D49C /* CLAScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAScanner.m; path = IllumiApp/CLAScanner.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4915CBA8010035D49C /* CLAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAAppDelegate.h; path = IllumiApp/CLAAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAAppDelegate.m; path = IllumiApp/CLAAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4B15CBA8010035D49C /* CLAScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAScannerViewController.h; path = IllumiApp/CLAScannerViewController.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4C15CBA8010035D49C /* CLAScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAScannerViewController.m; path = IllumiApp/CLAScannerViewController.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4D15CBA8010035D49C /* CLAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAViewController.h; path = IllumiApp/CLAViewController.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4E15CBA8010035D49C /* CLAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAViewController.m; path = IllumiApp/CLAViewController.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = IllumiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
@@ -125,6 +129,8 @@
 				E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */,
 				E9E61A5D15CBA83F0035D49C /* Icon.png */,
 				E9E61A5E15CBA83F0035D49C /* Icon@2x.png */,
+				E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */,
+				E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -169,12 +175,12 @@
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
 				E9E61A4915CBA8010035D49C /* CLAAppDelegate.h */,
 				E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */,
-				E9E61A4B15CBA8010035D49C /* CLAScannerViewController.h */,
-				E9E61A4C15CBA8010035D49C /* CLAScannerViewController.m */,
 				E9E61A4D15CBA8010035D49C /* CLAViewController.h */,
 				E9E61A4E15CBA8010035D49C /* CLAViewController.m */,
 				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
+				E908D00915CCA382002387E1 /* ILConnectionViewController.h */,
+				E908D00A15CCA382002387E1 /* ILConnectionViewController.m */,
 				E90BC5CB1579A42200342F89 /* Supporting Files */,
 				E908470315928FE2003746E6 /* Resources */,
 			);
@@ -324,6 +330,8 @@
 				E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */,
 				E908CFFE15CCA011002387E1 /* README.md in Resources */,
 				E908CFFF15CCA011002387E1 /* TODO.md in Resources */,
+				E908D00F15CCA3A0002387E1 /* low_contrast_linen_@2X.png in Resources */,
+				E908D01015CCA3A0002387E1 /* low_contrast_linen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,9 +371,9 @@
 				E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */,
 				E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */,
 				E9E61A5015CBA8010035D49C /* CLAAppDelegate.m in Sources */,
-				E9E61A5115CBA8010035D49C /* CLAScannerViewController.m in Sources */,
 				E9E61A5215CBA8010035D49C /* CLAViewController.m in Sources */,
 				E9E61A5815CBA8200035D49C /* main.m in Sources */,
+				E908D00B15CCA382002387E1 /* ILConnectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

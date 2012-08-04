@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E908CFFE15CCA011002387E1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E908CFFC15CCA011002387E1 /* README.md */; };
+		E908CFFF15CCA011002387E1 /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = E908CFFD15CCA011002387E1 /* TODO.md */; };
 		E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
 		E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
 		E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C81579A42200342F89 /* CoreGraphics.framework */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E908CFFC15CCA011002387E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E908CFFD15CCA011002387E1 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
 		E90BC5C01579A42200342F89 /* IllumiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IllumiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +132,8 @@
 		E90BC5B51579A42200342F89 = {
 			isa = PBXGroup;
 			children = (
+				E908CFFC15CCA011002387E1 /* README.md */,
+				E908CFFD15CCA011002387E1 /* TODO.md */,
 				E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */,
 				E90BC5CA1579A42200342F89 /* IllumiApp */,
 				E90BC5E81579A42200342F89 /* IllumiAppTests */,
@@ -316,6 +322,8 @@
 				E9E61A6415CBA83F0035D49C /* Icon@2x.png in Resources */,
 				E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */,
 				E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */,
+				E908CFFE15CCA011002387E1 /* README.md in Resources */,
+				E908CFFF15CCA011002387E1 /* TODO.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

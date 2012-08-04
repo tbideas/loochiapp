@@ -40,7 +40,20 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationItem.title = clight.host;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (!self.clight) {
+        [self performSegueWithIdentifier:@"pickIllumi" sender:self];
+    }
+}
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"pickIllumi"]) {
+        ILConnectionViewController *vc = (ILConnectionViewController*)segue.destinationViewController;
+        vc.delegate = self;
+    }
 }
 
 -(void)viewDidLoad
@@ -76,12 +89,15 @@
     return YES;
 }
 
-#pragma mark Methods for UI elements
+#pragma mark ILConnectionDelegate
 
-- (IBAction)toggleLamp:(id)sender
+-(void)selectedIllumi:(CLALight *)illumi
 {
-    [clight setLed:lampSwitch.on];
+    self.clight = illumi;
+    [self dismissModalViewControllerAnimated:YES];
 }
+
+#pragma mark Methods for UI elements
 
 - (IBAction)rgbValueUpdated:(id)sender
 {

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CLALight.h"
+#import "ILConnectionViewController.h"
 
-@interface CLAViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CLAViewController : UIViewController<UIImagePickerControllerDelegate, ILConnectionDelegate>
 
 @property (nonatomic, retain) CLALight* clight;
 @property (nonatomic, weak) IBOutlet UISwitch* lampSwitch;

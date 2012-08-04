@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lCg-Mk-vxT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
@@ -50,11 +50,12 @@
                         <outlet property="greenSlider" destination="3dm-AA-IPm" id="scR-wV-tq9"/>
                         <outlet property="imageView" destination="UXi-XI-QPl" id="zQc-Of-gzS"/>
                         <outlet property="redSlider" destination="sM0-Ia-LYd" id="Phb-NE-ABZ"/>
+                        <segue destination="lCg-Mk-vxT" kind="modal" identifier="pickIllumi" id="1Nf-nx-mcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="43"/>
+            <point key="canvasLocation" x="223" y="-99"/>
         </scene>
         <!--Connection View Controller-->
         <scene sceneID="H8r-HD-aSd">
@@ -80,15 +81,27 @@
                                 <rect key="frame" x="142" y="211" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V8K-cZ-V6F">
+                                <rect key="frame" x="124" y="371" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Demo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="useADemoIllumi:" destination="lCg-Mk-vxT" eventType="touchUpInside" id="87n-aE-u0g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <segue destination="2" kind="modal" identifier="display-main" id="la1-Mv-p2z"/>
-                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="156" y="43"/>
+            <point key="canvasLocation" x="255" y="677"/>
         </scene>
     </scenes>
     <resources>
@@ -110,6 +123,9 @@
         </class>
         <class className="ILConnectionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ILConnectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="useADemoIllumi:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

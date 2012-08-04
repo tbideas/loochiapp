@@ -12,7 +12,6 @@
 @interface ILConnectionViewController ()
 {
     CLAScanner *_scanner;
-    CLALight *_foundLight;
 }
 
 @end
@@ -40,7 +39,6 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -52,20 +50,16 @@
 
 -(void) newClightDetected:(CLALight*)light
 {
-    _foundLight = light;
-    [self performSegueWithIdentifier:@"display-main" sender:self];
+    self.selectedLamp = light;
+
+    [self.delegate selectedIllumi:self.selectedLamp];
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(IBAction)useADemoIllumi:(id)sender
 {
-    if ([@"display-main" isEqualToString:segue.identifier]) {
-        CLAViewController *vc = (CLAViewController*)segue.destinationViewController;
-        vc.clight = _foundLight;
-    }
-    else {
-        NSLog(@"Should not happen. Unrecognized segue: %@", segue.identifier);
-    }
+    self.selectedLamp = [[CLALight alloc] initWithHost:@"127.0.0.1"];
+    
+    [self.delegate selectedIllumi:self.selectedLamp];
 }
-
 
 @end

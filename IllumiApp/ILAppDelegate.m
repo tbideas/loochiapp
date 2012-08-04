@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CLAAppDelegate.h"
+#import "ILAppDelegate.h"
 
-@implementation CLAAppDelegate
+@implementation ILAppDelegate
 
 @synthesize window = _window;
 

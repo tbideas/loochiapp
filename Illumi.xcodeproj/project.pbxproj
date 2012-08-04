@@ -26,8 +26,8 @@
 		E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */; };
 		E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4415CBA7DB0035D49C /* CLALight.m */; };
 		E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4615CBA7DB0035D49C /* CLAScanner.m */; };
-		E9E61A5015CBA8010035D49C /* CLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */; };
-		E9E61A5215CBA8010035D49C /* CLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* CLAViewController.m */; };
+		E9E61A5015CBA8010035D49C /* ILAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */; };
+		E9E61A5215CBA8010035D49C /* ILColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* ILColorViewController.m */; };
 		E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */; };
 		E9E61A5815CBA8200035D49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A5615CBA8200035D49C /* main.m */; };
 		E9E61A5F15CBA83F0035D49C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5915CBA83F0035D49C /* background.png */; };
@@ -75,10 +75,10 @@
 		E9E61A4415CBA7DB0035D49C /* CLALight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLALight.m; path = IllumiApp/CLALight.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4515CBA7DB0035D49C /* CLAScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAScanner.h; path = IllumiApp/CLAScanner.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4615CBA7DB0035D49C /* CLAScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAScanner.m; path = IllumiApp/CLAScanner.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4915CBA8010035D49C /* CLAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAAppDelegate.h; path = IllumiApp/CLAAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAAppDelegate.m; path = IllumiApp/CLAAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4D15CBA8010035D49C /* CLAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAViewController.h; path = IllumiApp/CLAViewController.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4E15CBA8010035D49C /* CLAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAViewController.m; path = IllumiApp/CLAViewController.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4915CBA8010035D49C /* ILAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILAppDelegate.h; path = IllumiApp/ILAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILAppDelegate.m; path = IllumiApp/ILAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4D15CBA8010035D49C /* ILColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILColorViewController.h; path = IllumiApp/ILColorViewController.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4E15CBA8010035D49C /* ILColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILColorViewController.m; path = IllumiApp/ILColorViewController.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = IllumiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		E9E61A5415CBA8200035D49C /* IllumiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IllumiApp-Info.plist"; path = "IllumiApp/IllumiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E9E61A5515CBA8200035D49C /* IllumiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "IllumiApp-Prefix.pch"; path = "IllumiApp/IllumiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -173,10 +173,10 @@
 			children = (
 				E9C5BD35158DA23300B724BF /* UIKit */,
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
-				E9E61A4915CBA8010035D49C /* CLAAppDelegate.h */,
-				E9E61A4A15CBA8010035D49C /* CLAAppDelegate.m */,
-				E9E61A4D15CBA8010035D49C /* CLAViewController.h */,
-				E9E61A4E15CBA8010035D49C /* CLAViewController.m */,
+				E9E61A4915CBA8010035D49C /* ILAppDelegate.h */,
+				E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */,
+				E9E61A4D15CBA8010035D49C /* ILColorViewController.h */,
+				E9E61A4E15CBA8010035D49C /* ILColorViewController.m */,
 				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
 				E908D00915CCA382002387E1 /* ILConnectionViewController.h */,
@@ -370,8 +370,8 @@
 				E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */,
 				E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */,
 				E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */,
-				E9E61A5015CBA8010035D49C /* CLAAppDelegate.m in Sources */,
-				E9E61A5215CBA8010035D49C /* CLAViewController.m in Sources */,
+				E9E61A5015CBA8010035D49C /* ILAppDelegate.m in Sources */,
+				E9E61A5215CBA8010035D49C /* ILColorViewController.m in Sources */,
 				E9E61A5815CBA8200035D49C /* main.m in Sources */,
 				E908D00B15CCA382002387E1 /* ILConnectionViewController.m in Sources */,
 			);

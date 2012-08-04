@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CLAViewController.h"
+#import "ILColorViewController.h"
 #import "UIImageView+ColorPicker.h"
 #import "CLATintedView.h"
 
-@interface CLAViewController ()
+@interface ILColorViewController ()
 {
     UIPopoverController *_popoverController;
     CLATintedView *_crosshairView;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation CLAViewController
+@implementation ILColorViewController
 
 @synthesize clight;
 @synthesize lampSwitch;

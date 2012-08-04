@@ -28,14 +28,6 @@
 
 @implementation ILColorViewController
 
-@synthesize clight;
-@synthesize lampSwitch;
-
-@synthesize redSlider;
-@synthesize greenSlider;
-@synthesize blueSlider;
-@synthesize imageView;
-
 #pragma mark - View lifecycle
 
 - (void)viewWillAppear:(BOOL)animated
@@ -95,9 +87,21 @@
 
 - (IBAction)rgbValueUpdated:(id)sender
 {
-    [clight setRed:self.redSlider.value
+    [_clight setRed:self.redSlider.value
              green:self.greenSlider.value
               blue:self.blueSlider.value];
+}
+
+-(IBAction)colorModeChanged:(id)sender
+{
+    UISegmentedControl *segmentedControl = (UISegmentedControl*) sender;
+    
+    if (segmentedControl.selectedSegmentIndex == 0) {
+        self.imageView.image = [UIImage imageNamed:@"background-color.png"];
+    }
+    else {
+        self.imageView.image = [UIImage imageNamed:@"background-white.png"];
+    }
 }
 
 #pragma mark Touch event handlers

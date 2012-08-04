@@ -7,7 +7,6 @@
 //
 
 #import "ILConnectionViewController.h"
-#import "CLAViewController.h"
 
 @interface ILConnectionViewController ()
 {

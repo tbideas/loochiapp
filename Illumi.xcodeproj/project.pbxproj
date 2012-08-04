@@ -21,6 +21,7 @@
 		E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */; };
 		E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD315CBA97300C23B8D /* InfoPlist.strings */; };
 		E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */; };
+		E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AC353C15CCB28A004BFBBA /* background-white.png */; };
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
 		E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */; };
@@ -30,7 +31,7 @@
 		E9E61A5215CBA8010035D49C /* ILColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* ILColorViewController.m */; };
 		E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */; };
 		E9E61A5815CBA8200035D49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A5615CBA8200035D49C /* main.m */; };
-		E9E61A5F15CBA83F0035D49C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5915CBA83F0035D49C /* background.png */; };
+		E9E61A5F15CBA83F0035D49C /* background-color.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5915CBA83F0035D49C /* background-color.png */; };
 		E9E61A6015CBA83F0035D49C /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5A15CBA83F0035D49C /* crosshair.png */; };
 		E9E61A6115CBA83F0035D49C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5B15CBA83F0035D49C /* Icon-72.png */; };
 		E9E61A6215CBA83F0035D49C /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */; };
@@ -65,6 +66,7 @@
 		E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IllumiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = IllumiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		E9AC353C15CCB28A004BFBBA /* background-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-white.png"; path = "IllumiApp/background-white.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
 		E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+GeometryConversion.m"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.m"; sourceTree = SOURCE_ROOT; };
 		E9E61A3D15CBA7C70035D49C /* CLATintedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLATintedView.h; path = IllumiApp/CLATintedView.h; sourceTree = SOURCE_ROOT; };
@@ -83,7 +85,7 @@
 		E9E61A5415CBA8200035D49C /* IllumiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IllumiApp-Info.plist"; path = "IllumiApp/IllumiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E9E61A5515CBA8200035D49C /* IllumiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "IllumiApp-Prefix.pch"; path = "IllumiApp/IllumiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		E9E61A5615CBA8200035D49C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = IllumiApp/main.m; sourceTree = SOURCE_ROOT; };
-		E9E61A5915CBA83F0035D49C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = IllumiApp/background.png; sourceTree = SOURCE_ROOT; };
+		E9E61A5915CBA83F0035D49C /* background-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-color.png"; path = "IllumiApp/background-color.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A5A15CBA83F0035D49C /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshair.png; path = IllumiApp/crosshair.png; sourceTree = SOURCE_ROOT; };
 		E9E61A5B15CBA83F0035D49C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "IllumiApp/Icon-72.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "IllumiApp/Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -122,8 +124,9 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9AC353C15CCB28A004BFBBA /* background-white.png */,
 				E9746BD315CBA97300C23B8D /* InfoPlist.strings */,
-				E9E61A5915CBA83F0035D49C /* background.png */,
+				E9E61A5915CBA83F0035D49C /* background-color.png */,
 				E9E61A5A15CBA83F0035D49C /* crosshair.png */,
 				E9E61A5B15CBA83F0035D49C /* Icon-72.png */,
 				E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */,
@@ -175,12 +178,12 @@
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
 				E9E61A4915CBA8010035D49C /* ILAppDelegate.h */,
 				E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */,
+				E908D00915CCA382002387E1 /* ILConnectionViewController.h */,
+				E908D00A15CCA382002387E1 /* ILConnectionViewController.m */,
 				E9E61A4D15CBA8010035D49C /* ILColorViewController.h */,
 				E9E61A4E15CBA8010035D49C /* ILColorViewController.m */,
 				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
-				E908D00915CCA382002387E1 /* ILConnectionViewController.h */,
-				E908D00A15CCA382002387E1 /* ILConnectionViewController.m */,
 				E90BC5CB1579A42200342F89 /* Supporting Files */,
 				E908470315928FE2003746E6 /* Resources */,
 			);
@@ -320,7 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */,
-				E9E61A5F15CBA83F0035D49C /* background.png in Resources */,
+				E9E61A5F15CBA83F0035D49C /* background-color.png in Resources */,
 				E9E61A6015CBA83F0035D49C /* crosshair.png in Resources */,
 				E9E61A6115CBA83F0035D49C /* Icon-72.png in Resources */,
 				E9E61A6215CBA83F0035D49C /* Icon-72@2x.png in Resources */,
@@ -332,6 +335,7 @@
 				E908CFFF15CCA011002387E1 /* TODO.md in Resources */,
 				E908D00F15CCA3A0002387E1 /* low_contrast_linen_@2X.png in Resources */,
 				E908D01015CCA3A0002387E1 /* low_contrast_linen.png in Resources */,
+				E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

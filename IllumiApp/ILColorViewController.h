@@ -13,6 +13,7 @@
 @interface ILColorViewController : UIViewController<ILConnectionDelegate>
 
 @property (nonatomic, retain) CLALight* clight;
-@property (nonatomic, weak) IBOutlet UISwitch* lampSwitch;
+
+-(IBAction)colorModeChanged:(id)sender;
 
 @end

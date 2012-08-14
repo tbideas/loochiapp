@@ -8,13 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    CLALightNotConnected,
+    CLALightConnecting,
+    CLALightConnected,
+    CLALightError
+} CLALightStatus;
+
 @interface CLALight : NSObject
+{
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
+}
 
 - (id) initWithHost:(NSString*)host;
+- (void) setRed:(float)red green:(float)green blue:(float) blue;
 
--(void) setLed:(BOOL)on;
--(void) setRed:(float)red green:(float)green blue:(float) blue;
+- (void) cleanStreams;
 
 @property (readonly) NSString *host;
+@property int status;
 
 @end

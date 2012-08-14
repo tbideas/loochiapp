@@ -21,8 +21,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _scanner = [[CLAScanner alloc] init];
-        _scanner.delegate = self;
     }
     return self;
 }
@@ -31,19 +29,24 @@
 {
     [super viewDidLoad];
     
-    
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"low_contrast_linen.png"]];
+
+    _scanner = [[CLAScanner alloc] init];
+    _scanner.delegate = self;
+    [_scanner startScanning];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [_scanner stopScanning];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 #pragma mark CLAScannerDelegate
 

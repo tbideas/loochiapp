@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ILConnectionViewController.h"
+#import "ILColorViewController.h"
 
-@interface ILAppDelegate : UIResponder <UIApplicationDelegate>
+@interface ILAppDelegate : UIResponder <UIApplicationDelegate, ILConnectionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) ILColorViewController *colorViewController;
 
 @end

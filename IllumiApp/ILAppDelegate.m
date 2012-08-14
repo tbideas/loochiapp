@@ -8,16 +8,41 @@
 
 #import "ILAppDelegate.h"
 
+
 @implementation ILAppDelegate
 
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    
+    UIViewController *mainViewController = [storyboard instantiateInitialViewController];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = mainViewController;
+    [self.window makeKeyAndVisible];
+    
+    self.colorViewController = (ILColorViewController*)mainViewController;
+
+    // Show the connection window
+    ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
+    cvc.delegate = self;
+    [self.colorViewController presentModalViewController:cvc animated:NO];
+
     return YES;
 }
-							
+
+#pragma mark ILConnectionDelegate
+
+- (void) selectedIllumi:(CLALight *)illumi
+{
+    [self.colorViewController setClight:illumi];
+    [self.colorViewController dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark default stuff
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

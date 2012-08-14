@@ -30,24 +30,6 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewWillAppear:(BOOL)animated
-{
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    if (!self.clight) {
-        [self performSegueWithIdentifier:@"pickIllumi" sender:self];
-    }
-}
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"pickIllumi"]) {
-        ILConnectionViewController *vc = (ILConnectionViewController*)segue.destinationViewController;
-        vc.delegate = self;
-    }
-}
-
 -(void)viewDidLoad
 {
     _crosshairView = [[CLATintedView alloc] initWithImage:[UIImage imageNamed:@"crosshair.png"]];
@@ -73,14 +55,6 @@
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return YES;
-}
-
-#pragma mark ILConnectionDelegate
-
--(void)selectedIllumi:(CLALight *)illumi
-{
-    self.clight = illumi;
-    [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark Methods for UI elements

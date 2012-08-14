@@ -104,6 +104,15 @@
     }
 }
 
+-(IBAction)turnOffTheLight:(id)sender
+{
+    self.redSlider.value = 0;
+    self.greenSlider.value = 0;
+    self.blueSlider.value = 0;
+    
+    [self rgbValueUpdated:self];
+}
+
 #pragma mark Touch event handlers
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

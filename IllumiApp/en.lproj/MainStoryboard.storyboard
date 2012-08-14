@@ -52,6 +52,21 @@
                                     <action selector="colorModeChanged:" destination="2" eventType="valueChanged" id="W1C-EZ-Xhp"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bfb-ON-MPL">
+                                <rect key="frame" x="240" y="10" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="OFF">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnOffTheLight:" destination="2" eventType="touchUpInside" id="msh-WD-yya"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -125,6 +140,7 @@
             <relationships>
                 <relationship kind="action" name="colorModeChanged:"/>
                 <relationship kind="action" name="rgbValueUpdated:"/>
+                <relationship kind="action" name="turnOffTheLight:"/>
                 <relationship kind="outlet" name="blueSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="greenSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>

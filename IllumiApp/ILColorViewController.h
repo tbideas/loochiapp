@@ -15,5 +15,6 @@
 @property (nonatomic, retain) CLALight* clight;
 
 -(IBAction)colorModeChanged:(id)sender;
+-(IBAction)turnOffTheLight:(id)sender;
 
 @end

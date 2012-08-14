@@ -7,7 +7,14 @@
 //
 
 #import "ILAppDelegate.h"
+#import "TestFlight.h"
 
+/* This is to avoid a warning when calling uniqueIdentifier for TestFlight */
+@protocol UIDeviceHack <NSObject>
+
+- (NSString*) uniqueIdentifier;
+
+@end
 
 @implementation ILAppDelegate
 
@@ -15,6 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestFlight takeOff:@"e8642e72fc14638e855c49593d0bb606_MTE5NzQzMjAxMi0wOC0wOSAxNjo1OTowMy43MTMwNjI"];
+    // TODO: Remove this in production (forbidden APIs) - Used here to improve beta reporting.
+    [TestFlight setDeviceIdentifier:[(id<UIDeviceHack>)[UIDevice currentDevice] uniqueIdentifier]];
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
     UIViewController *mainViewController = [storyboard instantiateInitialViewController];
@@ -30,6 +41,8 @@
     cvc.delegate = self;
     [self.colorViewController presentModalViewController:cvc animated:NO];
 
+    [TestFlight passCheckpoint:@"LAUNCH"];
+
     return YES;
 }
 
@@ -37,6 +50,7 @@
 
 - (void) selectedIllumi:(CLALight *)illumi
 {
+    [TestFlight passCheckpoint:@"CONNECTED"];
     [self.colorViewController setClight:illumi];
     [self.colorViewController dismissModalViewControllerAnimated:YES];
 }

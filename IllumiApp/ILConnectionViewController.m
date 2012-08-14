@@ -7,6 +7,7 @@
 //
 
 #import "ILConnectionViewController.h"
+#import "TestFlight.h"
 
 @interface ILConnectionViewController ()
 {
@@ -59,6 +60,8 @@
 
 -(IBAction)useADemoIllumi:(id)sender
 {
+    [TestFlight passCheckpoint:@"DEMO"];
+
     self.selectedLamp = [[CLALight alloc] initWithHost:@"127.0.0.1"];
     
     [self.delegate selectedIllumi:self.selectedLamp];

@@ -13,6 +13,5 @@
 @interface ILAppDelegate : UIResponder <UIApplicationDelegate, ILConnectionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) ILColorViewController *colorViewController;
 
 @end

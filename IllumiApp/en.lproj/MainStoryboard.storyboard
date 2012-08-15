@@ -8,7 +8,7 @@
         <!--Color View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ILColorViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="colorViewController" id="2" customClass="ILColorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

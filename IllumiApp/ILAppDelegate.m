@@ -19,6 +19,12 @@
 
 @end
 
+@interface ILAppDelegate ()
+
+@property (strong, nonatomic) ILColorViewController *colorViewController;
+
+@end
+
 @implementation ILAppDelegate
 
 @synthesize window = _window;
@@ -34,23 +40,22 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [TestFlight takeOff:@"e8642e72fc14638e855c49593d0bb606_MTE5NzQzMjAxMi0wOC0wOSAxNjo1OTowMy43MTMwNjI"];
 #ifdef DEBUG
-    // TODO: Remove this in production (forbidden APIs) - Used here to improve beta reporting.
+    // This is disabled in production (forbidden APIs) - Used here to improve beta reporting.
     [TestFlight setDeviceIdentifier:[(id<UIDeviceHack>)[UIDevice currentDevice] uniqueIdentifier]];
 #endif
+
+    self.colorViewController = (ILColorViewController*)self.window.rootViewController;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = self.colorViewController;
+    [self.window makeKeyAndVisible];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
-    UIViewController *mainViewController = [storyboard instantiateInitialViewController];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = mainViewController;
-    [self.window makeKeyAndVisible];
-    
-    self.colorViewController = (ILColorViewController*)mainViewController;
-
     // Show the connection window
     ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
     cvc.delegate = self;
+    
     [self.colorViewController presentModalViewController:cvc animated:NO];
 
     [TestFlight passCheckpoint:@"LAUNCH"];

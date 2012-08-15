@@ -27,9 +27,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
-	<string></string>
+	<string>MainStoryboard</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string></string>
+	<string>LargeStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

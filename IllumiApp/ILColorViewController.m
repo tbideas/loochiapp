@@ -65,6 +65,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     return YES;
 }
 
+#pragma mark ILLampUserProtocol
+
+- (void) setLamp:(CLALight *)light
+{
+    self.clight = light;
+}
+
 #pragma mark Methods for UI elements
 
 - (IBAction)rgbValueUpdated:(id)sender

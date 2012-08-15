@@ -12,6 +12,8 @@
 #import "DDASLLogger.h"
 #import "DDTTYLogger.h"
 
+#import "ILLightClient.h"
+
 /* This is to avoid a warning when calling uniqueIdentifier for TestFlight */
 @protocol UIDeviceHack <NSObject>
 
@@ -20,8 +22,6 @@
 @end
 
 @interface ILAppDelegate ()
-
-@property (strong, nonatomic) ILColorViewController *colorViewController;
 
 @end
 
@@ -43,20 +43,20 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     // This is disabled in production (forbidden APIs) - Used here to improve beta reporting.
     [TestFlight setDeviceIdentifier:[(id<UIDeviceHack>)[UIDevice currentDevice] uniqueIdentifier]];
 #endif
-
-    self.colorViewController = (ILColorViewController*)self.window.rootViewController;
     
+    // FIXME
+    // I have to create the window manually and the initial View Controller by
+    // hand - otherwise the modal view does not appear for some weird reasons...
+    UIViewController *mainViewController = self.window.rootViewController;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.colorViewController;
     [self.window makeKeyAndVisible];
-    
+    self.window.rootViewController = mainViewController;
+
+    // Create and show the connection window
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    
-    // Show the connection window
     ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
     cvc.delegate = self;
-    
-    [self.colorViewController presentModalViewController:cvc animated:NO];
+    [self.window.rootViewController presentModalViewController:cvc animated:NO];
 
     [TestFlight passCheckpoint:@"LAUNCH"];
 
@@ -68,8 +68,19 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void) selectedIllumi:(CLALight *)illumi
 {
     [TestFlight passCheckpoint:@"CONNECTED"];
-    [self.colorViewController setClight:illumi];
-    [self.colorViewController dismissModalViewControllerAnimated:YES];
+
+    if ([self.window.rootViewController isKindOfClass:[UITabBarController class]])
+    {
+        UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
+        for (UIViewController *vc in tabBarController.viewControllers)
+        {
+            if ([vc conformsToProtocol:@protocol(ILLightClient)]) {
+                id<ILLightClient> lampVC = (id<ILLightClient>)vc;
+                [lampVC setLamp:illumi];
+            }
+        }
+    }
+    [self.window.rootViewController dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark default stuff

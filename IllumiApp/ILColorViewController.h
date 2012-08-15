@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CLALight.h"
+#import "ILLightClient.h"
 
-@interface ILColorViewController : UIViewController
+@interface ILColorViewController : UIViewController<ILLightClient>
 
 @property (nonatomic, retain) CLALight* clight;
 

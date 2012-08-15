@@ -17,6 +17,12 @@
     CLATintedView *_crosshairView2;
     
     UITouch *_firstTouch, *_secondTouch;
+    
+    NSTimer *animationTimer;
+    UIColor *startColor, *endColor;
+    NSTimeInterval animationDuration;
+    NSTimeInterval animationPosition;
+    NSDate *animationStart;
 }
 
 @property (weak) IBOutlet UISlider *redSlider;
@@ -27,6 +33,8 @@
 @end
 
 @implementation ILColorViewController
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - View lifecycle
 
@@ -80,6 +88,8 @@
 
 -(IBAction)turnOffTheLight:(id)sender
 {
+    [self stopAnimation];
+    
     self.redSlider.value = 0;
     self.greenSlider.value = 0;
     self.blueSlider.value = 0;
@@ -91,11 +101,12 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [self stopAnimation];
+
     for (UITouch *t in touches) {
         CGPoint viewPoint = [t locationInView:self.imageView];
         // If we dont already have a touch - then the first one will be the ... the firstTouch
         if (_firstTouch == nil) {
-            NSLog(@"First touch started");
             _firstTouch = t;
             
             [self beginShowingCrossHairView:_crosshairView atPoint:viewPoint primary:YES];
@@ -103,13 +114,9 @@
         }
         // If we do already have one touch, then the second one will be the secondTouch
         else if (_secondTouch == nil) {
-            NSLog(@"And YES! we found a second beginning touch!");
             _secondTouch = t;
             
             [self beginShowingCrossHairView:_crosshairView2 atPoint:viewPoint primary:NO];
-        }
-        else {
-            NSLog(@"Another touch has begun. We wont track this one.");
         }
     }
 }
@@ -119,18 +126,11 @@
     for (UITouch *t in touches) {
         CGPoint viewPoint = [t locationInView:self.imageView];
         if (t == _firstTouch) {
-            NSLog(@"First touch has moved");
-            
             [self updateCrossHairView:_crosshairView toPoint:viewPoint];
             [self updateSlidersToCrossHairView:_crosshairView];
         }
         else if (t == _secondTouch) {
-            NSLog(@"Second touch has moved");
-            
             [self updateCrossHairView:_crosshairView2 toPoint:viewPoint];
-        }
-        else {
-            NSLog(@"Another (non-tracked) touch has moved");
         }
     }
 }
@@ -139,17 +139,12 @@
 {
     for (UITouch *t in touches) {
         if (t == _firstTouch) {
-            NSLog(@"Cancelled first touch");
             _firstTouch = nil;
             [self dismissCrossHairView:_crosshairView];
         }
         else if (t == _secondTouch) {
-            NSLog(@"Cancelled second touch");
             _secondTouch = nil;
             [self dismissCrossHairView:_crosshairView2];
-        }
-        else {
-            NSLog(@"Cancelled another non-tracked touch");
         }
     }
 }
@@ -158,25 +153,93 @@
 {    
     for (UITouch *t in touches) {
         if (t == _firstTouch) {
-            NSLog(@"Ended first touch");
             _firstTouch = nil;
             [self dismissCrossHairView:_crosshairView];
+            
+            if (_secondTouch != nil) {
+                // Keep color of that point as start of animation
+                CGPoint viewPoint = [t locationInView:self.imageView];
+                startColor = [self.imageView pixerlColorAtViewLocation:viewPoint];
+            }
         }
         else if (t == _secondTouch) {
-            NSLog(@"Ended second touch");
             _secondTouch = nil;
             [self dismissCrossHairView:_crosshairView2];
             
             // If the user drops the second touch after the first one, then
             // we animate from the first one to the second one.
             if (_firstTouch == nil) {
-                NSLog(@"Let's party!");
+                CGPoint viewPoint = [t locationInView:self.imageView];
+                endColor = [self.imageView pixerlColorAtViewLocation:viewPoint];
                 
+                if (animationTimer) {
+                    [animationTimer invalidate];
+                    animationTimer = nil;
+                }
+                animationDuration = 3.0;
+                animationPosition = 0.0;
+                animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.05
+                                                                  target:self
+                                                                selector:@selector(updateAnimation:)
+                                                                userInfo:nil
+                                                                 repeats:YES];
             }
         }
-        else {
-            NSLog(@"Ended another non-tracked touch");
-        }
+    }
+}
+
+- (void) updateAnimation:(id) userInfo
+{
+    if (animationStart == nil) {
+        animationStart = [NSDate date];
+    }
+
+    animationPosition = [[NSDate date] timeIntervalSinceDate:animationStart];
+    if (animationPosition > animationDuration) {
+        // If we have reached the end - re-set the beginning date correctly
+        animationStart = [NSDate dateWithTimeInterval:animationDuration - animationPosition sinceDate:[NSDate date]];
+
+        //animationPosition = animationPosition - animationDuration;
+        animationPosition = [[NSDate date] timeIntervalSinceDate:animationStart];
+        // And inverse the colors
+        UIColor *color = endColor;
+        endColor = startColor;
+        startColor = color;
+        DDLogVerbose(@"Looping animation. start=%f position=%f", [animationStart timeIntervalSinceReferenceDate], animationPosition);
+    }
+
+    CGFloat redA, greenA, blueA;
+    CGFloat redB, greenB, blueB;
+    CGFloat alpha;
+    
+    [startColor getRed:&redA green:&greenA blue:&blueA alpha:&alpha];
+    [endColor getRed:&redB green:&greenB blue:&blueB alpha:&alpha];
+    
+    CGFloat red, green, blue;
+    
+    red = redA * (animationDuration - animationPosition) / (animationDuration)
+    + redB * (animationPosition) / animationDuration;
+    
+    green = greenA * (animationDuration - animationPosition) / (animationDuration)
+    + greenB * (animationPosition) / animationDuration;
+
+    blue = blueA * (animationDuration - animationPosition) / (animationDuration)
+    + blueB * (animationPosition) / animationDuration;
+    
+    DDLogVerbose(@"Animating to color: %0.2f %0.2f %0.2f - Position:%.1f Duration:%.1f (%f%%)",
+          red, green, blue, animationPosition, animationDuration, (animationDuration - animationPosition) / animationDuration * 100);
+    
+    self.redSlider.value = red;
+    self.greenSlider.value = green;
+    self.blueSlider.value = blue;
+    [self rgbValueUpdated:self];
+}
+
+- (void) stopAnimation
+{
+    if (animationTimer) {
+        [animationTimer invalidate];
+        animationTimer = nil;
     }
 }
 

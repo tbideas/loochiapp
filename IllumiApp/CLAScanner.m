@@ -27,6 +27,8 @@
     NSMutableSet *_foundLights;
 }
 
+static const int ddLogLevel = LOG_LEVEL_WARN;
+
 @synthesize delegate;
 
 -(id)init
@@ -66,9 +68,9 @@
     
     char buffer[BUF_LEN];
     
-    NSLog(@"Starting scan...");
+    DDLogInfo(@"Starting scan...");
     if (_socket < 0) {
-        NSLog(@"Unable to open socket: %i", _socket);
+        DDLogError(@"Unable to open socket: %i", _socket);
         return;
     }
     
@@ -77,14 +79,14 @@
     srv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     
     if (bind(_socket, (const struct sockaddr*)&srv_addr, sizeof(srv_addr)) == -1) {
-        NSLog(@"Unable to bind socket.");
+        DDLogError(@"Unable to bind socket.");
         return;
     }
     
     while(!_stopped) {
         int len = recvfrom(_socket, buffer, BUF_LEN, 0, (struct sockaddr*)&remote_addr, &remote_addr_len);
         
-        NSLog(@"Got %i bytes from %s.", len, inet_ntoa(remote_addr.sin_addr));
+        DDLogVerbose(@"Got %i bytes from %s.", len, inet_ntoa(remote_addr.sin_addr));
         dispatch_async(dispatch_get_main_queue(), ^{
             CLALight *light = [[CLALight alloc] initWithHost:[NSString stringWithCString:inet_ntoa(remote_addr.sin_addr) encoding:NSASCIIStringEncoding]];
             if (![_foundLights member:light]) {
@@ -96,7 +98,7 @@
     
     close(_socket);
     _socket = 0;
-    NSLog(@"Stopped scanning.");
+    DDLogInfo(@"Stopped scanning.");
 }
 
 @end

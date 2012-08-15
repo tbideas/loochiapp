@@ -9,6 +9,9 @@
 #import "ILAppDelegate.h"
 #import "TestFlight.h"
 
+#import "DDASLLogger.h"
+#import "DDTTYLogger.h"
+
 /* This is to avoid a warning when calling uniqueIdentifier for TestFlight */
 @protocol UIDeviceHack <NSObject>
 
@@ -20,11 +23,20 @@
 
 @synthesize window = _window;
 
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    DDLogError(@"Starting the app!");
+
     [TestFlight takeOff:@"e8642e72fc14638e855c49593d0bb606_MTE5NzQzMjAxMi0wOC0wOSAxNjo1OTowMy43MTMwNjI"];
+#ifdef DEBUG
     // TODO: Remove this in production (forbidden APIs) - Used here to improve beta reporting.
     [TestFlight setDeviceIdentifier:[(id<UIDeviceHack>)[UIDevice currentDevice] uniqueIdentifier]];
+#endif
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     

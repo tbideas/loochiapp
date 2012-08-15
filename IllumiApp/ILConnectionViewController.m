@@ -30,8 +30,6 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"low_contrast_linen.png"]];
-
     _scanner = [[CLAScanner alloc] init];
     _scanner.delegate = self;
     [_scanner startScanning];

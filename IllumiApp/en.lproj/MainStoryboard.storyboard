@@ -41,17 +41,6 @@
                                     <action selector="rgbValueUpdated:" destination="2" eventType="valueChanged" id="hNi-7n-HEu"/>
                                 </connections>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rrG-tz-iLC">
-                                <rect key="frame" x="10" y="10" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Color"/>
-                                    <segment title="White"/>
-                                </segments>
-                                <connections>
-                                    <action selector="colorModeChanged:" destination="2" eventType="valueChanged" id="W1C-EZ-Xhp"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bfb-ON-MPL">
                                 <rect key="frame" x="10" y="324" width="44" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,7 +77,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y97-r3-aj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="r19-Pl-EZV" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="M8y-Sd-KDN">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -151,7 +140,6 @@
         <class className="ILColorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ILColorViewController.h"/>
             <relationships>
-                <relationship kind="action" name="colorModeChanged:"/>
                 <relationship kind="action" name="rgbValueUpdated:"/>
                 <relationship kind="action" name="turnOffTheLight:"/>
                 <relationship kind="outlet" name="blueSlider" candidateClass="UISlider"/>

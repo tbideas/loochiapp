@@ -40,6 +40,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 -(void)viewDidLoad
 {
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"low_contrast_linen.png"]];
+    
+
     _crosshairView = [[CLATintedView alloc] initWithImage:[UIImage imageNamed:@"crosshair.png"]];
     _crosshairView.bounds = CGRectMake(0, 0, 50, 50);
     _crosshairView.alpha = 0;
@@ -65,6 +68,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     return YES;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.redSlider.value = 0;
+    self.greenSlider.value = 0;
+    self.blueSlider.value = 0;
+}
+
 #pragma mark ILLampUserProtocol
 
 - (void) setLamp:(CLALight *)light
@@ -79,18 +89,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [_clight setRed:self.redSlider.value
              green:self.greenSlider.value
               blue:self.blueSlider.value];
-}
-
--(IBAction)colorModeChanged:(id)sender
-{
-    UISegmentedControl *segmentedControl = (UISegmentedControl*) sender;
-    
-    if (segmentedControl.selectedSegmentIndex == 0) {
-        self.imageView.image = [UIImage imageNamed:@"background-color.png"];
-    }
-    else {
-        self.imageView.image = [UIImage imageNamed:@"background-white.png"];
-    }
 }
 
 -(IBAction)turnOffTheLight:(id)sender

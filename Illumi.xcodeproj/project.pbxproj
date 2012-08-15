@@ -32,8 +32,8 @@
 		E991CE6915DB175B00627CDA /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E991CC2F15DB175A00627CDA /* DispatchQueueLogFormatter.m */; };
 		E991D02915DB39BE00627CDA /* 98-palette.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D02715DB39BE00627CDA /* 98-palette.png */; };
 		E991D02A15DB39BE00627CDA /* 98-palette@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D02815DB39BE00627CDA /* 98-palette@2x.png */; };
-		E991D02D15DB3A9F00627CDA /* 29-circle-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D02B15DB3A9F00627CDA /* 29-circle-pause.png */; };
-		E991D02E15DB3A9F00627CDA /* 29-circle-pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D02C15DB3A9F00627CDA /* 29-circle-pause@2x.png */; };
+		E991D03215DB444E00627CDA /* 29-circle-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03015DB444E00627CDA /* 29-circle-pause.png */; };
+		E991D03315DB444E00627CDA /* 29-circle-pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */; };
 		E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AC353C15CCB28A004BFBBA /* background-white.png */; };
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
@@ -108,9 +108,9 @@
 		E991CC3115DB175A00627CDA /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		E991D02715DB39BE00627CDA /* 98-palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "98-palette.png"; sourceTree = SOURCE_ROOT; };
 		E991D02815DB39BE00627CDA /* 98-palette@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "98-palette@2x.png"; sourceTree = SOURCE_ROOT; };
-		E991D02B15DB3A9F00627CDA /* 29-circle-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause.png"; sourceTree = SOURCE_ROOT; };
-		E991D02C15DB3A9F00627CDA /* 29-circle-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause@2x.png"; sourceTree = SOURCE_ROOT; };
 		E991D02F15DB3B3500627CDA /* ILLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILLightClient.h; sourceTree = SOURCE_ROOT; };
+		E991D03015DB444E00627CDA /* 29-circle-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause.png"; sourceTree = SOURCE_ROOT; };
+		E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9AC353C15CCB28A004BFBBA /* background-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-white.png"; path = "IllumiApp/background-white.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
 		E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+GeometryConversion.m"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.m"; sourceTree = SOURCE_ROOT; };
@@ -171,8 +171,8 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E991D02B15DB3A9F00627CDA /* 29-circle-pause.png */,
-				E991D02C15DB3A9F00627CDA /* 29-circle-pause@2x.png */,
+				E991D03015DB444E00627CDA /* 29-circle-pause.png */,
+				E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */,
 				E991D02715DB39BE00627CDA /* 98-palette.png */,
 				E991D02815DB39BE00627CDA /* 98-palette@2x.png */,
 				E98E050B15DADB8C00DC0C1B /* Default.png */,
@@ -452,8 +452,8 @@
 				E98E050E15DADB8C00DC0C1B /* Default@2x.png in Resources */,
 				E991D02915DB39BE00627CDA /* 98-palette.png in Resources */,
 				E991D02A15DB39BE00627CDA /* 98-palette@2x.png in Resources */,
-				E991D02D15DB3A9F00627CDA /* 29-circle-pause.png in Resources */,
-				E991D02E15DB3A9F00627CDA /* 29-circle-pause@2x.png in Resources */,
+				E991D03215DB444E00627CDA /* 29-circle-pause.png in Resources */,
+				E991D03315DB444E00627CDA /* 29-circle-pause@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

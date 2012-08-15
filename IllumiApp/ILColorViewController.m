@@ -65,7 +65,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    return YES;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        return YES;
+    else
+        return NO;
 }
 
 -(void)viewWillAppear:(BOOL)animated

@@ -55,27 +55,27 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     switch (status) {
         case CLALightNotConnected:
-            NSLog(@"Connecting...");
+            DDLogVerbose(@"Connecting...");
             [self connect];
             break;
         case CLALightError:
-            NSLog(@"Re-Connecting");
+            DDLogVerbose(@"Re-Connecting");
             [self connect];
             break;
         case CLALightConnecting:
-            NSLog(@"Already connecting. Doing nothing.");
+            DDLogVerbose(@"Already connecting. Doing nothing.");
             break;
         case CLALightConnected:{
             const char *commandBytes = (const char*)[command cStringUsingEncoding:NSUTF8StringEncoding];
-            NSLog(@"Writing to stream... (%s)", commandBytes);
+            DDLogVerbose(@"Writing to stream... (%s)", commandBytes);
             if (CFWriteStreamWrite(writeStream, (const UInt8 *)commandBytes, strlen(commandBytes)) < 0) {
                 CFStreamError error = CFWriteStreamGetError(writeStream);
-                NSLog(@"Unable to write - Domain: %ld Error: %ld", error.domain, error.error);
+                DDLogWarn(@"Unable to write - Domain: %ld Error: %ld", error.domain, error.error);
             }
             break;
         }
         default:
-            NSLog(@"Something weird happening here... %i", status);
+            DDLogWarn(@"Something weird happening here... %i (lost in switch statement)", status);
             break;
     }
     return YES;
@@ -92,16 +92,16 @@ void socketReadCallback(CFReadStreamRef stream, CFStreamEventType event, void *m
             CFIndex bytesRead = CFReadStreamRead(stream, buf, BUFSIZE - 1);
             if (bytesRead > 0) {
                 buf[bytesRead] = 0;
-                NSLog(@"Server has data to read!");
-                NSLog(@">> %s", buf);
+                DDLogCVerbose(@"Server has data to read!");
+                DDLogCVerbose(@">> %s", buf);
             }
             break;
         }
         case kCFStreamEventErrorOccurred:
-            NSLog(@"A Read Stream Error Has Occurred!");
+            DDLogCWarn(@"A Read Stream Error Has Occurred!");
+            break;
         case kCFStreamEventEndEncountered:
-            NSLog(@"A Read Stream Event End!");
-        default:
+            DDLogCWarn(@"A Read Stream Event End!");
             break;
     }
     
@@ -113,25 +113,23 @@ void socketWriteCallback(CFWriteStreamRef stream, CFStreamEventType event, void 
     
     switch(event) {
         case kCFStreamEventOpenCompleted:{
-            NSLog(@"Open completed.");
+            DDLogCVerbose(@"Open completed.");
             l.status = CLALightConnected;
             break;
         }
         case kCFStreamEventCanAcceptBytes:{
-            NSLog(@"Can accept bytes.");
+            DDLogCVerbose(@"Can accept bytes.");
             break;
         }
         case kCFStreamEventErrorOccurred:
-            NSLog(@"A write Stream Error Has Occurred!");
+            DDLogCWarn(@"A write Stream Error Has Occurred!");
             l.status = CLALightError;
             [l cleanStreams];
             break;
         case kCFStreamEventEndEncountered:
-            NSLog(@"A write Stream Event End!");
+            DDLogCWarn(@"A write Stream Event End!");
             l.status = CLALightError;
             [l cleanStreams];
-            break;
-        default:
             break;
     }
     
@@ -174,7 +172,7 @@ void socketWriteCallback(CFWriteStreamRef stream, CFStreamEventType event, void 
     status = CLALightConnecting;
     if (!CFReadStreamOpen(readStream) || !CFWriteStreamOpen(writeStream))
     {
-        NSLog(@"Error while opening streams");
+        DDLogWarn(@"Error while opening streams");
         status = CLALightNotConnected;
         [self cleanStreams];
     }

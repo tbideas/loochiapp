@@ -5,7 +5,8 @@
 reconnect to the last lamp that was used-
 * -Show a "lamp picker" if the last found lamp could not be found-
 * -Make sure that the startup modal view works on iPad-
-* Make the color picker simpler: remove the gesture recognizer, add a segmented
-button in the navbar to choose between white vs colors
+* -Make the color picker simpler: remove the gesture recognizer, add a segmented
+button in the navbar to choose between white vs colors-
 * Add a tabbar and let the user switch from "static color" mode to IllumiNatur
+* Create an object that defines an effect over time - list them in the illuminatur tab
 * Write a first IllumiNature effect

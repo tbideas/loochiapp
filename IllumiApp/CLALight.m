@@ -16,6 +16,8 @@ void socketWriteCallback(CFWriteStreamRef stream, CFStreamEventType event, void 
 
 @implementation CLALight
 
+static const int ddLogLevel = LOG_LEVEL_WARN;
+
 @synthesize host;
 @synthesize status;
 
@@ -38,6 +40,15 @@ void socketWriteCallback(CFWriteStreamRef stream, CFStreamEventType event, void 
                          ];
     
     [self sendCommand:command];
+}
+
+- (void) setColor:(UIColor*) color
+{
+    float red, green, blue, alpha;
+    
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+
+    [self setRed:red green:green blue:blue];
 }
 
 - (BOOL) sendCommand:(NSString*) command;

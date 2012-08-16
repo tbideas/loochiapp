@@ -6,13 +6,21 @@
 //
 //
 
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <arpa/inet.h>
 #import "CLALight.h"
+#import "DDLog.h"
 
 #define CLAMP_PORT 2000
 
-void socketReadCallback(CFReadStreamRef stream, CFStreamEventType event, void *myPtr);
-void socketWriteCallback(CFWriteStreamRef stream, CFStreamEventType event, void *myPtr);
+@interface CLALight ()
 
+@property NSThread *thread;
+@property NSString *nextCommand;
+
+@end
 
 @implementation CLALight
 
@@ -51,139 +59,63 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self setRed:red green:green blue:blue];
 }
 
+- (void) startThread
+{
+    self.thread = [[NSThread alloc] initWithTarget:self selector:@selector(communicate:) object:nil];
+    [self.thread setThreadPriority:1.0];
+    [self.thread start];
+}
+
+#define BUFLEN 200
+
+- (void) communicate:(id) object
+{
+    struct sockaddr_in si_addr;
+    int s, slen = sizeof(si_addr);
+
+    if ((s = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1)
+    {
+        DDLogWarn(@"Unable to open socket %i", errno);
+        return;
+    }
+    
+    memset((char*) &si_addr, 0, sizeof(si_addr));
+    si_addr.sin_family = AF_INET;
+    si_addr.sin_port = htons(CLAMP_PORT);
+    if (inet_aton([self.host cStringUsingEncoding:NSASCIIStringEncoding], &si_addr.sin_addr) == 0) {
+        DDLogWarn(@"inet_aton failed");
+        return;
+    }
+    
+    NSString *lastCommand;
+    while (1) {
+        NSString *cmd;
+        @synchronized(self) {
+            cmd = [self.nextCommand copy];
+        }
+        if (cmd && ![cmd isEqualToString:lastCommand])
+        {
+            DDLogVerbose(@"Sending command: %@", cmd);
+            const char *commandBytes = (const char*)[cmd cStringUsingEncoding:NSUTF8StringEncoding];
+            lastCommand = cmd;
+            sendto(s, commandBytes, strlen(commandBytes), 0, (struct sockaddr*)&si_addr, slen);
+        }
+        // Send one command every 33ms max - That's 30 cmd/s which should be enough for most purpose
+        // and also seems to be pretty close to the Wifly limit
+        usleep(33000);
+    }
+}
+
 - (BOOL) sendCommand:(NSString*) command;
 {
-    switch (status) {
-        case CLALightNotConnected:
-            DDLogVerbose(@"Connecting...");
-            [self connect];
-            break;
-        case CLALightError:
-            DDLogVerbose(@"Re-Connecting");
-            [self connect];
-            break;
-        case CLALightConnecting:
-            DDLogVerbose(@"Already connecting. Doing nothing.");
-            break;
-        case CLALightConnected:{
-            const char *commandBytes = (const char*)[command cStringUsingEncoding:NSUTF8StringEncoding];
-            DDLogVerbose(@"Writing to stream... (%s)", commandBytes);
-            if (CFWriteStreamWrite(writeStream, (const UInt8 *)commandBytes, strlen(commandBytes)) < 0) {
-                CFStreamError error = CFWriteStreamGetError(writeStream);
-                DDLogWarn(@"Unable to write - Domain: %ld Error: %ld", error.domain, error.error);
-            }
-            break;
-        }
-        default:
-            DDLogWarn(@"Something weird happening here... %i (lost in switch statement)", status);
-            break;
+    
+    if (self.thread == nil)
+        [self startThread];
+    
+    @synchronized(self) {
+        self.nextCommand = command;
     }
     return YES;
-}
-
-
-#define BUFSIZE 1024
-
-void socketReadCallback(CFReadStreamRef stream, CFStreamEventType event, void *myPtr)
-{
-    switch(event) {
-        case kCFStreamEventHasBytesAvailable:{
-            UInt8 buf[BUFSIZE];
-            CFIndex bytesRead = CFReadStreamRead(stream, buf, BUFSIZE - 1);
-            if (bytesRead > 0) {
-                buf[bytesRead] = 0;
-                DDLogCVerbose(@"Server has data to read!");
-                DDLogCVerbose(@">> %s", buf);
-            }
-            break;
-        }
-        case kCFStreamEventErrorOccurred:
-            DDLogCWarn(@"A Read Stream Error Has Occurred!");
-            break;
-        case kCFStreamEventEndEncountered:
-            DDLogCWarn(@"A Read Stream Event End!");
-            break;
-    }
-    
-}
-
-void socketWriteCallback(CFWriteStreamRef stream, CFStreamEventType event, void *myPtr)
-{
-    CLALight *l = (__bridge CLALight*) myPtr;
-    
-    switch(event) {
-        case kCFStreamEventOpenCompleted:{
-            DDLogCVerbose(@"Open completed.");
-            l.status = CLALightConnected;
-            break;
-        }
-        case kCFStreamEventCanAcceptBytes:{
-            DDLogCVerbose(@"Can accept bytes.");
-            break;
-        }
-        case kCFStreamEventErrorOccurred:
-            DDLogCWarn(@"A write Stream Error Has Occurred!");
-            l.status = CLALightError;
-            [l cleanStreams];
-            break;
-        case kCFStreamEventEndEncountered:
-            DDLogCWarn(@"A write Stream Event End!");
-            l.status = CLALightError;
-            [l cleanStreams];
-            break;
-    }
-    
-}
-
-
-- (void) connect
-{
-    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
-                                       (__bridge CFStringRef)host,
-                                       CLAMP_PORT,
-                                       &readStream, &writeStream);
-    
-    //CFStreamClientContext myContext = { 0, NULL, NULL, NULL, NULL };
-    CFStreamClientContext myContext = {
-        0,
-        (__bridge void*)self,
-        (void *(*)(void *info))CFRetain,
-        (void (*)(void *info))CFRelease,
-        (CFStringRef (*)(void *info))CFCopyDescription
-    };
-    
-    CFOptionFlags registeredEvents = kCFStreamEventOpenCompleted
-                                    | kCFStreamEventCanAcceptBytes
-                                    | kCFStreamEventHasBytesAvailable
-                                    | kCFStreamEventErrorOccurred
-                                    | kCFStreamEventEndEncountered;
-    
-    if (CFReadStreamSetClient(readStream, registeredEvents, socketReadCallback, &myContext))
-    {
-        CFReadStreamScheduleWithRunLoop(readStream, CFRunLoopGetCurrent(),
-                                        kCFRunLoopCommonModes);
-    }
-    
-    if (CFWriteStreamSetClient(writeStream, registeredEvents, socketWriteCallback, &myContext))
-    {
-        CFWriteStreamScheduleWithRunLoop(writeStream, CFRunLoopGetCurrent(),
-                                        kCFRunLoopCommonModes);
-    }
-    status = CLALightConnecting;
-    if (!CFReadStreamOpen(readStream) || !CFWriteStreamOpen(writeStream))
-    {
-        DDLogWarn(@"Error while opening streams");
-        status = CLALightNotConnected;
-        [self cleanStreams];
-    }
-}
-
-- (void) cleanStreams
-{
-    CFReadStreamClose(readStream);
-    CFRelease(readStream);
-    CFWriteStreamClose(writeStream);
-    CFRelease(writeStream);
 }
 
 #pragma mark Override isEqual and hash to avoid creating the same light twice

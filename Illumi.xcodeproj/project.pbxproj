@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9054BE715DB582A00A52C2A /* ILFireScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E9054BE615DB582A00A52C2A /* ILFireScene.m */; };
 		E908D00B15CCA382002387E1 /* ILConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E908D00A15CCA382002387E1 /* ILConnectionViewController.m */; };
 		E908D00F15CCA3A0002387E1 /* low_contrast_linen_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */; };
 		E908D01015CCA3A0002387E1 /* low_contrast_linen.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */; };
@@ -34,6 +35,10 @@
 		E991D02A15DB39BE00627CDA /* 98-palette@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D02815DB39BE00627CDA /* 98-palette@2x.png */; };
 		E991D03215DB444E00627CDA /* 29-circle-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03015DB444E00627CDA /* 29-circle-pause.png */; };
 		E991D03315DB444E00627CDA /* 29-circle-pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */; };
+		E991D03615DB49C100627CDA /* 271-dramamasks.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03415DB49C100627CDA /* 271-dramamasks.png */; };
+		E991D03715DB49C100627CDA /* 271-dramamasks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */; };
+		E991D03A15DB49EE00627CDA /* ILScenesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E991D03915DB49EE00627CDA /* ILScenesViewController.m */; };
+		E991D04115DB575000627CDA /* ILLightScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E991D04015DB575000627CDA /* ILLightScene.m */; };
 		E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AC353C15CCB28A004BFBBA /* background-white.png */; };
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
@@ -64,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9054BE515DB582A00A52C2A /* ILFireScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILFireScene.h; sourceTree = SOURCE_ROOT; };
+		E9054BE615DB582A00A52C2A /* ILFireScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILFireScene.m; sourceTree = SOURCE_ROOT; };
 		E908CFFC15CCA011002387E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E908CFFD15CCA011002387E1 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
 		E908D00915CCA382002387E1 /* ILConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILConnectionViewController.h; path = IllumiApp/ILConnectionViewController.h; sourceTree = SOURCE_ROOT; };
@@ -111,6 +118,12 @@
 		E991D02F15DB3B3500627CDA /* ILLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILLightClient.h; sourceTree = SOURCE_ROOT; };
 		E991D03015DB444E00627CDA /* 29-circle-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause.png"; sourceTree = SOURCE_ROOT; };
 		E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause@2x.png"; sourceTree = SOURCE_ROOT; };
+		E991D03415DB49C100627CDA /* 271-dramamasks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "271-dramamasks.png"; sourceTree = SOURCE_ROOT; };
+		E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "271-dramamasks@2x.png"; sourceTree = SOURCE_ROOT; };
+		E991D03815DB49EE00627CDA /* ILScenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILScenesViewController.h; sourceTree = SOURCE_ROOT; };
+		E991D03915DB49EE00627CDA /* ILScenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILScenesViewController.m; sourceTree = SOURCE_ROOT; };
+		E991D03F15DB574F00627CDA /* ILLightScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILLightScene.h; path = IllumiApp/ILLightScene.h; sourceTree = SOURCE_ROOT; };
+		E991D04015DB575000627CDA /* ILLightScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILLightScene.m; path = IllumiApp/ILLightScene.m; sourceTree = SOURCE_ROOT; };
 		E9AC353C15CCB28A004BFBBA /* background-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-white.png"; path = "IllumiApp/background-white.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
 		E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+GeometryConversion.m"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.m"; sourceTree = SOURCE_ROOT; };
@@ -171,6 +184,8 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E991D03415DB49C100627CDA /* 271-dramamasks.png */,
+				E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */,
 				E991D03015DB444E00627CDA /* 29-circle-pause.png */,
 				E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */,
 				E991D02715DB39BE00627CDA /* 98-palette.png */,
@@ -232,11 +247,9 @@
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
 				E9E61A4915CBA8010035D49C /* ILAppDelegate.h */,
 				E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */,
-				E991D02F15DB3B3500627CDA /* ILLightClient.h */,
 				E908D00915CCA382002387E1 /* ILConnectionViewController.h */,
 				E908D00A15CCA382002387E1 /* ILConnectionViewController.m */,
-				E9E61A4D15CBA8010035D49C /* ILColorViewController.h */,
-				E9E61A4E15CBA8010035D49C /* ILColorViewController.m */,
+				E991D03E15DB4AA100627CDA /* LightViewControllers */,
 				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
 				E90BC5CB1579A42200342F89 /* Supporting Files */,
@@ -333,6 +346,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E991D03E15DB4AA100627CDA /* LightViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9E61A4D15CBA8010035D49C /* ILColorViewController.h */,
+				E9E61A4E15CBA8010035D49C /* ILColorViewController.m */,
+				E991D03815DB49EE00627CDA /* ILScenesViewController.h */,
+				E991D03915DB49EE00627CDA /* ILScenesViewController.m */,
+				E991D04315DB57DB00627CDA /* Scenes */,
+			);
+			name = LightViewControllers;
+			sourceTree = "<group>";
+		};
+		E991D04315DB57DB00627CDA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E991D03F15DB574F00627CDA /* ILLightScene.h */,
+				E991D04015DB575000627CDA /* ILLightScene.m */,
+				E9054BE515DB582A00A52C2A /* ILFireScene.h */,
+				E9054BE615DB582A00A52C2A /* ILFireScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 		E9ADB6FF15912E2C0061F79D /* UIImageView-GeometryConversion */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +397,7 @@
 				E9E61A4415CBA7DB0035D49C /* CLALight.m */,
 				E9E61A4515CBA7DB0035D49C /* CLAScanner.h */,
 				E9E61A4615CBA7DB0035D49C /* CLAScanner.m */,
+				E991D02F15DB3B3500627CDA /* ILLightClient.h */,
 			);
 			name = IllumiServices;
 			sourceTree = "<group>";
@@ -454,6 +491,8 @@
 				E991D02A15DB39BE00627CDA /* 98-palette@2x.png in Resources */,
 				E991D03215DB444E00627CDA /* 29-circle-pause.png in Resources */,
 				E991D03315DB444E00627CDA /* 29-circle-pause@2x.png in Resources */,
+				E991D03615DB49C100627CDA /* 271-dramamasks.png in Resources */,
+				E991D03715DB49C100627CDA /* 271-dramamasks@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +542,9 @@
 				E991CE6715DB175B00627CDA /* DDTTYLogger.m in Sources */,
 				E991CE6815DB175B00627CDA /* ContextFilterLogFormatter.m in Sources */,
 				E991CE6915DB175B00627CDA /* DispatchQueueLogFormatter.m in Sources */,
+				E991D03A15DB49EE00627CDA /* ILScenesViewController.m in Sources */,
+				E991D04115DB575000627CDA /* ILLightScene.m in Sources */,
+				E9054BE715DB582A00A52C2A /* ILFireScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

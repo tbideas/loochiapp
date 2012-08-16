@@ -21,7 +21,6 @@
     NSTimer *animationTimer;
     UIColor *startColor, *endColor;
     NSTimeInterval animationDuration;
-    NSTimeInterval animationPosition;
     NSDate *animationStart;
 }
 
@@ -34,7 +33,7 @@
 
 @implementation ILColorViewController
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = LOG_LEVEL_WARN;
 
 #pragma mark - View lifecycle
 
@@ -68,7 +67,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         return YES;
     else
-        return NO;
+        if (toInterfaceOrientation == UIInterfaceOrientationPortrait)
+            return YES;
+        else
+            return NO;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -185,8 +187,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
                     animationTimer = nil;
                 }
                 animationDuration = 3.0;
-                animationPosition = 0.0;
-                animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.05
+                animationStart = nil;
+                animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
                                                                   target:self
                                                                 selector:@selector(updateAnimation:)
                                                                 userInfo:nil
@@ -202,7 +204,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         animationStart = [NSDate date];
     }
 
-    animationPosition = [[NSDate date] timeIntervalSinceDate:animationStart];
+    NSTimeInterval animationPosition = [[NSDate date] timeIntervalSinceDate:animationStart];
     if (animationPosition > animationDuration) {
         // If we have reached the end - re-set the beginning date correctly
         animationStart = [NSDate dateWithTimeInterval:animationDuration - animationPosition sinceDate:[NSDate date]];

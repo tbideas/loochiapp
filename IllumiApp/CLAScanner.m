@@ -6,9 +6,10 @@
 //
 //
 
-#import <sys/socket.h>
-#import <netinet/in.h>
-#import <arpa/inet.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <fcntl.h>
 #import "CLAScanner.h"
 
 #define CLAMP_ADVERTISE_PORT 14484
@@ -16,9 +17,10 @@
 
 @interface CLAScanner ()
 {
-    BOOL _stopped;
-    int _socket;
+    CFSocketRef _cfSocket;
 }
+
+-(void)readData;
 
 @end
 
@@ -27,7 +29,7 @@
     NSMutableSet *_foundLights;
 }
 
-static const int ddLogLevel = LOG_LEVEL_WARN;
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @synthesize delegate;
 
@@ -35,70 +37,142 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     self = [super init];
     if (self) {
-        _stopped = NO;
-        _socket = 0;
         _foundLights = [NSMutableSet set];
     }
     return self;
 }
 
+-(void)dealloc
+{
+    // Make sure to stop scanning and invalidate callback before releasing object
+    DDLogVerbose(@"CLAScanner dealloc");
+    [self stopScanning];
+}
+
 -(void)startScanning
 {
-    // Only start if we are not already running.
-    if (_socket <= 0) {
-        _stopped = NO;
-        [NSThread detachNewThreadSelector:@selector(performScan) toTarget:self withObject:nil];
+    NSError *error;
+    assert(_cfSocket == nil);
+    
+    _cfSocket = [self setupServerSocketOnPort:CLAMP_ADVERTISE_PORT error:&error];
+    
+    if (_cfSocket == nil) {
+        DDLogError(@"An error occured preparing the server socket: %@", error);
     }
 }
 
 -(void)stopScanning
 {
-    _stopped = YES;
+    DDLogCVerbose(@"Closing server socket");
+    
+    // According to the doc, this will close the socket and also invalidate the runloopsource
+    CFSocketInvalidate(_cfSocket);
+    CFRelease(_cfSocket);
+    _cfSocket = nil;
 }
 
-/* 
- * Let's do some old school networking to get UDP Broadcast packet from the lamp.
- */
--(void) performScan
+
+-(CFSocketRef)setupServerSocketOnPort:(NSUInteger) port error:(NSError**)errorPtr
 {
-    _socket = socket(PF_INET, SOCK_DGRAM, 0);
+    // This whole function inspired by the UDPEcho example
+    // https://developer.apple.com/library/mac/#samplecode/UDPEcho/Listings/UDPEcho_m.html
+    int s;
+    int err = 0;
     struct sockaddr_in srv_addr;
+    CFSocketRef cfs;
+    const CFSocketContext   context = { 0, (__bridge void *)(self), NULL, NULL, NULL };
+    CFRunLoopSourceRef      rls;
+
+    
+    // Create the socket
+    s = socket(PF_INET, SOCK_DGRAM, 0);
+    if (s < 0) {
+        err = errno;
+    }
+    
+    // Bind the socket to listen
+    if (err == 0) {
+        memset(&srv_addr, 0, sizeof(srv_addr));
+        srv_addr.sin_len = sizeof(srv_addr);
+        srv_addr.sin_family = AF_INET;
+        srv_addr.sin_port = htons(port);
+        srv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+        
+        err = bind(s, (const struct sockaddr*)&srv_addr, sizeof(srv_addr));
+        if (err < 0) {
+            err = errno;
+        }
+    }
+    
+    if (err == 0) {
+        // Make sure we can reuse the socket after quitting the app/restarting
+        if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &(int){ 1 }, sizeof(int)) < 0) {
+            err = errno;
+        }
+    }
+
+    // Switch the socket to non-blocking mode
+    if (err == 0) {
+        int flags = fcntl(s, F_GETFL);
+        if (fcntl(s, F_SETFL, flags | O_NONBLOCK) < 0) {
+            err = errno;
+        }
+    }
+    
+    // Wrap the native socket in a CFSocket
+    if (err == 0) {
+        cfs = CFSocketCreateWithNative(NULL, s, kCFSocketReadCallBack, SocketReadCallback, &context);
+        s = -1;
+        
+        rls = CFSocketCreateRunLoopSource(NULL, cfs, 0);
+        
+        CFRunLoopAddSource(CFRunLoopGetCurrent(), rls, kCFRunLoopDefaultMode);
+        CFRelease(rls);
+    }
+    
+    
+    // Return configured CFSocket or report error.
+    if (err == 0) {
+        return cfs;
+    }
+    else {
+        *errorPtr = [NSError errorWithDomain:NSPOSIXErrorDomain code:err userInfo:nil];
+        return nil;
+    }
+}
+
+/* This C routine is called by CFSocket when there's data waiting on our      *
+ * UDP socket.  It just redirects the call to Objective-C code.               */
+static void SocketReadCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address, const void *data, void *info)
+{
+    CLAScanner *obj;
+    
+    obj = (__bridge CLAScanner *) info;
+    assert([obj isKindOfClass:[CLAScanner class]]);
+    
+    DDLogCVerbose(@"SocketReadCallback");
+    [obj readData];
+}
+
+/* Called by the C callback when there is data to be read on the socket. */
+-(void)readData
+{
+    DDLogCVerbose(@"readData");
+    int s, len;
+    char buffer[BUF_LEN];
     struct sockaddr_in remote_addr;
     socklen_t remote_addr_len = sizeof(remote_addr);
+
+    s = CFSocketGetNative(_cfSocket);
+    len = recvfrom(s, buffer, BUF_LEN, 0, (struct sockaddr*)&remote_addr, &remote_addr_len);
     
-    char buffer[BUF_LEN];
-    
-    DDLogInfo(@"Starting scan...");
-    if (_socket < 0) {
-        DDLogError(@"Unable to open socket: %i", _socket);
-        return;
+    DDLogVerbose(@"Got %i bytes from %s.", len, inet_ntoa(remote_addr.sin_addr));
+
+    CLALight *light = [[CLALight alloc] initWithHost:[NSString stringWithCString:inet_ntoa(remote_addr.sin_addr) encoding:NSASCIIStringEncoding]];
+    if (![_foundLights member:light]) {
+        [_foundLights addObject:light];
+        [self.delegate newClightDetected:light];
     }
-    
-    srv_addr.sin_family = AF_INET;
-    srv_addr.sin_port = htons(CLAMP_ADVERTISE_PORT);
-    srv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    
-    if (bind(_socket, (const struct sockaddr*)&srv_addr, sizeof(srv_addr)) == -1) {
-        DDLogError(@"Unable to bind socket.");
-        return;
-    }
-    
-    while(!_stopped) {
-        int len = recvfrom(_socket, buffer, BUF_LEN, 0, (struct sockaddr*)&remote_addr, &remote_addr_len);
-        
-        DDLogVerbose(@"Got %i bytes from %s.", len, inet_ntoa(remote_addr.sin_addr));
-        dispatch_async(dispatch_get_main_queue(), ^{
-            CLALight *light = [[CLALight alloc] initWithHost:[NSString stringWithCString:inet_ntoa(remote_addr.sin_addr) encoding:NSASCIIStringEncoding]];
-            if (![_foundLights member:light]) {
-                [_foundLights addObject:light];
-                [self.delegate newClightDetected:light];
-            }
-        });
-    }
-    
-    close(_socket);
-    _socket = 0;
-    DDLogInfo(@"Stopped scanning.");
 }
 
 @end

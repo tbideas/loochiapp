@@ -23,6 +23,8 @@
 
 @interface ILAppDelegate ()
 
+@property BOOL firstLaunch;
+
 @end
 
 @implementation ILAppDelegate
@@ -30,6 +32,17 @@
 @synthesize window = _window;
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
+-(id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        _firstLaunch = YES;
+    }
+    return self;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -43,24 +56,42 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     // This is disabled in production (forbidden APIs) - Used here to improve beta reporting.
     [TestFlight setDeviceIdentifier:[(id<UIDeviceHack>)[UIDevice currentDevice] uniqueIdentifier]];
 #endif
-    
-    // FIXME
-    // I have to create the window manually and the initial View Controller by
-    // hand - otherwise the modal view does not appear for some weird reasons...
-    UIViewController *mainViewController = self.window.rootViewController;
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window makeKeyAndVisible];
-    self.window.rootViewController = mainViewController;
-
-    // Create and show the connection window
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
-    cvc.delegate = self;
-    [self.window.rootViewController presentModalViewController:cvc animated:NO];
-
     [TestFlight passCheckpoint:@"LAUNCH"];
 
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    DDLogInfo(@"applicationDidBecomeActive");
+    
+    // Display the connection window until we are sure to have a connection
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
+    cvc.delegate = self;
+    
+    // On first launch, we do not want the animation because the splash screen matches the selection view
+    if (!_firstLaunch) {
+        [self.window.rootViewController presentModalViewController:cvc animated:YES];
+    }
+    else {
+        [self.window.rootViewController presentModalViewController:cvc animated:NO];
+        _firstLaunch = NO;
+    }
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    DDLogInfo(@"applicationWillResignActive");
+    
+    // If the connection window is still there - dismiss it
+    // It will be re-created when becoming active again
+    // We do this to make sure that the associated network sockets are closed on resign
+    // and restarted on becomeActive.
+    
+    if (self.window.rootViewController.modalViewController != nil) {
+        [self.window.rootViewController dismissModalViewControllerAnimated:NO];
+    }
 }
 
 #pragma mark ILConnectionDelegate
@@ -85,16 +116,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark default stuff
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-     */
-}
-
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    DDLogInfo(@"applicationDidEnterBackground");
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -103,20 +127,15 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    DDLogInfo(@"applicationWillEnterForeground");
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
-}
-
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    DDLogInfo(@"applicationWillTerminate");
     /*
      Called when the application is about to terminate.
      Save data if appropriate.

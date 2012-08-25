@@ -23,7 +23,7 @@
 
 @interface ILAppDelegate ()
 
-@property BOOL firstLaunch;
+@property BOOL animateConnectionViewApperance;
 
 @end
 
@@ -39,7 +39,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     if (self)
     {
-        _firstLaunch = YES;
+        // When the app is started, we do not want the animation - we want a
+        // smooth transition from the splash screen to the connectionVC
+        _animateConnectionViewApperance = NO;
     }
     return self;
 }
@@ -70,14 +72,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
     cvc.delegate = self;
     
-    // On first launch, we do not want the animation because the splash screen matches the selection view
-    if (!_firstLaunch) {
-        [self.window.rootViewController presentModalViewController:cvc animated:YES];
-    }
-    else {
-        [self.window.rootViewController presentModalViewController:cvc animated:NO];
-        _firstLaunch = NO;
-    }
+    [self.window.rootViewController presentModalViewController:cvc animated:_animateConnectionViewApperance];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -91,6 +86,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     if (self.window.rootViewController.modalViewController != nil) {
         [self.window.rootViewController dismissModalViewControllerAnimated:NO];
+
+        // Do not animate because we want the user to think it stayed there.
+        _animateConnectionViewApperance = NO;
+    }
+    else {
+        // Animate the view next time we start
+        _animateConnectionViewApperance = YES;
     }
 }
 

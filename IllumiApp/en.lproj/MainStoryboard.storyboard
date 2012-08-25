@@ -84,8 +84,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="c4R-rl-hZ7"/>
-                        <segue destination="w1i-ug-HmF" kind="relationship" relationship="viewControllers" id="6tR-hw-i1J"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="0gn-6p-FGP"/>
+                        <segue destination="w1i-ug-HmF" kind="relationship" relationship="viewControllers" id="8u0-9H-Pge"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -177,6 +177,28 @@
         <image name="Default.png" width="320" height="480"/>
         <image name="background-color.png" width="1024" height="1024"/>
     </resources>
+    <classes>
+        <class className="ILColorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ILColorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="rgbValueUpdated:"/>
+                <relationship kind="action" name="turnOffTheLight:"/>
+                <relationship kind="outlet" name="blueSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="greenSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="redSlider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="ILConnectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ILConnectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="useADemoIllumi:"/>
+            </relationships>
+        </class>
+        <class className="ILScenesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ILScenesViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

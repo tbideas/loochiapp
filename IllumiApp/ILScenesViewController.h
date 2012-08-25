@@ -11,6 +11,6 @@
 
 @interface ILScenesViewController : UITableViewController<ILLightClient>
 
-@property CLALight *lamp;
+@property (nonatomic, retain) CLALight *lamp;
 
 @end

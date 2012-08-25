@@ -81,20 +81,13 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     self.blueSlider.value = 0;
 }
 
-#pragma mark ILLampUserProtocol
-
-- (void) setLamp:(CLALight *)light
-{
-    self.clight = light;
-}
-
 #pragma mark Methods for UI elements
 
 - (IBAction)rgbValueUpdated:(id)sender
 {
-    [_clight setRed:self.redSlider.value
-             green:self.greenSlider.value
-              blue:self.blueSlider.value];
+    [self.lamp setRed:self.redSlider.value
+                green:self.greenSlider.value
+                 blue:self.blueSlider.value];
 }
 
 -(IBAction)turnOffTheLight:(id)sender

@@ -6,18 +6,15 @@
 //
 //
 
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netinet/tcp.h>
-#include <arpa/inet.h>
 #import "CLALight.h"
 #import "DDLog.h"
+#import "LOOUDPThread.h"
 
 #define CLAMP_PORT 2000
 
 @interface CLALight ()
 
-@property NSThread *thread;
+@property LOOUDPThread *thread;
 @property NSString *nextCommand;
 
 @end
@@ -37,6 +34,11 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         status = CLALightNotConnected;
     }
     return self;
+}
+
+-(void) dealloc
+{
+    [self stopThread];
 }
 
 -(void) setRed:(float)red green:(float)green blue:(float) blue
@@ -59,62 +61,32 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self setRed:red green:green blue:blue];
 }
 
-- (void) startThread
+-(void) startThread
 {
-    self.thread = [[NSThread alloc] initWithTarget:self selector:@selector(communicate:) object:nil];
-    [self.thread setThreadPriority:1.0];
-    [self.thread start];
+    if (self.thread == nil || [self.thread isFinished]) {
+        self.thread = [[LOOUDPThread alloc] init];
+        self.thread.host = self.host;
+        self.thread.port = CLAMP_PORT;
+
+        [self.thread setThreadPriority:1.0];
+        [self.thread start];
+    }
+}
+
+-(void) stopThread
+{
+    [self.thread cancel];
 }
 
 #define BUFLEN 200
 
-- (void) communicate:(id) object
-{
-    struct sockaddr_in si_addr;
-    int s, slen = sizeof(si_addr);
-
-    if ((s = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1)
-    {
-        DDLogWarn(@"Unable to open socket %i", errno);
-        return;
-    }
-    
-    memset((char*) &si_addr, 0, sizeof(si_addr));
-    si_addr.sin_family = AF_INET;
-    si_addr.sin_port = htons(CLAMP_PORT);
-    if (inet_aton([self.host cStringUsingEncoding:NSASCIIStringEncoding], &si_addr.sin_addr) == 0) {
-        DDLogWarn(@"inet_aton failed");
-        return;
-    }
-    
-    NSString *lastCommand;
-    while (1) {
-        NSString *cmd;
-        @synchronized(self) {
-            cmd = [self.nextCommand copy];
-        }
-        if (cmd && ![cmd isEqualToString:lastCommand])
-        {
-            DDLogVerbose(@"Sending command: %@", cmd);
-            const char *commandBytes = (const char*)[cmd cStringUsingEncoding:NSUTF8StringEncoding];
-            lastCommand = cmd;
-            sendto(s, commandBytes, strlen(commandBytes), 0, (struct sockaddr*)&si_addr, slen);
-        }
-        // Send one command every 33ms max - That's 30 cmd/s which should be enough for most purpose
-        // and also seems to be pretty close to the Wifly limit
-        usleep(33000);
-    }
-}
 
 - (BOOL) sendCommand:(NSString*) command;
 {
-    
-    if (self.thread == nil)
+    if (self.thread == nil || [self.thread isFinished])
         [self startThread];
     
-    @synchronized(self) {
-        self.nextCommand = command;
-    }
+    self.thread.nextCommand = command;
     return YES;
 }
 

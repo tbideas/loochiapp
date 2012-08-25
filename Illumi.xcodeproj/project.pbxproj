@@ -41,6 +41,7 @@
 		E991D03715DB49C100627CDA /* 271-dramamasks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */; };
 		E991D04115DB575000627CDA /* ILLightScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E991D04015DB575000627CDA /* ILLightScene.m */; };
 		E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AC353C15CCB28A004BFBBA /* background-white.png */; };
+		E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */; };
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
 		E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */; };
@@ -128,6 +129,8 @@
 		E991D03F15DB574F00627CDA /* ILLightScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILLightScene.h; path = IllumiApp/ILLightScene.h; sourceTree = SOURCE_ROOT; };
 		E991D04015DB575000627CDA /* ILLightScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILLightScene.m; path = IllumiApp/ILLightScene.m; sourceTree = SOURCE_ROOT; };
 		E9AC353C15CCB28A004BFBBA /* background-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-white.png"; path = "IllumiApp/background-white.png"; sourceTree = SOURCE_ROOT; };
+		E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPThread.m; path = IllumiApp/LOOUDPThread.m; sourceTree = SOURCE_ROOT; };
+		E9E2C57915E8B1C400C4B5D1 /* LOOUDPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPThread.h; path = IllumiApp/LOOUDPThread.h; sourceTree = SOURCE_ROOT; };
 		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
 		E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+GeometryConversion.m"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.m"; sourceTree = SOURCE_ROOT; };
 		E9E61A3D15CBA7C70035D49C /* CLATintedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLATintedView.h; path = IllumiApp/CLATintedView.h; sourceTree = SOURCE_ROOT; };
@@ -406,6 +409,8 @@
 		E9DBDA4F158D683200EE2B9D /* IllumiServices */ = {
 			isa = PBXGroup;
 			children = (
+				E9E2C57915E8B1C400C4B5D1 /* LOOUDPThread.h */,
+				E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */,
 				E9E61A4315CBA7DB0035D49C /* CLALight.h */,
 				E9E61A4415CBA7DB0035D49C /* CLALight.m */,
 				E9E61A4515CBA7DB0035D49C /* CLAScanner.h */,
@@ -559,6 +564,7 @@
 				E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */,
 				E97F239C15E85F2C003A38D9 /* ILScenesViewController.m in Sources */,
 				E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */,
+				E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

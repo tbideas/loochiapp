@@ -12,7 +12,7 @@
 
 @interface ILColorViewController : UIViewController<ILLightClient>
 
-@property (nonatomic, retain) CLALight* clight;
+@property (nonatomic, retain) CLALight* lamp;
 
 -(IBAction)turnOffTheLight:(id)sender;
 

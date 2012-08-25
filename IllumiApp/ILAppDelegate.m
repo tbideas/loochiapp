@@ -94,6 +94,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         // Animate the view next time we start
         _animateConnectionViewApperance = YES;
     }
+    
+    // Get rid of existing connection
+    [self setLampOnViewControllers:nil];
 }
 
 #pragma mark ILConnectionDelegate
@@ -102,6 +105,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     [TestFlight passCheckpoint:@"CONNECTED"];
 
+    [self setLampOnViewControllers:illumi];
+    
+    [self.window.rootViewController dismissModalViewControllerAnimated:YES];
+}
+
+-(void)setLampOnViewControllers:(CLALight*)lamp
+{
     if ([self.window.rootViewController isKindOfClass:[UITabBarController class]])
     {
         UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
@@ -109,11 +119,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         {
             if ([vc conformsToProtocol:@protocol(ILLightClient)]) {
                 id<ILLightClient> lampVC = (id<ILLightClient>)vc;
-                [lampVC setLamp:illumi];
+
+                [lampVC setLamp:lamp];
             }
         }
     }
-    [self.window.rootViewController dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark default stuff

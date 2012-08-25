@@ -7,8 +7,12 @@
 //
 
 #import "ILFireScene.h"
+#import "UIColor+ILColor.h"
 
 @interface ILFireScene ()
+{
+    UIColor *startColor, *endColor;
+}
 
 @end
 
@@ -18,6 +22,8 @@
 {
     self = [super init];
     if (self) {
+        startColor = [UIColor redColor];
+        endColor = [UIColor orangeColor];
     }
     return self;
 }
@@ -29,23 +35,13 @@
 
 - (NSTimeInterval) duration
 {
-    return 10.0;
+    return 0.5;
 }
 
 - (UIColor*) colorForTime:(NSTimeInterval)timeInAnimation
 {
-    float red, green, blue;
-    
-    red = 0.8;
-    green = 0.2 + 2/3 * fabs(random() * 1.0 / LONG_MAX);
-    blue = 1/5 * fabs(random() * 1.0 / LONG_MAX);
-    
-    float alpha = fabs(random() * 1.0 / LONG_MAX);
-    red *= alpha;
-    green *= alpha;
-    blue *= alpha;
-    
-    return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    // Returns the interpolation of the two colors
+    return [UIColor colorByInterpolatingFrom:startColor to:endColor at:timeInAnimation/[self duration]];
 }
 
 @end

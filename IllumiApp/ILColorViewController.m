@@ -9,6 +9,7 @@
 #import "ILColorViewController.h"
 #import "UIImageView+ColorPicker.h"
 #import "CLATintedView.h"
+#import "UIColor+ILColor.h"
 
 @interface ILColorViewController ()
 {
@@ -218,23 +219,9 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         DDLogVerbose(@"Looping animation. start=%f position=%f", [animationStart timeIntervalSinceReferenceDate], animationPosition);
     }
 
-    CGFloat redA, greenA, blueA;
-    CGFloat redB, greenB, blueB;
-    CGFloat alpha;
-    
-    [startColor getRed:&redA green:&greenA blue:&blueA alpha:&alpha];
-    [endColor getRed:&redB green:&greenB blue:&blueB alpha:&alpha];
-    
-    CGFloat red, green, blue;
-    
-    red = redA * (animationDuration - animationPosition) / (animationDuration)
-    + redB * (animationPosition) / animationDuration;
-    
-    green = greenA * (animationDuration - animationPosition) / (animationDuration)
-    + greenB * (animationPosition) / animationDuration;
-
-    blue = blueA * (animationDuration - animationPosition) / (animationDuration)
-    + blueB * (animationPosition) / animationDuration;
+    UIColor *newColor = [UIColor colorByInterpolatingFrom:startColor to:endColor at:(animationDuration - animationPosition) / animationDuration];
+    float red, green, blue;
+    [newColor getRed:&red green:&green blue:&blue alpha:nil];
     
     DDLogVerbose(@"Animating to color: %0.2f %0.2f %0.2f - Position:%.1f Duration:%.1f (%f%%)",
           red, green, blue, animationPosition, animationDuration, (animationDuration - animationPosition) / animationDuration * 100);

@@ -7,8 +7,8 @@
 //
 
 #import "ILScenesViewController.h"
-
 #import "ILFireScene.h"
+#import "DDLog.h"
 
 @interface ILScenesViewController ()
 {
@@ -23,7 +23,7 @@
 
 @implementation ILScenesViewController
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

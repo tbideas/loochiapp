@@ -81,6 +81,11 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     self.blueSlider.value = 0;
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self turnOffTheLight:nil];
+}
+
 #pragma mark Methods for UI elements
 
 - (IBAction)rgbValueUpdated:(id)sender

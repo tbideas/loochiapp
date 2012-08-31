@@ -43,7 +43,13 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        return YES;
+    else
+        if (interfaceOrientation == UIInterfaceOrientationPortrait)
+            return YES;
+        else
+            return NO;
 }
 
 
@@ -60,9 +66,7 @@
 {
     [TestFlight passCheckpoint:@"DEMO"];
 
-    self.selectedLamp = [[CLALight alloc] initWithHost:@"127.0.0.1"];
-    
-    [self.delegate selectedIllumi:self.selectedLamp];
+    [self.delegate selectedIllumi:nil];
 }
 
 @end

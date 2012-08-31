@@ -68,7 +68,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     DDLogInfo(@"applicationDidBecomeActive");
     
     // Display the connection window until we are sure to have a connection
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIStoryboard *storyboard;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        storyboard = [UIStoryboard storyboardWithName:@"LargeStoryboard" bundle:nil];
+    else
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    
     ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
     cvc.delegate = self;
     

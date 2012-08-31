@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E907057515F01B4E001A23E5 /* ILRainbowScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E907057415F01B4E001A23E5 /* ILRainbowScene.m */; };
 		E908D00B15CCA382002387E1 /* ILConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E908D00A15CCA382002387E1 /* ILConnectionViewController.m */; };
 		E908D00F15CCA3A0002387E1 /* low_contrast_linen_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */; };
 		E908D01015CCA3A0002387E1 /* low_contrast_linen.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */; };
@@ -71,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E907057315F01B4E001A23E5 /* ILRainbowScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILRainbowScene.h; path = IllumiApp/ILRainbowScene.h; sourceTree = SOURCE_ROOT; };
+		E907057415F01B4E001A23E5 /* ILRainbowScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILRainbowScene.m; path = IllumiApp/ILRainbowScene.m; sourceTree = SOURCE_ROOT; };
 		E908CFFC15CCA011002387E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E908CFFD15CCA011002387E1 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
 		E908D00915CCA382002387E1 /* ILConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILConnectionViewController.h; path = IllumiApp/ILConnectionViewController.h; sourceTree = SOURCE_ROOT; };
@@ -381,6 +384,8 @@
 				E991D04015DB575000627CDA /* ILLightScene.m */,
 				E97F239D15E85F3B003A38D9 /* ILFireScene.h */,
 				E97F239E15E85F3B003A38D9 /* ILFireScene.m */,
+				E907057315F01B4E001A23E5 /* ILRainbowScene.h */,
+				E907057415F01B4E001A23E5 /* ILRainbowScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				E97F239C15E85F2C003A38D9 /* ILScenesViewController.m in Sources */,
 				E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */,
 				E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */,
+				E907057515F01B4E001A23E5 /* ILRainbowScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

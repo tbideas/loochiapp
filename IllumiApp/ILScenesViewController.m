@@ -8,6 +8,7 @@
 
 #import "ILScenesViewController.h"
 #import "ILFireScene.h"
+#import "ILRainbowScene.h"
 #import "DDLog.h"
 
 @interface ILScenesViewController ()
@@ -25,20 +26,15 @@
 
 static const int ddLogLevel = LOG_LEVEL_WARN;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"low_contrast_linen.png"]]];
+    self.scenesTablesView.backgroundView = nil; // needed on ipads
     
-    self.scenes = @[ [[ILFireScene alloc] init] ];
+    self.scenes = @[ [[ILFireScene alloc] init],
+                     [[ILRainbowScene alloc] init] ];
 }
 
 - (void)viewDidUnload
@@ -48,7 +44,18 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        return YES;
+    else
+        if (interfaceOrientation == UIInterfaceOrientationPortrait)
+            return YES;
+        else
+            return NO;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.scenesTablesView reloadData];
 }
 
 - (void) viewWillDisappear:(BOOL)animated
@@ -77,6 +84,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     ILLightScene *scene = [_scenes objectAtIndex:indexPath.row];
     cell.textLabel.text  = scene.description;
     
+    if (scene == currentScene) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
@@ -86,6 +99,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     ILLightScene *scene = [_scenes objectAtIndex:indexPath.row];
     [self startScene:scene];
+    [tableView reloadData];
 }
 
 #pragma mark - Animation functions
@@ -106,7 +120,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 - (void) animateScene
 {
     NSTimeInterval scenePosition = [[NSDate date] timeIntervalSinceDate:sceneStart];
-    if (scenePosition > currentScene.duration) {
+    if (scenePosition >= currentScene.duration) {
         // If we have reached the end - re-set the beginning date correctly
         sceneStart = [NSDate dateWithTimeInterval:currentScene.duration - scenePosition sinceDate:[NSDate date]];
         
@@ -120,7 +134,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     float red, green, blue;
     [nowColor getRed:&red green:&green blue:&blue alpha:nil];
     DDLogVerbose(@"Effect '%@' Pos=%2.2f %.2f/%.2f/%.2f", currentScene.description, scenePosition, red, green, blue);
-    [self.lamp setRed:red green:green blue:blue];
+    [self.lamp setColor:nowColor];
+    [self.colorView setBackgroundColor:nowColor];
 }
 
 - (void) stopScene
@@ -128,6 +143,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [sceneTimer invalidate];
     sceneTimer = nil;
     [self.lamp setColor:[UIColor blackColor]];
+    currentScene = nil;
 }
 
 @end

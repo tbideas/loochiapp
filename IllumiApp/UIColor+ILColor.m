@@ -21,9 +21,9 @@
     
     CGFloat red, green, blue;
     
-    red = redA * position + redB * (1 - position);
-    green = greenA * position + greenB * (1 - position);
-    blue = blueA * position + blueB * (1 - position);
+    red = redA * (1 - position) + redB * position;
+    green = greenA * (1 - position) + greenB * position;
+    blue = blueA * (1 - position) + blueB * position;
     
     return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
 }

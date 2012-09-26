@@ -55,6 +55,7 @@
 		E9CDA5F7161293CA0097A47E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CDA5F3161293CA0097A47E /* libTestFlight.a */; };
 		E9CDA5F8161293CA0097A47E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5F4161293CA0097A47E /* README.md */; };
 		E9CDA5F9161293CA0097A47E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5F5161293CA0097A47E /* release_notes.md */; };
+		E9CDA5FB161296A60097A47E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5FA161296A60097A47E /* Default-568h@2x.png */; };
 		E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */; };
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
@@ -166,6 +167,7 @@
 		E9CDA5F4161293CA0097A47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E9CDA5F5161293CA0097A47E /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
 		E9CDA5F6161293CA0097A47E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		E9CDA5FA161296A60097A47E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPThread.m; path = IllumiApp/LOOUDPThread.m; sourceTree = SOURCE_ROOT; };
 		E9E2C57915E8B1C400C4B5D1 /* LOOUDPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPThread.h; path = IllumiApp/LOOUDPThread.h; sourceTree = SOURCE_ROOT; };
 		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
@@ -265,6 +267,7 @@
 		E90BC5B51579A42200342F89 = {
 			isa = PBXGroup;
 			children = (
+				E9CDA5FA161296A60097A47E /* Default-568h@2x.png */,
 				E908CFFC15CCA011002387E1 /* README.md */,
 				E908CFFD15CCA011002387E1 /* TODO.md */,
 				E90BC5CA1579A42200342F89 /* IllumiApp */,
@@ -594,6 +597,7 @@
 				E985645C15F173D2004EB431 /* 194-note-2@2x.png in Resources */,
 				E9CDA5F8161293CA0097A47E /* README.md in Resources */,
 				E9CDA5F9161293CA0097A47E /* release_notes.md in Resources */,
+				E9CDA5FB161296A60097A47E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

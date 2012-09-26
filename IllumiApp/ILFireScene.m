@@ -26,7 +26,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     self = [super init];
     if (self) {
         baseColor = [UIColor colorWithRed:(float)0xFF/0xFF green:(float)0x00/0xFF blue:(float)0x00/0xFF alpha:1];
-        brightColor = [UIColor colorWithRed:(float)0xFF/0xFF green:(float)0x8A/0xFF blue:(float)0x00/0xFF alpha:1];
+        brightColor = [UIColor colorWithRed:(float)0xFF/0xFF green:(float)0x6A/0xFF blue:(float)0x00/0xFF alpha:1];
         brightness = 0;
     }
     return self;
@@ -50,12 +50,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     // Sometimes the fire goes brighter
     float alea = RANDF();
-    if (alea > 0.98) {
-        brightness = MIN(1, brightness + RANDF() / 4);
+    if (alea > 0.95) {
+        brightness = MIN(1, brightness + RANDF() / 3);
         DDLogVerbose(@"Fire boost! brightness now %.3f (alea = %.4f)", brightness, alea);
     }
     // The fire always diminishes
-    brightness = MAX(0, brightness - brightness*brightness / 50);
+    brightness = MAX(0, brightness - brightness*brightness / 100);
     
     DDLogVerbose(@"Brightness is %.3f", brightness);
     // Returns the interpolation of the two colors

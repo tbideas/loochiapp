@@ -11,5 +11,6 @@
 @interface UIColor (ILColor)
 
 + (UIColor*) colorByInterpolatingFrom:(UIColor*) colorA to:(UIColor*) colorB at:(float)position;
++ (UIColor *)colorFromHexString:(NSString *)hexString;
 
 @end

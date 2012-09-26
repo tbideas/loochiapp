@@ -10,4 +10,7 @@
 
 @interface ILRainbowScene : ILLightScene
 
+- (id) initWithColors:(NSArray*) colors andDurationPerColor:(NSTimeInterval) duration
+       andDescription:(NSString*) description andRepeat:(BOOL) repeat;
+
 @end

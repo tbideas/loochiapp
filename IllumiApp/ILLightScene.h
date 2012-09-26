@@ -12,6 +12,7 @@
 
 @property (readonly) NSString *description;
 @property (readonly) NSTimeInterval duration;
+@property (readonly) BOOL repeat;
 
 - (UIColor*) colorForTime:(NSTimeInterval)timeInAnimation;
 

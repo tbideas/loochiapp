@@ -9,6 +9,7 @@
 #import "ILScenesViewController.h"
 #import "ILFireScene.h"
 #import "ILRainbowScene.h"
+#import "UIColor+ILColor.h"
 #import "DDLog.h"
 
 @interface ILScenesViewController ()
@@ -32,9 +33,95 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"low_contrast_linen.png"]]];
     self.scenesTablesView.backgroundView = nil; // needed on ipads
-    
-    self.scenes = @[ [[ILFireScene alloc] init],
-                     [[ILRainbowScene alloc] init] ];
+ 
+    NSMutableArray *scenes = [[NSMutableArray alloc] initWithCapacity:10];
+
+    [scenes addObject:[[ILFireScene alloc] init]];
+    [scenes addObject:
+        [[ILRainbowScene alloc] initWithColors:@[
+         [UIColor blackColor],
+         [UIColor redColor],
+         [UIColor orangeColor],
+         [UIColor yellowColor],
+         [UIColor greenColor],
+         [UIColor blueColor],
+         [UIColor colorWithRed:(float)0x4B/0xFF green:0x00/0xFF blue:(float)0x82/0xFF alpha:1],
+         [UIColor purpleColor],
+         [UIColor blackColor]
+         ]
+                           andDurationPerColor:1 andDescription:@"Rainbow" andRepeat:YES] ];
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+        [UIColor colorFromHexString:@"#000030"], // blue
+        [UIColor colorFromHexString:@"#804000"], // orange
+        [UIColor colorFromHexString:@"#808000"], // yellow
+        [UIColor colorFromHexString:@"#FFFF33"] // white
+      ] andDurationPerColor:30 andDescription:@"Sunrise"  andRepeat:NO]];
+
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+      [UIColor colorFromHexString:@"#FFFF33"],
+      [UIColor colorFromHexString:@"#808000"], // yellow
+      [UIColor colorFromHexString:@"#804000"], // orange
+      [UIColor colorFromHexString:@"#000030"],
+     ] andDurationPerColor:30 andDescription:@"Sunset" andRepeat:NO]];
+
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+      [UIColor colorFromHexString:@"#A06065"],
+      [UIColor blueColor],
+      [UIColor colorFromHexString:@"#A06065"],
+      ] andDurationPerColor:10 andDescription:@"Love Scene" andRepeat:YES] ];
+
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+      [UIColor blackColor],
+      [UIColor colorFromHexString:@"#0000FF"],
+      [UIColor blackColor],
+      ] andDurationPerColor:0.25 andDescription:@"Boris-Dance Blue!" andRepeat:YES] ];
+
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+      [UIColor blackColor],
+      [UIColor colorFromHexString:@"#FF0000"],
+      [UIColor blackColor],
+      [UIColor blackColor],
+      ] andDurationPerColor:0.1 andDescription:@"Boris-Dance Red!" andRepeat:YES] ];
+
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+      [UIColor blackColor],
+      [UIColor colorFromHexString:@"#FFD033"],
+      [UIColor blackColor],
+      ] andDurationPerColor:0.15 andDescription:@"Boris-Dance White!" andRepeat:YES] ];
+
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+      [UIColor colorFromHexString:@"#000010"], // blue
+      [UIColor colorFromHexString:@"#000010"], // blue
+      [UIColor colorFromHexString:@"#000010"], // blue
+      [UIColor colorFromHexString:@"#000010"], // blue
+      [UIColor colorFromHexString:@"#000010"], // blue
+      [UIColor colorFromHexString:@"#000010"], // blue
+      [UIColor colorFromHexString:@"#000010"], // blue
+      [UIColor colorFromHexString:@"#C0C000"], // blue
+      [UIColor colorFromHexString:@"#000010"], // blue
+      ] andDurationPerColor:0.5 andDescription:@"Lighthouse" andRepeat:YES] ];
+
+    [scenes addObject:
+     [[ILRainbowScene alloc] initWithColors:@[
+      [UIColor redColor],
+      [UIColor blueColor],
+      [UIColor yellowColor],
+      [UIColor purpleColor],
+      [UIColor orangeColor],
+      [UIColor colorWithRed:(float)0x4B/0xFF green:0x00/0xFF blue:(float)0x82/0xFF alpha:1],
+      [UIColor greenColor],
+      [UIColor redColor]
+      ]
+                        andDurationPerColor:0.2 andDescription:@"Crazy Colors" andRepeat:YES] ];
+
+    self.scenes = scenes;
 }
 
 - (void)viewDidUnload
@@ -121,12 +208,20 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     NSTimeInterval scenePosition = [[NSDate date] timeIntervalSinceDate:sceneStart];
     if (scenePosition >= currentScene.duration) {
-        // If we have reached the end - re-set the beginning date correctly
-        sceneStart = [NSDate dateWithTimeInterval:currentScene.duration - scenePosition sinceDate:[NSDate date]];
-        
-        scenePosition = [[NSDate date] timeIntervalSinceDate:sceneStart];
+        if (currentScene.repeat) {
+            // If we have reached the end - re-set the beginning date correctly
+            sceneStart = [NSDate dateWithTimeInterval:currentScene.duration - scenePosition sinceDate:[NSDate date]];
+            
+            scenePosition = [[NSDate date] timeIntervalSinceDate:sceneStart];
 
-        DDLogVerbose(@"Looping animation. start=%f position=%f", [sceneStart timeIntervalSinceReferenceDate], scenePosition);
+            DDLogVerbose(@"Looping animation. start=%f position=%f", [sceneStart timeIntervalSinceReferenceDate], scenePosition);
+        }
+        else {
+            [sceneTimer invalidate];
+            sceneTimer = nil;
+            currentScene = nil;
+            return;
+        }
     }
 
     UIColor *nowColor = [currentScene colorForTime:scenePosition];

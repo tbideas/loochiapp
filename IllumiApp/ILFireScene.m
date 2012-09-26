@@ -19,14 +19,14 @@
 
 @implementation ILFireScene
 
-static const int ddLogLevel = LOG_LEVEL_WARN;
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (id) init
 {
     self = [super init];
     if (self) {
-        baseColor = [UIColor colorWithRed:(float)0xFF/0xFF green:(float)0x00/0xFF blue:(float)0x00/0xFF alpha:1];
-        brightColor = [UIColor colorWithRed:(float)0xFF/0xFF green:(float)0x6A/0xFF blue:(float)0x00/0xFF alpha:1];
+        baseColor = [UIColor colorFromHexString:@"#FF8000"];
+        brightColor = [UIColor colorFromHexString:@"#FFFF30"];
         brightness = 0;
     }
     return self;
@@ -50,8 +50,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     // Sometimes the fire goes brighter
     float alea = RANDF();
-    if (alea > 0.95) {
-        brightness = MIN(1, brightness + RANDF() / 3);
+    if (alea > 0.98) {
+        brightness = MIN(1, brightness + RANDF() / 5);
         DDLogVerbose(@"Fire boost! brightness now %.3f (alea = %.4f)", brightness, alea);
     }
     // The fire always diminishes

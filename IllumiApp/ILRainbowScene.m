@@ -11,49 +11,57 @@
 
 @interface ILRainbowScene ()
 
+@property NSString *description;
+@property NSTimeInterval durationPerColor;
 @property NSArray *colors;
+@property (readwrite) BOOL repeat;
 
 @end
 
 @implementation ILRainbowScene
 
-#define TIME_PER_COLOR 1
+// Have to synthesize the property I override.
+@synthesize description;
+@synthesize repeat;
 
 - (id) init
 {
     self = [super init];
     if (self) {
-        _colors = @[ [UIColor blackColor], [UIColor redColor], [UIColor orangeColor],
-                    [UIColor yellowColor], [UIColor greenColor], [UIColor blueColor],
-                    [UIColor colorWithRed:(float)0x4B/0xFF green:0x00/0xFF blue:(float)0x82/0xFF alpha:1],
-                    [UIColor purpleColor]];
     }
     return self;
 }
 
-- (NSString*) description
-{
-    return @"Rainbow";
+- (id) initWithColors:(NSArray*) colors andDurationPerColor:(NSTimeInterval) duration
+       andDescription:(NSString*) aDescription andRepeat:(BOOL) aRepeat
+{   self = [super init];
+    if (self) {
+        _colors = colors;
+        _durationPerColor = duration;
+        description = aDescription;
+        repeat = aRepeat;
+    }
+    return self;
 }
 
 - (NSTimeInterval) duration
 {
-    return TIME_PER_COLOR * [_colors count];
+    return _durationPerColor * ([_colors count] - 1);
 }
 
 - (UIColor*) colorForTime:(NSTimeInterval)timeInAnimation
 {
-    UIColor *prevColor = [_colors objectAtIndex:floor(timeInAnimation / TIME_PER_COLOR)];
+    UIColor *prevColor = [_colors objectAtIndex:floor(timeInAnimation / _durationPerColor)];
     
-    int nextIndex = ceil(timeInAnimation / TIME_PER_COLOR);
+    int nextIndex = ceil(timeInAnimation / _durationPerColor);
     // Loop around when we reach the end
     if (nextIndex >= [_colors count]) {
         nextIndex = 0;
     }
     UIColor *nextColor = [_colors objectAtIndex:nextIndex];
-    
-    NSLog(@"PrevColor=%@ NextColor=%@", prevColor, nextColor);
-    return [UIColor colorByInterpolatingFrom:prevColor to:nextColor at:timeInAnimation - floor(timeInAnimation)];
+        
+    float position = fmod(timeInAnimation, _durationPerColor) / _durationPerColor;
+    return [UIColor colorByInterpolatingFrom:prevColor to:nextColor at:position];
 }
 
 @end

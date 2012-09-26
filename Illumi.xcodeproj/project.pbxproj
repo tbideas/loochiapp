@@ -18,14 +18,24 @@
 		E90BC5E41579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
 		E90BC5E51579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
 		E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */; };
+		E92B000015F04F5F00EBD2F4 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */; };
+		E92B000315F050D600EBD2F4 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */; };
+		E92B000515F050F700EBD2F4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92B000415F050F700EBD2F4 /* Accelerate.framework */; };
+		E92B000815F0812E00EBD2F4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92B000615F0812E00EBD2F4 /* AudioToolbox.framework */; };
+		E92BFFEE15F04B3800EBD2F4 /* LOOSoundViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFED15F04B3800EBD2F4 /* LOOSoundViewController.mm */; };
+		E92BFFF415F04F2F00EBD2F4 /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */; };
+		E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */; };
+		E92BFFFF15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */; };
 		E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD315CBA97300C23B8D /* InfoPlist.strings */; };
 		E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */; };
 		E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */; };
 		E97F239C15E85F2C003A38D9 /* ILScenesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */; };
 		E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239E15E85F3B003A38D9 /* ILFireScene.m */; };
+		E985645815F1710F004EB431 /* DCRejectionFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E985645715F1710F004EB431 /* DCRejectionFilter.mm */; };
+		E985645B15F173D2004EB431 /* 194-note-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E985645915F173D2004EB431 /* 194-note-2.png */; };
+		E985645C15F173D2004EB431 /* 194-note-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E985645A15F173D2004EB431 /* 194-note-2@2x.png */; };
 		E98E050D15DADB8C00DC0C1B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E98E050B15DADB8C00DC0C1B /* Default.png */; };
 		E98E050E15DADB8C00DC0C1B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98E050C15DADB8C00DC0C1B /* Default@2x.png */; };
-		E98E052415DAE8E000DC0C1B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E98E052015DAE8E000DC0C1B /* libTestFlight.a */; };
 		E98E052815DAE92800DC0C1B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E98E052715DAE92800DC0C1B /* libz.dylib */; };
 		E991CE6315DB175B00627CDA /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E991CC2215DB175A00627CDA /* DDAbstractDatabaseLogger.m */; };
 		E991CE6415DB175B00627CDA /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E991CC2415DB175A00627CDA /* DDASLLogger.m */; };
@@ -87,6 +97,23 @@
 		E90BC5E11579A42200342F89 /* IllumiAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IllumiAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5E21579A42200342F89 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
+		E92B000215F050D600EBD2F4 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
+		E92B000415F050F700EBD2F4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		E92B000615F0812E00EBD2F4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E92B000715F0812E00EBD2F4 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		E92BFFEC15F04B3800EBD2F4 /* LOOSoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOSoundViewController.h; path = IllumiApp/AudioAnalysis/LOOSoundViewController.h; sourceTree = SOURCE_ROOT; };
+		E92BFFED15F04B3800EBD2F4 /* LOOSoundViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LOOSoundViewController.mm; path = IllumiApp/AudioAnalysis/LOOSoundViewController.mm; sourceTree = SOURCE_ROOT; };
+		E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FFTBufferManager.cpp; path = IllumiApp/AudioAnalysis/FFTBufferManager.cpp; sourceTree = SOURCE_ROOT; };
+		E92BFFF315F04F2F00EBD2F4 /* FFTBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFTBufferManager.h; path = IllumiApp/AudioAnalysis/FFTBufferManager.h; sourceTree = SOURCE_ROOT; };
+		E92BFFF615F04F5F00EBD2F4 /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
+		E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		E92BFFF815F04F5F00EBD2F4 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		E92BFFF915F04F5F00EBD2F4 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		E92BFFFB15F04F5F00EBD2F4 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IllumiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = IllumiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "IllumiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
@@ -96,12 +123,12 @@
 		E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILScenesViewController.m; path = IllumiApp/ILScenesViewController.m; sourceTree = SOURCE_ROOT; };
 		E97F239D15E85F3B003A38D9 /* ILFireScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILFireScene.h; path = IllumiApp/ILFireScene.h; sourceTree = SOURCE_ROOT; };
 		E97F239E15E85F3B003A38D9 /* ILFireScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILFireScene.m; path = IllumiApp/ILFireScene.m; sourceTree = SOURCE_ROOT; };
+		E985645615F170BD004EB431 /* DCRejectionFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCRejectionFilter.h; path = IllumiApp/AudioAnalysis/DCRejectionFilter.h; sourceTree = SOURCE_ROOT; };
+		E985645715F1710F004EB431 /* DCRejectionFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DCRejectionFilter.mm; path = IllumiApp/AudioAnalysis/DCRejectionFilter.mm; sourceTree = SOURCE_ROOT; };
+		E985645915F173D2004EB431 /* 194-note-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2.png"; sourceTree = SOURCE_ROOT; };
+		E985645A15F173D2004EB431 /* 194-note-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2@2x.png"; sourceTree = SOURCE_ROOT; };
 		E98E050B15DADB8C00DC0C1B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		E98E050C15DADB8C00DC0C1B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		E98E052015DAE8E000DC0C1B /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		E98E052115DAE8E000DC0C1B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		E98E052215DAE8E000DC0C1B /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
-		E98E052315DAE8E000DC0C1B /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		E98E052715DAE92800DC0C1B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E991CC0915DB175A00627CDA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E991CC0A15DB175A00627CDA /* .hgignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .hgignore; sourceTree = "<group>"; };
@@ -168,12 +195,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92B000815F0812E00EBD2F4 /* AudioToolbox.framework in Frameworks */,
+				E92B000515F050F700EBD2F4 /* Accelerate.framework in Frameworks */,
 				E98E052815DAE92800DC0C1B /* libz.dylib in Frameworks */,
 				E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */,
 				E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */,
 				E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */,
 				E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */,
-				E98E052415DAE8E000DC0C1B /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +230,8 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E985645915F173D2004EB431 /* 194-note-2.png */,
+				E985645A15F173D2004EB431 /* 194-note-2@2x.png */,
 				E991D03415DB49C100627CDA /* 271-dramamasks.png */,
 				E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */,
 				E991D03015DB444E00627CDA /* 29-circle-pause.png */,
@@ -229,7 +259,6 @@
 			children = (
 				E908CFFC15CCA011002387E1 /* README.md */,
 				E908CFFD15CCA011002387E1 /* TODO.md */,
-				E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */,
 				E90BC5CA1579A42200342F89 /* IllumiApp */,
 				E90BC5E81579A42200342F89 /* IllumiAppTests */,
 				E90BC5C31579A42200342F89 /* Frameworks */,
@@ -249,6 +278,10 @@
 		E90BC5C31579A42200342F89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E92B000615F0812E00EBD2F4 /* AudioToolbox.framework */,
+				E92B000715F0812E00EBD2F4 /* AudioUnit.framework */,
+				E92B000415F050F700EBD2F4 /* Accelerate.framework */,
+				E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */,
 				E98E052715DAE92800DC0C1B /* libz.dylib */,
 				E90BC5C41579A42200342F89 /* UIKit.framework */,
 				E90BC5C61579A42200342F89 /* Foundation.framework */,
@@ -261,6 +294,7 @@
 		E90BC5CA1579A42200342F89 /* IllumiApp */ = {
 			isa = PBXGroup;
 			children = (
+				E92BFFEA15F04AF600EBD2F4 /* AudioAnalysis */,
 				E9054BE815DC8B2200A52C2A /* Category */,
 				E9C5BD35158DA23300B724BF /* UIKit */,
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
@@ -273,7 +307,6 @@
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
 				E90BC5CB1579A42200342F89 /* Supporting Files */,
 				E908470315928FE2003746E6 /* Resources */,
-				E98E051F15DAE8E000DC0C1B /* TestFlightSDK1.0 */,
 				E991CC0815DB175A00627CDA /* CocoaLumberjack */,
 			);
 			name = IllumiApp;
@@ -309,16 +342,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E98E051F15DAE8E000DC0C1B /* TestFlightSDK1.0 */ = {
+		E92BFFEA15F04AF600EBD2F4 /* AudioAnalysis */ = {
 			isa = PBXGroup;
 			children = (
-				E98E052015DAE8E000DC0C1B /* libTestFlight.a */,
-				E98E052115DAE8E000DC0C1B /* README.txt */,
-				E98E052215DAE8E000DC0C1B /* release_notes.txt */,
-				E98E052315DAE8E000DC0C1B /* TestFlight.h */,
+				E92BFFF515F04F5F00EBD2F4 /* iPublicUtility */,
+				E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */,
+				E92BFFF315F04F2F00EBD2F4 /* FFTBufferManager.h */,
+				E92BFFEC15F04B3800EBD2F4 /* LOOSoundViewController.h */,
+				E92BFFED15F04B3800EBD2F4 /* LOOSoundViewController.mm */,
+				E985645615F170BD004EB431 /* DCRejectionFilter.h */,
+				E985645715F1710F004EB431 /* DCRejectionFilter.mm */,
 			);
-			name = TestFlightSDK1.0;
-			path = IllumiApp/TestFlightSDK1.0;
+			name = AudioAnalysis;
+			sourceTree = "<group>";
+		};
+		E92BFFF515F04F5F00EBD2F4 /* iPublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */,
+				E92B000215F050D600EBD2F4 /* CADebugPrintf.h */,
+				E92BFFF615F04F5F00EBD2F4 /* CABitOperations.h */,
+				E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */,
+				E92BFFF815F04F5F00EBD2F4 /* CADebugMacros.h */,
+				E92BFFF915F04F5F00EBD2F4 /* CAMath.h */,
+				E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */,
+				E92BFFFB15F04F5F00EBD2F4 /* CAStreamBasicDescription.h */,
+				E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */,
+				E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */,
+			);
+			name = iPublicUtility;
+			path = IllumiApp/AudioAnalysis/iPublicUtility;
 			sourceTree = SOURCE_ROOT;
 		};
 		E991CC0815DB175A00627CDA /* CocoaLumberjack */ = {
@@ -516,6 +569,8 @@
 				E991D03315DB444E00627CDA /* 29-circle-pause@2x.png in Resources */,
 				E991D03615DB49C100627CDA /* 271-dramamasks.png in Resources */,
 				E991D03715DB49C100627CDA /* 271-dramamasks@2x.png in Resources */,
+				E985645B15F173D2004EB431 /* 194-note-2.png in Resources */,
+				E985645C15F173D2004EB431 /* 194-note-2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +626,13 @@
 				E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */,
 				E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */,
 				E907057515F01B4E001A23E5 /* ILRainbowScene.m in Sources */,
+				E92BFFEE15F04B3800EBD2F4 /* LOOSoundViewController.mm in Sources */,
+				E92BFFF415F04F2F00EBD2F4 /* FFTBufferManager.cpp in Sources */,
+				E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */,
+				E92BFFFF15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp in Sources */,
+				E92B000015F04F5F00EBD2F4 /* CAXException.cpp in Sources */,
+				E92B000315F050D600EBD2F4 /* CADebugPrintf.cpp in Sources */,
+				E985645815F1710F004EB431 /* DCRejectionFilter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +729,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.0\"",
+					"\"$(SRCROOT)/../../Downloads/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -685,6 +748,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.0\"",
+					"\"$(SRCROOT)/../../Downloads/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

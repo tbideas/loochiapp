@@ -6,13 +6,15 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <CoreBluetooth/CoreBluetooth.h>
+
 #import "ILAppDelegate.h"
 #import "TestFlight.h"
 
 #import "DDASLLogger.h"
 #import "DDTTYLogger.h"
 
-#import "ILLightClient.h"
+#import "LOOLightClient.h"
 
 /* This is to avoid a warning when calling uniqueIdentifier for TestFlight */
 @protocol UIDeviceHack <NSObject>
@@ -21,9 +23,10 @@
 
 @end
 
-@interface ILAppDelegate ()
+@interface ILAppDelegate () <CBCentralManagerDelegate>
 
 @property BOOL animateConnectionViewApperance;
+@property CBCentralManager *cbManager;
 
 @end
 
@@ -60,6 +63,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #endif
     [TestFlight passCheckpoint:@"LAUNCH"];
 
+    if (!self.cbManager) {
+        self.cbManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    }
     return YES;
 }
 
@@ -74,7 +80,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     else
         storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
-    ILConnectionViewController *cvc = (ILConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
+    LOOConnectionViewController *cvc = (LOOConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
     cvc.delegate = self;
     
     [self.window.rootViewController presentModalViewController:cvc animated:_animateConnectionViewApperance];
@@ -106,7 +112,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark ILConnectionDelegate
 
-- (void) selectedIllumi:(CLALight *)illumi
+- (void) selectedIllumi:(LOOUDPLamp *)illumi
 {
     [TestFlight passCheckpoint:@"CONNECTED"];
 
@@ -115,15 +121,15 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [self.window.rootViewController dismissModalViewControllerAnimated:YES];
 }
 
--(void)setLampOnViewControllers:(CLALight*)lamp
+-(void)setLampOnViewControllers:(LOOUDPLamp*)lamp
 {
     if ([self.window.rootViewController isKindOfClass:[UITabBarController class]])
     {
         UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
         for (UIViewController *vc in tabBarController.viewControllers)
         {
-            if ([vc conformsToProtocol:@protocol(ILLightClient)]) {
-                id<ILLightClient> lampVC = (id<ILLightClient>)vc;
+            if ([vc conformsToProtocol:@protocol(LOOLightClient)]) {
+                id<LOOLightClient> lampVC = (id<LOOLightClient>)vc;
 
                 [lampVC setLamp:lamp];
             }
@@ -158,6 +164,29 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+#pragma mark CBCentralManagerDelegate
+
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    if (central.state == CBCentralManagerStatePoweredOn) {
+        DDLogVerbose(@"CBCentralManager powered on");
+        [central scanForPeripheralsWithServices:nil options:nil];
+    }
+    else if (central.state == CBCentralManagerStatePoweredOff) {
+        DDLogVerbose(@"CBCentralManager powered off");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bluetooth is off" message:@"Please turn on Bluetooth in Settings to connect to Bluetooth lamps." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else {
+        DDLogVerbose(@"CBCentralManager state: %i", central.state);
+    }
+}
+
+- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
+{
+    DDLogVerbose(@"Discovered peripheral: %@ advertisement %@ RSSI: %@", [peripheral description], [advertisementData description], [RSSI description]);
 }
 
 @end

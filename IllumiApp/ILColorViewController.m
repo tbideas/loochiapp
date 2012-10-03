@@ -90,9 +90,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (IBAction)rgbValueUpdated:(id)sender
 {
-    [self.lamp setRed:self.redSlider.value
-                green:self.greenSlider.value
-                 blue:self.blueSlider.value];
+    [self.lamp setColor:[UIColor colorWithRed:self.redSlider.value
+                                        green:self.greenSlider.value
+                                         blue:self.blueSlider.value
+                                        alpha:1.0]];
 }
 
 -(IBAction)turnOffTheLight:(id)sender

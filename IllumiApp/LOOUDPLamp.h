@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LOOLamp.h"
 
 typedef enum
 {
@@ -16,7 +17,7 @@ typedef enum
     CLALightError
 } CLALightStatus;
 
-@interface CLALight : NSObject
+@interface LOOUDPLamp : LOOLamp
 
 - (id) initWithHost:(NSString*)host;
 - (void) setRed:(float)red green:(float)green blue:(float) blue;

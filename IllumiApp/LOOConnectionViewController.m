@@ -6,17 +6,18 @@
 //
 //
 
-#import "ILConnectionViewController.h"
+#import "LOOConnectionViewController.h"
 #import "TestFlight.h"
+#import "LOOUDPScanner.h"
 
-@interface ILConnectionViewController ()
+@interface LOOConnectionViewController ()
 {
-    CLAScanner *_scanner;
+    LOOUDPScanner *_scanner;
 }
 
 @end
 
-@implementation ILConnectionViewController
+@implementation LOOConnectionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +31,7 @@
 {
     [super viewDidLoad];
     
-    _scanner = [[CLAScanner alloc] init];
+    _scanner = [[LOOUDPScanner alloc] init];
     _scanner.delegate = self;
     [_scanner startScanning];
 }
@@ -55,7 +56,7 @@
 
 #pragma mark CLAScannerDelegate
 
--(void) newClightDetected:(CLALight*)light
+-(void) newLampDetected:(LOOLamp *)light
 {
     self.selectedLamp = light;
 

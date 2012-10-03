@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ILConnectionViewController.h"
+#import "LOOConnectionViewController.h"
 #import "ILColorViewController.h"
 
-@interface ILAppDelegate : UIResponder <UIApplicationDelegate, ILConnectionDelegate>
+@interface ILAppDelegate : UIResponder <UIApplicationDelegate, LOOConnectionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

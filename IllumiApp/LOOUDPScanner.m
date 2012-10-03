@@ -10,12 +10,12 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
-#import "CLAScanner.h"
+#import "LOOUDPScanner.h"
 
 #define CLAMP_ADVERTISE_PORT 14484
 #define BUF_LEN 1000
 
-@interface CLAScanner ()
+@interface LOOUDPScanner ()
 {
     CFSocketRef _cfSocket;
 }
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation CLAScanner
+@implementation LOOUDPScanner
 {
     NSMutableSet *_foundLights;
 }
@@ -122,8 +122,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     // Wrap the native socket in a CFSocket
     if (err == 0) {
         cfs = CFSocketCreateWithNative(NULL, s, kCFSocketReadCallBack, SocketReadCallback, &context);
-        s = -1;
-        
         rls = CFSocketCreateRunLoopSource(NULL, cfs, 0);
         
         CFRunLoopAddSource(CFRunLoopGetCurrent(), rls, kCFRunLoopDefaultMode);
@@ -136,7 +134,9 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         return cfs;
     }
     else {
-        *errorPtr = [NSError errorWithDomain:NSPOSIXErrorDomain code:err userInfo:nil];
+        if (errorPtr) {
+            *errorPtr = [NSError errorWithDomain:NSPOSIXErrorDomain code:err userInfo:nil];
+        }
         return nil;
     }
 }
@@ -145,10 +145,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
  * UDP socket.  It just redirects the call to Objective-C code.               */
 static void SocketReadCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address, const void *data, void *info)
 {
-    CLAScanner *obj;
+    LOOUDPScanner *obj;
     
-    obj = (__bridge CLAScanner *) info;
-    assert([obj isKindOfClass:[CLAScanner class]]);
+    obj = (__bridge LOOUDPScanner *) info;
+    assert([obj isKindOfClass:[LOOUDPScanner class]]);
     
     DDLogCVerbose(@"SocketReadCallback");
     [obj readData];
@@ -168,10 +168,10 @@ static void SocketReadCallback(CFSocketRef s, CFSocketCallBackType type, CFDataR
     
     DDLogVerbose(@"Got %i bytes from %s.", len, inet_ntoa(remote_addr.sin_addr));
 
-    CLALight *light = [[CLALight alloc] initWithHost:[NSString stringWithCString:inet_ntoa(remote_addr.sin_addr) encoding:NSASCIIStringEncoding]];
+    LOOUDPLamp *light = [[LOOUDPLamp alloc] initWithHost:[NSString stringWithCString:inet_ntoa(remote_addr.sin_addr) encoding:NSASCIIStringEncoding]];
     if (![_foundLights member:light]) {
         [_foundLights addObject:light];
-        [self.delegate newClightDetected:light];
+        [self.delegate newLampDetected:light];
     }
 }
 

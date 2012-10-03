@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CLALight.h"
-#import "ILLightClient.h"
+#import "LOOLamp.h"
+#import "LOOLightClient.h"
 
-@interface ILColorViewController : UIViewController<ILLightClient>
+@interface ILColorViewController : UIViewController<LOOLightClient>
 
-@property (nonatomic, retain) CLALight* lamp;
+@property (nonatomic, retain) LOOLamp* lamp;
 
 -(IBAction)turnOffTheLight:(id)sender;
 

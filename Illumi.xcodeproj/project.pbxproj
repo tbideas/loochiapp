@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E907057515F01B4E001A23E5 /* ILRainbowScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E907057415F01B4E001A23E5 /* ILRainbowScene.m */; };
-		E908D00B15CCA382002387E1 /* ILConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E908D00A15CCA382002387E1 /* ILConnectionViewController.m */; };
 		E908D00F15CCA3A0002387E1 /* low_contrast_linen_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */; };
 		E908D01015CCA3A0002387E1 /* low_contrast_linen.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */; };
+		E90A65E716165AD00085EE8A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A65E616165AD00085EE8A /* CoreBluetooth.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E90A65ED16165F8C0085EE8A /* LOOUDPScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A65EC16165F8C0085EE8A /* LOOUDPScanner.m */; };
 		E90BC5C51579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
 		E90BC5C71579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
 		E90BC5C91579A42200342F89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C81579A42200342F89 /* CoreGraphics.framework */; };
@@ -26,6 +27,10 @@
 		E92BFFF415F04F2F00EBD2F4 /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */; };
 		E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */; };
 		E92BFFFF15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */; };
+		E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */; };
+		E95BC47B161CDA5700E56DDC /* LOOBLEScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47A161CDA5700E56DDC /* LOOBLEScanner.m */; };
+		E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47D161CDA8200E56DDC /* LOOLamp.m */; };
+		E95BC482161CDA8200E56DDC /* LOOScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC480161CDA8200E56DDC /* LOOScanner.m */; };
 		E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD315CBA97300C23B8D /* InfoPlist.strings */; };
 		E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */; };
 		E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */; };
@@ -60,8 +65,7 @@
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
 		E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */; };
-		E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4415CBA7DB0035D49C /* CLALight.m */; };
-		E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4615CBA7DB0035D49C /* CLAScanner.m */; };
+		E9E61A4715CBA7DB0035D49C /* LOOUDPLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */; };
 		E9E61A5015CBA8010035D49C /* ILAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */; };
 		E9E61A5215CBA8010035D49C /* ILColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* ILColorViewController.m */; };
 		E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */; };
@@ -90,10 +94,11 @@
 		E907057415F01B4E001A23E5 /* ILRainbowScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILRainbowScene.m; path = IllumiApp/ILRainbowScene.m; sourceTree = SOURCE_ROOT; };
 		E908CFFC15CCA011002387E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E908CFFD15CCA011002387E1 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
-		E908D00915CCA382002387E1 /* ILConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILConnectionViewController.h; path = IllumiApp/ILConnectionViewController.h; sourceTree = SOURCE_ROOT; };
-		E908D00A15CCA382002387E1 /* ILConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILConnectionViewController.m; path = IllumiApp/ILConnectionViewController.m; sourceTree = SOURCE_ROOT; };
+		E908D00915CCA382002387E1 /* LOOConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOConnectionViewController.h; path = IllumiApp/LOOConnectionViewController.h; sourceTree = SOURCE_ROOT; };
 		E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "low_contrast_linen_@2X.png"; sourceTree = SOURCE_ROOT; };
 		E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = low_contrast_linen.png; sourceTree = SOURCE_ROOT; };
+		E90A65E616165AD00085EE8A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		E90A65EC16165F8C0085EE8A /* LOOUDPScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPScanner.m; path = IllumiApp/LOOUDPScanner.m; sourceTree = SOURCE_ROOT; };
 		E90BC5C01579A42200342F89 /* IllumiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IllumiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,11 +123,18 @@
 		E92BFFFB15F04F5F00EBD2F4 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
 		E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOConnectionViewController.m; path = IllumiApp/LOOConnectionViewController.m; sourceTree = SOURCE_ROOT; };
+		E95BC479161CDA5700E56DDC /* LOOBLEScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOBLEScanner.h; path = IllumiApp/LOOBLEScanner.h; sourceTree = SOURCE_ROOT; };
+		E95BC47A161CDA5700E56DDC /* LOOBLEScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOBLEScanner.m; path = IllumiApp/LOOBLEScanner.m; sourceTree = SOURCE_ROOT; };
+		E95BC47C161CDA8200E56DDC /* LOOLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLamp.h; path = IllumiApp/LOOLamp.h; sourceTree = SOURCE_ROOT; };
+		E95BC47D161CDA8200E56DDC /* LOOLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOLamp.m; path = IllumiApp/LOOLamp.m; sourceTree = SOURCE_ROOT; };
+		E95BC47E161CDA8200E56DDC /* LOOLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLightClient.h; path = IllumiApp/LOOLightClient.h; sourceTree = SOURCE_ROOT; };
+		E95BC47F161CDA8200E56DDC /* LOOScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOScanner.h; path = IllumiApp/LOOScanner.h; sourceTree = SOURCE_ROOT; };
+		E95BC480161CDA8200E56DDC /* LOOScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOScanner.m; path = IllumiApp/LOOScanner.m; sourceTree = SOURCE_ROOT; };
 		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IllumiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = IllumiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "IllumiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
 		E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ILColor.m"; path = "IllumiApp/UIColor+ILColor.m"; sourceTree = SOURCE_ROOT; };
-		E97F239915E85F1C003A38D9 /* ILLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILLightClient.h; path = IllumiApp/ILLightClient.h; sourceTree = SOURCE_ROOT; };
 		E97F239A15E85F2C003A38D9 /* ILScenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILScenesViewController.h; path = IllumiApp/ILScenesViewController.h; sourceTree = SOURCE_ROOT; };
 		E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILScenesViewController.m; path = IllumiApp/ILScenesViewController.m; sourceTree = SOURCE_ROOT; };
 		E97F239D15E85F3B003A38D9 /* ILFireScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILFireScene.h; path = IllumiApp/ILFireScene.h; sourceTree = SOURCE_ROOT; };
@@ -176,10 +188,9 @@
 		E9E61A3E15CBA7C70035D49C /* CLATintedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLATintedView.m; path = IllumiApp/CLATintedView.m; sourceTree = SOURCE_ROOT; };
 		E9E61A3F15CBA7C70035D49C /* UIImageView+ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ColorPicker.h"; path = "IllumiApp/UIImageView+ColorPicker.h"; sourceTree = SOURCE_ROOT; };
 		E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ColorPicker.m"; path = "IllumiApp/UIImageView+ColorPicker.m"; sourceTree = SOURCE_ROOT; };
-		E9E61A4315CBA7DB0035D49C /* CLALight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLALight.h; path = IllumiApp/CLALight.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4415CBA7DB0035D49C /* CLALight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLALight.m; path = IllumiApp/CLALight.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4515CBA7DB0035D49C /* CLAScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAScanner.h; path = IllumiApp/CLAScanner.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4615CBA7DB0035D49C /* CLAScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAScanner.m; path = IllumiApp/CLAScanner.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4315CBA7DB0035D49C /* LOOUDPLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPLamp.h; path = IllumiApp/LOOUDPLamp.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPLamp.m; path = IllumiApp/LOOUDPLamp.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4515CBA7DB0035D49C /* LOOUDPScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPScanner.h; path = IllumiApp/LOOUDPScanner.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4915CBA8010035D49C /* ILAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILAppDelegate.h; path = IllumiApp/ILAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILAppDelegate.m; path = IllumiApp/ILAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4D15CBA8010035D49C /* ILColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILColorViewController.h; path = IllumiApp/ILColorViewController.h; sourceTree = SOURCE_ROOT; };
@@ -204,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90A65E716165AD00085EE8A /* CoreBluetooth.framework in Frameworks */,
 				E92B000815F0812E00EBD2F4 /* AudioToolbox.framework in Frameworks */,
 				E92B000515F050F700EBD2F4 /* Accelerate.framework in Frameworks */,
 				E98E052815DAE92800DC0C1B /* libz.dylib in Frameworks */,
@@ -267,6 +279,7 @@
 		E90BC5B51579A42200342F89 = {
 			isa = PBXGroup;
 			children = (
+				E90A65E616165AD00085EE8A /* CoreBluetooth.framework */,
 				E9CDA5FA161296A60097A47E /* Default-568h@2x.png */,
 				E908CFFC15CCA011002387E1 /* README.md */,
 				E908CFFD15CCA011002387E1 /* TODO.md */,
@@ -305,14 +318,15 @@
 		E90BC5CA1579A42200342F89 /* IllumiApp */ = {
 			isa = PBXGroup;
 			children = (
+				E95BC473161CC6D400E56DDC /* LOOScanner */,
 				E92BFFEA15F04AF600EBD2F4 /* AudioAnalysis */,
 				E9054BE815DC8B2200A52C2A /* Category */,
 				E9C5BD35158DA23300B724BF /* UIKit */,
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
 				E9E61A4915CBA8010035D49C /* ILAppDelegate.h */,
 				E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */,
-				E908D00915CCA382002387E1 /* ILConnectionViewController.h */,
-				E908D00A15CCA382002387E1 /* ILConnectionViewController.m */,
+				E908D00915CCA382002387E1 /* LOOConnectionViewController.h */,
+				E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */,
 				E991D03E15DB4AA100627CDA /* LightViewControllers */,
 				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
@@ -385,6 +399,19 @@
 			name = iPublicUtility;
 			path = IllumiApp/AudioAnalysis/iPublicUtility;
 			sourceTree = SOURCE_ROOT;
+		};
+		E95BC473161CC6D400E56DDC /* LOOScanner */ = {
+			isa = PBXGroup;
+			children = (
+				E95BC47F161CDA8200E56DDC /* LOOScanner.h */,
+				E95BC480161CDA8200E56DDC /* LOOScanner.m */,
+				E9E61A4515CBA7DB0035D49C /* LOOUDPScanner.h */,
+				E90A65EC16165F8C0085EE8A /* LOOUDPScanner.m */,
+				E95BC479161CDA5700E56DDC /* LOOBLEScanner.h */,
+				E95BC47A161CDA5700E56DDC /* LOOBLEScanner.m */,
+			);
+			name = LOOScanner;
+			sourceTree = "<group>";
 		};
 		E991CC0815DB175A00627CDA /* CocoaLumberjack */ = {
 			isa = PBXGroup;
@@ -491,13 +518,13 @@
 		E9DBDA4F158D683200EE2B9D /* IllumiServices */ = {
 			isa = PBXGroup;
 			children = (
+				E95BC47E161CDA8200E56DDC /* LOOLightClient.h */,
+				E95BC47C161CDA8200E56DDC /* LOOLamp.h */,
+				E95BC47D161CDA8200E56DDC /* LOOLamp.m */,
 				E9E2C57915E8B1C400C4B5D1 /* LOOUDPThread.h */,
 				E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */,
-				E9E61A4315CBA7DB0035D49C /* CLALight.h */,
-				E9E61A4415CBA7DB0035D49C /* CLALight.m */,
-				E9E61A4515CBA7DB0035D49C /* CLAScanner.h */,
-				E9E61A4615CBA7DB0035D49C /* CLAScanner.m */,
-				E97F239915E85F1C003A38D9 /* ILLightClient.h */,
+				E9E61A4315CBA7DB0035D49C /* LOOUDPLamp.h */,
+				E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */,
 			);
 			name = IllumiServices;
 			sourceTree = "<group>";
@@ -634,12 +661,10 @@
 				E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */,
 				E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */,
 				E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */,
-				E9E61A4715CBA7DB0035D49C /* CLALight.m in Sources */,
-				E9E61A4815CBA7DB0035D49C /* CLAScanner.m in Sources */,
+				E9E61A4715CBA7DB0035D49C /* LOOUDPLamp.m in Sources */,
 				E9E61A5015CBA8010035D49C /* ILAppDelegate.m in Sources */,
 				E9E61A5215CBA8010035D49C /* ILColorViewController.m in Sources */,
 				E9E61A5815CBA8200035D49C /* main.m in Sources */,
-				E908D00B15CCA382002387E1 /* ILConnectionViewController.m in Sources */,
 				E991CE6315DB175B00627CDA /* DDAbstractDatabaseLogger.m in Sources */,
 				E991CE6415DB175B00627CDA /* DDASLLogger.m in Sources */,
 				E991CE6515DB175B00627CDA /* DDFileLogger.m in Sources */,
@@ -660,6 +685,11 @@
 				E92B000015F04F5F00EBD2F4 /* CAXException.cpp in Sources */,
 				E92B000315F050D600EBD2F4 /* CADebugPrintf.cpp in Sources */,
 				E985645815F1710F004EB431 /* DCRejectionFilter.mm in Sources */,
+				E90A65ED16165F8C0085EE8A /* LOOUDPScanner.m in Sources */,
+				E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */,
+				E95BC47B161CDA5700E56DDC /* LOOBLEScanner.m in Sources */,
+				E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */,
+				E95BC482161CDA8200E56DDC /* LOOScanner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,8 +785,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.0\"",
-					"\"$(SRCROOT)/../../Downloads/TestFlightSDK1.1\"",
 					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -775,8 +803,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.0\"",
-					"\"$(SRCROOT)/../../Downloads/TestFlightSDK1.1\"",
 					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

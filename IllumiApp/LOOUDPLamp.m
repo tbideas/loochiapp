@@ -6,20 +6,20 @@
 //
 //
 
-#import "CLALight.h"
+#import "LOOUDPLamp.h"
 #import "DDLog.h"
 #import "LOOUDPThread.h"
 
 #define CLAMP_PORT 2000
 
-@interface CLALight ()
+@interface LOOUDPLamp ()
 
 @property LOOUDPThread *thread;
 @property NSString *nextCommand;
 
 @end
 
-@implementation CLALight
+@implementation LOOUDPLamp
 
 static const int ddLogLevel = LOG_LEVEL_WARN;
 
@@ -95,7 +95,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 -(BOOL)isEqual:(id)object
 {
     if ([object isKindOfClass:[self class]]) {
-        CLALight *otherLight = (CLALight*) object;
+        LOOUDPLamp *otherLight = (LOOUDPLamp*) object;
         return [otherLight.host isEqual:self.host];
     }
     else {

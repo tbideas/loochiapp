@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ILLightClient.h"
+#import "LOOLightClient.h"
 
-@interface ILScenesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, ILLightClient>
+@interface ILScenesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, LOOLightClient>
 
-@property (nonatomic, retain) CLALight *lamp;
+@property (nonatomic, retain) LOOLamp *lamp;
 @property (nonatomic, weak) IBOutlet UIView *colorView;
 @property (nonatomic, weak) IBOutlet UITableView *scenesTablesView;
 

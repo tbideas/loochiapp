@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LOOScanner.h"
+#import "LOOLamp.h"
+
+@protocol LOOUDPScannerDelegate
+
+/*
+ * Will be called (on the main thread) everytime a new lamp is discovered.
+ */
+-(void) newLampDetected:(LOOLamp*)light;
+
+@end
 
 @interface LOOUDPScanner : NSObject
 
-@property (weak) id<LOOScannerDelegate> delegate;
+@property (weak) id<LOOUDPScannerDelegate> delegate;
 
 -(void) startScanning;
 -(void) stopScanning;

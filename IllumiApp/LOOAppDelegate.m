@@ -27,6 +27,7 @@
 
 @property BOOL animateConnectionViewApperance;
 @property CBCentralManager *cbManager;
+@property LOOConnectionViewController *connectionViewController;
 
 @end
 
@@ -80,10 +81,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     else
         storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
-    LOOConnectionViewController *cvc = (LOOConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
-    cvc.delegate = self;
-    
-    [self.window.rootViewController presentModalViewController:cvc animated:_animateConnectionViewApperance];
+    self.connectionViewController =
+        (LOOConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
+    self.connectionViewController.delegate = self;
+    self.connectionViewController.cbCentralManager = self.cbCentralManager;
+    [self.window.rootViewController presentModalViewController:self.connectionViewController
+                                                      animated:_animateConnectionViewApperance];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -97,6 +100,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     if (self.window.rootViewController.modalViewController != nil) {
         [self.window.rootViewController dismissModalViewControllerAnimated:NO];
+        self.connectionViewController = nil;
 
         // Do not animate because we want the user to think it stayed there.
         _animateConnectionViewApperance = NO;
@@ -112,16 +116,17 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark ILConnectionDelegate
 
-- (void) selectedIllumi:(LOOUDPLamp *)illumi
+- (void) selectedIllumi:(LOOLamp *)illumi
 {
     [TestFlight passCheckpoint:@"CONNECTED"];
 
     [self setLampOnViewControllers:illumi];
     
     [self.window.rootViewController dismissModalViewControllerAnimated:YES];
+    self.connectionViewController = nil;
 }
 
--(void)setLampOnViewControllers:(LOOUDPLamp*)lamp
+-(void)setLampOnViewControllers:(LOOLamp*)lamp
 {
     if ([self.window.rootViewController isKindOfClass:[UITabBarController class]])
     {
@@ -170,23 +175,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-    if (central.state == CBCentralManagerStatePoweredOn) {
-        DDLogVerbose(@"CBCentralManager powered on");
-        [central scanForPeripheralsWithServices:nil options:nil];
-    }
-    else if (central.state == CBCentralManagerStatePoweredOff) {
-        DDLogVerbose(@"CBCentralManager powered off");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bluetooth is off" message:@"Please turn on Bluetooth in Settings to connect to Bluetooth lamps." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    }
-    else {
-        DDLogVerbose(@"CBCentralManager state: %i", central.state);
-    }
+    [self.connectionViewController centralManagerDidUpdateState:central];
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    DDLogVerbose(@"Discovered peripheral: %@ advertisement %@ RSSI: %@", [peripheral description], [advertisementData description], [RSSI description]);
+    [self.connectionViewController centralManager:central didDiscoverPeripheral:peripheral advertisementData:advertisementData RSSI:RSSI];
 }
 
 @end

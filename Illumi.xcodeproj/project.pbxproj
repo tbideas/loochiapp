@@ -28,9 +28,7 @@
 		E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */; };
 		E92BFFFF15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */; };
 		E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */; };
-		E95BC47B161CDA5700E56DDC /* LOOBLEScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47A161CDA5700E56DDC /* LOOBLEScanner.m */; };
 		E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47D161CDA8200E56DDC /* LOOLamp.m */; };
-		E95BC482161CDA8200E56DDC /* LOOScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC480161CDA8200E56DDC /* LOOScanner.m */; };
 		E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD315CBA97300C23B8D /* InfoPlist.strings */; };
 		E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */; };
 		E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */; };
@@ -124,13 +122,10 @@
 		E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOConnectionViewController.m; path = IllumiApp/LOOConnectionViewController.m; sourceTree = SOURCE_ROOT; };
-		E95BC479161CDA5700E56DDC /* LOOBLEScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOBLEScanner.h; path = IllumiApp/LOOBLEScanner.h; sourceTree = SOURCE_ROOT; };
-		E95BC47A161CDA5700E56DDC /* LOOBLEScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOBLEScanner.m; path = IllumiApp/LOOBLEScanner.m; sourceTree = SOURCE_ROOT; };
 		E95BC47C161CDA8200E56DDC /* LOOLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLamp.h; path = IllumiApp/LOOLamp.h; sourceTree = SOURCE_ROOT; };
 		E95BC47D161CDA8200E56DDC /* LOOLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOLamp.m; path = IllumiApp/LOOLamp.m; sourceTree = SOURCE_ROOT; };
 		E95BC47E161CDA8200E56DDC /* LOOLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLightClient.h; path = IllumiApp/LOOLightClient.h; sourceTree = SOURCE_ROOT; };
-		E95BC47F161CDA8200E56DDC /* LOOScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOScanner.h; path = IllumiApp/LOOScanner.h; sourceTree = SOURCE_ROOT; };
-		E95BC480161CDA8200E56DDC /* LOOScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOScanner.m; path = IllumiApp/LOOScanner.m; sourceTree = SOURCE_ROOT; };
+		E95BC483161CDD3C00E56DDC /* LOOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOAppDelegate.h; path = IllumiApp/LOOAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IllumiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = IllumiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "IllumiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
@@ -191,7 +186,6 @@
 		E9E61A4315CBA7DB0035D49C /* LOOUDPLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPLamp.h; path = IllumiApp/LOOUDPLamp.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPLamp.m; path = IllumiApp/LOOUDPLamp.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4515CBA7DB0035D49C /* LOOUDPScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPScanner.h; path = IllumiApp/LOOUDPScanner.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4915CBA8010035D49C /* LOOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOAppDelegate.h; path = IllumiApp/LOOAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOAppDelegate.m; path = IllumiApp/LOOAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4D15CBA8010035D49C /* ILColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILColorViewController.h; path = IllumiApp/ILColorViewController.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4E15CBA8010035D49C /* ILColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILColorViewController.m; path = IllumiApp/ILColorViewController.m; sourceTree = SOURCE_ROOT; };
@@ -323,7 +317,7 @@
 				E9054BE815DC8B2200A52C2A /* Category */,
 				E9C5BD35158DA23300B724BF /* UIKit */,
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
-				E9E61A4915CBA8010035D49C /* LOOAppDelegate.h */,
+				E95BC483161CDD3C00E56DDC /* LOOAppDelegate.h */,
 				E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */,
 				E908D00915CCA382002387E1 /* LOOConnectionViewController.h */,
 				E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */,
@@ -403,12 +397,8 @@
 		E95BC473161CC6D400E56DDC /* LOOScanner */ = {
 			isa = PBXGroup;
 			children = (
-				E95BC47F161CDA8200E56DDC /* LOOScanner.h */,
-				E95BC480161CDA8200E56DDC /* LOOScanner.m */,
 				E9E61A4515CBA7DB0035D49C /* LOOUDPScanner.h */,
 				E90A65EC16165F8C0085EE8A /* LOOUDPScanner.m */,
-				E95BC479161CDA5700E56DDC /* LOOBLEScanner.h */,
-				E95BC47A161CDA5700E56DDC /* LOOBLEScanner.m */,
 			);
 			name = LOOScanner;
 			sourceTree = "<group>";
@@ -687,9 +677,7 @@
 				E985645815F1710F004EB431 /* DCRejectionFilter.mm in Sources */,
 				E90A65ED16165F8C0085EE8A /* LOOUDPScanner.m in Sources */,
 				E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */,
-				E95BC47B161CDA5700E56DDC /* LOOBLEScanner.m in Sources */,
 				E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */,
-				E95BC482161CDA8200E56DDC /* LOOScanner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

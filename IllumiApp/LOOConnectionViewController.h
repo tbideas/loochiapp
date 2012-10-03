@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LOOScanner.h"
+#import <CoreBluetooth/CoreBluetooth.h>
+#import "LOOUDPScanner.h"
 
 @protocol LOOConnectionDelegate <NSObject>
 
@@ -15,10 +16,11 @@
 
 @end
 
-@interface LOOConnectionViewController : UIViewController<LOOScannerDelegate>
+@interface LOOConnectionViewController : UIViewController<LOOUDPScannerDelegate, CBCentralManagerDelegate>
 
 @property (weak, nonatomic) id<LOOConnectionDelegate> delegate;
 @property (strong, nonatomic) LOOLamp *selectedLamp;
+@property (weak) CBCentralManager *cbCentralManager;
 
 -(IBAction)useADemoIllumi:(id)sender;
 

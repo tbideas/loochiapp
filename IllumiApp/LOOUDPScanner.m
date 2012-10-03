@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 #include <fcntl.h>
 #import "LOOUDPScanner.h"
+#import "LOOUDPLamp.h"
 
 #define CLAMP_ADVERTISE_PORT 14484
 #define BUF_LEN 1000
@@ -30,8 +31,6 @@
 }
 
 static const int ddLogLevel = LOG_LEVEL_WARN;
-
-@synthesize delegate;
 
 -(id)init
 {

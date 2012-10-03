@@ -66,7 +66,7 @@
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
 		E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */; };
 		E9E61A4715CBA7DB0035D49C /* LOOUDPLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */; };
-		E9E61A5015CBA8010035D49C /* ILAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */; };
+		E9E61A5015CBA8010035D49C /* LOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */; };
 		E9E61A5215CBA8010035D49C /* ILColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* ILColorViewController.m */; };
 		E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */; };
 		E9E61A5815CBA8200035D49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A5615CBA8200035D49C /* main.m */; };
@@ -191,8 +191,8 @@
 		E9E61A4315CBA7DB0035D49C /* LOOUDPLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPLamp.h; path = IllumiApp/LOOUDPLamp.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPLamp.m; path = IllumiApp/LOOUDPLamp.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4515CBA7DB0035D49C /* LOOUDPScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPScanner.h; path = IllumiApp/LOOUDPScanner.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4915CBA8010035D49C /* ILAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILAppDelegate.h; path = IllumiApp/ILAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILAppDelegate.m; path = IllumiApp/ILAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4915CBA8010035D49C /* LOOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOAppDelegate.h; path = IllumiApp/LOOAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOAppDelegate.m; path = IllumiApp/LOOAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4D15CBA8010035D49C /* ILColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILColorViewController.h; path = IllumiApp/ILColorViewController.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4E15CBA8010035D49C /* ILColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILColorViewController.m; path = IllumiApp/ILColorViewController.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = IllumiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
@@ -323,8 +323,8 @@
 				E9054BE815DC8B2200A52C2A /* Category */,
 				E9C5BD35158DA23300B724BF /* UIKit */,
 				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
-				E9E61A4915CBA8010035D49C /* ILAppDelegate.h */,
-				E9E61A4A15CBA8010035D49C /* ILAppDelegate.m */,
+				E9E61A4915CBA8010035D49C /* LOOAppDelegate.h */,
+				E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */,
 				E908D00915CCA382002387E1 /* LOOConnectionViewController.h */,
 				E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */,
 				E991D03E15DB4AA100627CDA /* LightViewControllers */,
@@ -662,7 +662,7 @@
 				E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */,
 				E9E61A4215CBA7C70035D49C /* UIImageView+ColorPicker.m in Sources */,
 				E9E61A4715CBA7DB0035D49C /* LOOUDPLamp.m in Sources */,
-				E9E61A5015CBA8010035D49C /* ILAppDelegate.m in Sources */,
+				E9E61A5015CBA8010035D49C /* LOOAppDelegate.m in Sources */,
 				E9E61A5215CBA8010035D49C /* ILColorViewController.m in Sources */,
 				E9E61A5815CBA8200035D49C /* main.m in Sources */,
 				E991CE6315DB175B00627CDA /* DDAbstractDatabaseLogger.m in Sources */,

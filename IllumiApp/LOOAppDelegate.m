@@ -8,7 +8,7 @@
 
 #import <CoreBluetooth/CoreBluetooth.h>
 
-#import "ILAppDelegate.h"
+#import "LOOAppDelegate.h"
 #import "TestFlight.h"
 
 #import "DDASLLogger.h"
@@ -23,14 +23,14 @@
 
 @end
 
-@interface ILAppDelegate () <CBCentralManagerDelegate>
+@interface LOOAppDelegate () <CBCentralManagerDelegate>
 
 @property BOOL animateConnectionViewApperance;
 @property CBCentralManager *cbManager;
 
 @end
 
-@implementation ILAppDelegate
+@implementation LOOAppDelegate
 
 @synthesize window = _window;
 

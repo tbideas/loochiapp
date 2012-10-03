@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 #import "LOOConnectionViewController.h"
 #import "ILColorViewController.h"
 
-@interface ILAppDelegate : UIResponder <UIApplicationDelegate, LOOConnectionDelegate>
+@interface LOOAppDelegate : UIResponder <UIApplicationDelegate, LOOConnectionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) CBCentralManager *cbCentralManager;
 
 @end

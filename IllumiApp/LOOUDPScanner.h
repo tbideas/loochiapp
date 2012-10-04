@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LOOLamp.h"
+#import "LOOUDPLamp.h"
 
 @protocol LOOUDPScannerDelegate
 
 /*
  * Will be called (on the main thread) everytime a new lamp is discovered.
  */
--(void) newLampDetected:(LOOLamp*)light;
+-(void) newLampDetected:(LOOUDPLamp*)light;
 
 @end
 

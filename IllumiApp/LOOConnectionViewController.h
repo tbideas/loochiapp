@@ -12,14 +12,13 @@
 
 @protocol LOOConnectionDelegate <NSObject>
 
--(void) selectedIllumi:(LOOLamp*)lamp;
+-(void) selectedLamp:(LOOLamp*)lamp;
 
 @end
 
-@interface LOOConnectionViewController : UIViewController<LOOUDPScannerDelegate, CBCentralManagerDelegate>
+@interface LOOConnectionViewController : UIViewController<LOOUDPScannerDelegate, CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (weak, nonatomic) id<LOOConnectionDelegate> delegate;
-@property (strong, nonatomic) LOOLamp *selectedLamp;
 @property (weak) CBCentralManager *cbCentralManager;
 
 -(IBAction)useADemoIllumi:(id)sender;

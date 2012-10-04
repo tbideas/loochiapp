@@ -20,8 +20,6 @@ typedef enum
 @interface LOOUDPLamp : LOOLamp
 
 - (id) initWithHost:(NSString*)host;
-- (void) setRed:(float)red green:(float)green blue:(float) blue;
-- (void) setColor:(UIColor*) color;
 
 @property (readonly) NSString *host;
 @property int status;

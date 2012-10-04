@@ -116,11 +116,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark ILConnectionDelegate
 
-- (void) selectedIllumi:(LOOLamp *)illumi
+- (void) selectedLamp:(LOOLamp *)lamp
 {
     [TestFlight passCheckpoint:@"CONNECTED"];
 
-    [self setLampOnViewControllers:illumi];
+    [self setLampOnViewControllers:lamp];
     
     [self.window.rootViewController dismissModalViewControllerAnimated:YES];
     self.connectionViewController = nil;
@@ -181,6 +181,32 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     [self.connectionViewController centralManager:central didDiscoverPeripheral:peripheral advertisementData:advertisementData RSSI:RSSI];
+}
+
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
+{
+    DDLogVerbose(@"AppDelegate: didConnectPeripheral");
+    [self.connectionViewController centralManager:central didConnectPeripheral:peripheral];
+}
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
+{
+    DDLogVerbose(@"AppDelegate: didDisconnectPeripheral (%@)", error);
+}
+
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
+{
+    DDLogVerbose(@"AppDelegate: didFailToConnectPeripheral (%@)", error);
+}
+
+- (void)centralManager:(CBCentralManager *)central didRetrieveConnectedPeripherals:(NSArray *)peripherals
+{
+    DDLogVerbose(@"AppDelegate: didRetrieveConnectedPeripherals");
+}
+
+- (void)centralManager:(CBCentralManager *)central didRetrievePeripherals:(NSArray *)peripherals
+{
+    DDLogVerbose(@"AppDelegate: didRetrievePeripherals");
 }
 
 @end

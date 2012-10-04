@@ -9,13 +9,14 @@
 #import "LOOConnectionViewController.h"
 #import "TestFlight.h"
 #import "LOOUDPScanner.h"
+#import "LOOBLELamp.h"
 #import "LOOAppDelegate.h"
 #import "DDLog.h"
 
 @interface LOOConnectionViewController ()
-{
-    LOOUDPScanner *_scanner;
-}
+
+@property (strong) LOOUDPScanner *udpScanner;
+@property (strong) CBPeripheral *connectingPeripheral;
 
 @end
 
@@ -35,15 +36,15 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     [super viewDidLoad];
     
-    _scanner = [[LOOUDPScanner alloc] init];
-    _scanner.delegate = self;
-    [_scanner startScanning];
+    self.udpScanner = [[LOOUDPScanner alloc] init];
+    self.udpScanner.delegate = self;
+    [self.udpScanner startScanning];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    [_scanner stopScanning];
+    [self.udpScanner stopScanning];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -62,16 +63,14 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     [TestFlight passCheckpoint:@"DEMO"];
 
-    [self.delegate selectedIllumi:nil];
+    [self.delegate selectedLamp:nil];
 }
 
 #pragma mark LOOUDPScannerDelegate
 
--(void) newLampDetected:(LOOLamp *)light
+-(void) newLampDetected:(LOOUDPLamp *)udpLamp
 {
-    self.selectedLamp = light;
-    
-    [self.delegate selectedIllumi:self.selectedLamp];
+    [self.delegate selectedLamp:udpLamp];
 }
 
 #pragma mark CBCentralManagerDelegate
@@ -85,7 +84,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     if (central.state == CBCentralManagerStatePoweredOn) {
         DDLogVerbose(@"CBCentralManager powered on");
         
-        [central scanForPeripheralsWithServices:nil options:nil];
+        [central scanForPeripheralsWithServices:@[ [CBUUID UUIDWithString:LOOCHI_SERVICE_UUID] ] options:nil];
     }
     else if (central.state == CBCentralManagerStatePoweredOff) {
         DDLogVerbose(@"CBCentralManager powered off");
@@ -98,6 +97,42 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     DDLogVerbose(@"Discovered peripheral: %@ advertisement %@ RSSI: %@", [peripheral description], [advertisementData description], [RSSI description]);
+
+    DDLogVerbose(@"Connecting to peripheral...");
+    [central connectPeripheral:peripheral options:nil];
+    // we need to retain the peripheral we are connecting too.
+    self.connectingPeripheral = peripheral;
+}
+
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
+{
+    DDLogVerbose(@"DidConnectToPeripheral");
+    peripheral.delegate = self;
+    [peripheral discoverServices:nil];
+}
+
+#pragma mark CBPeripheralDelegate
+
+- (void) peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
+{
+    DDLogVerbose(@"DidDiscoverServices");
+    for (CBService* aService in peripheral.services) {
+        if ([aService.UUID isEqual:[CBUUID UUIDWithString:LOOCHI_SERVICE_UUID]]) {
+            [peripheral discoverCharacteristics:nil forService:aService];
+        }
+    }
+}
+
+- (void) peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
+{
+    DDLogVerbose(@"DidDiscoverCharacteristics");
+    
+    // Now that we have explored the device, we can create the object
+    LOOBLELamp *bleLamp = [[LOOBLELamp alloc] initWithPeripheral:peripheral];
+    [self.delegate selectedLamp:bleLamp];
+    
+    // we can release the peripheral, it will be retained by the bleLamp while used.
+    self.connectingPeripheral = nil;
 }
 
 @end

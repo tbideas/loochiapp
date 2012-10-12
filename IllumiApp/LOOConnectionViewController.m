@@ -111,6 +111,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [peripheral discoverServices:nil];
 }
 
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
+{
+    DDLogVerbose(@"AppDelegate: didDisconnectPeripheral (%@)", error);
+    DDLogVerbose(@"Trying to reconnect ...");
+    [central connectPeripheral:peripheral options:nil];
+}
+
 #pragma mark CBPeripheralDelegate
 
 - (void) peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error

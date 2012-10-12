@@ -142,10 +142,14 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     DDLogVerbose(@"Discovered peripheral: %@ advertisement %@ RSSI: %@", [peripheral description], [advertisementData description], [RSSI description]);
 
-    DDLogVerbose(@"Connecting to peripheral...");
-    [central connectPeripheral:peripheral options:nil];
-    // we need to retain the peripheral we are connecting too.
-    self.connectingPeripheral = peripheral;
+    if (peripheral != self.connectingPeripheral) {
+        DDLogVerbose(@"Connecting to peripheral...");
+        [central connectPeripheral:peripheral options:nil];
+        self.connectingPeripheral = peripheral;
+    }
+    else {
+        DDLogVerbose(@"Detected a peripheral that we are already connecting to (%@).", peripheral);
+    }
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral

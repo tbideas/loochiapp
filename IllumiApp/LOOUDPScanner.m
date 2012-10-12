@@ -62,12 +62,13 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 -(void)stopScanning
 {
-    DDLogCVerbose(@"Closing server socket");
-    
-    // According to the doc, this will close the socket and also invalidate the runloopsource
-    CFSocketInvalidate(_cfSocket);
-    CFRelease(_cfSocket);
-    _cfSocket = nil;
+    if (_cfSocket != nil) {
+        DDLogCVerbose(@"Closing server socket");
+        // According to the doc, this will close the socket and also invalidate the runloopsource
+        CFSocketInvalidate(_cfSocket);
+        CFRelease(_cfSocket);
+        _cfSocket = nil;
+    }
 }
 
 

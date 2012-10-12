@@ -14,6 +14,5 @@
 @interface LOOAppDelegate : UIResponder <UIApplicationDelegate, LOOConnectionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) CBCentralManager *cbCentralManager;
 
 @end

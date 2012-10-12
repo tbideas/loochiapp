@@ -55,7 +55,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     
-    DDLogError(@"Starting the app!");
+    DDLogInfo(@"didFinishLaunchingWithOptions");
 
     [TestFlight takeOff:@"e8642e72fc14638e855c49593d0bb606_MTE5NzQzMjAxMi0wOC0wOSAxNjo1OTowMy43MTMwNjI"];
 #ifdef DEBUG
@@ -67,6 +67,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     if (!self.cbManager) {
         self.cbManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     }
+    
     return YES;
 }
 
@@ -81,10 +82,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     else
         storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
-    self.connectionViewController =
+    if (self.connectionViewController == nil) {
+        self.connectionViewController =
         (LOOConnectionViewController*) [storyboard instantiateViewControllerWithIdentifier:@"connectionViewController"];
-    self.connectionViewController.delegate = self;
-    self.connectionViewController.cbCentralManager = self.cbCentralManager;
+        self.connectionViewController.delegate = self;
+        self.connectionViewController.cbCentralManager = self.cbManager;
+    }
     [self.window.rootViewController presentModalViewController:self.connectionViewController
                                                       animated:_animateConnectionViewApperance];
 }
@@ -100,7 +103,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     if (self.window.rootViewController.modalViewController != nil) {
         [self.window.rootViewController dismissModalViewControllerAnimated:NO];
-        self.connectionViewController = nil;
 
         // Do not animate because we want the user to think it stayed there.
         _animateConnectionViewApperance = NO;
@@ -123,7 +125,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [self setLampOnViewControllers:lamp];
     
     [self.window.rootViewController dismissModalViewControllerAnimated:YES];
-    self.connectionViewController = nil;
 }
 
 -(void)setLampOnViewControllers:(LOOLamp*)lamp

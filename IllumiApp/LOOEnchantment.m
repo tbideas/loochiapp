@@ -6,9 +6,9 @@
 //
 //
 
-#import "ILLightScene.h"
+#import "LOOEnchantment.h"
 
-@implementation ILLightScene
+@implementation LOOEnchantment
 
 - (UIColor*) colorForTime:(NSTimeInterval)timeInAnimation
 {

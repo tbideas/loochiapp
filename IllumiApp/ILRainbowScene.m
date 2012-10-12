@@ -12,6 +12,7 @@
 @interface ILRainbowScene ()
 
 @property NSString *description;
+@property UIImage *image;
 @property NSTimeInterval durationPerColor;
 @property NSArray *colors;
 @property (readwrite) BOOL repeat;
@@ -23,6 +24,7 @@
 // Have to synthesize the property I override.
 @synthesize description;
 @synthesize repeat;
+@synthesize image;
 
 - (id) init
 {
@@ -33,12 +35,13 @@
 }
 
 - (id) initWithColors:(NSArray*) colors andDurationPerColor:(NSTimeInterval) duration
-       andDescription:(NSString*) aDescription andRepeat:(BOOL) aRepeat
+       andDescription:(NSString*) aDescription andImage:(UIImage*) anImage andRepeat:(BOOL) aRepeat
 {   self = [super init];
     if (self) {
         _colors = colors;
         _durationPerColor = duration;
         description = aDescription;
+        image = anImage;
         repeat = aRepeat;
     }
     return self;

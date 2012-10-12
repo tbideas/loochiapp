@@ -19,6 +19,18 @@
 		E90BC5E41579A42200342F89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C41579A42200342F89 /* UIKit.framework */; };
 		E90BC5E51579A42200342F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5C61579A42200342F89 /* Foundation.framework */; };
 		E90BC5FD1579AC0D00342F89 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */; };
+		E918665B161F6ED500F32B75 /* boris-dance-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186651161F6ED500F32B75 /* boris-dance-blue.png */; };
+		E918665C161F6ED500F32B75 /* boris-dance-red.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186652161F6ED500F32B75 /* boris-dance-red.png */; };
+		E918665D161F6ED500F32B75 /* boris-dance-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186653161F6ED500F32B75 /* boris-dance-white.png */; };
+		E918665E161F6ED500F32B75 /* crazycolors.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186654161F6ED500F32B75 /* crazycolors.png */; };
+		E918665F161F6ED500F32B75 /* fireplace.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186655161F6ED500F32B75 /* fireplace.png */; };
+		E9186660161F6ED500F32B75 /* lighthouse.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186656161F6ED500F32B75 /* lighthouse.png */; };
+		E9186661161F6ED500F32B75 /* lovescene.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186657161F6ED500F32B75 /* lovescene.png */; };
+		E9186662161F6ED500F32B75 /* rainbow.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186658161F6ED500F32B75 /* rainbow.png */; };
+		E9186663161F6ED500F32B75 /* sunrise.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186659161F6ED500F32B75 /* sunrise.png */; };
+		E9186664161F6ED500F32B75 /* sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = E918665A161F6ED500F32B75 /* sunset.png */; };
+		E9186668161F718000F32B75 /* LOOEnchantmentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9186667161F718000F32B75 /* LOOEnchantmentViewCell.m */; };
+		E918666A161F9E1400F32B75 /* enchantment-bg-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */; };
 		E92B000015F04F5F00EBD2F4 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */; };
 		E92B000315F050D600EBD2F4 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */; };
 		E92B000515F050F700EBD2F4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92B000415F050F700EBD2F4 /* Accelerate.framework */; };
@@ -30,6 +42,7 @@
 		E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */; };
 		E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47D161CDA8200E56DDC /* LOOLamp.m */; };
 		E95BC486161CE63A00E56DDC /* LOOBLELamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC485161CE63A00E56DDC /* LOOBLELamp.m */; };
+		E9660890161F612600C9B462 /* LOOEnchantmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E966088F161F612600C9B462 /* LOOEnchantmentsViewController.m */; };
 		E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD315CBA97300C23B8D /* InfoPlist.strings */; };
 		E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */; };
 		E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */; };
@@ -54,7 +67,7 @@
 		E991D03315DB444E00627CDA /* 29-circle-pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */; };
 		E991D03615DB49C100627CDA /* 271-dramamasks.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03415DB49C100627CDA /* 271-dramamasks.png */; };
 		E991D03715DB49C100627CDA /* 271-dramamasks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */; };
-		E991D04115DB575000627CDA /* ILLightScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E991D04015DB575000627CDA /* ILLightScene.m */; };
+		E991D04115DB575000627CDA /* LOOEnchantment.m in Sources */ = {isa = PBXBuildFile; fileRef = E991D04015DB575000627CDA /* LOOEnchantment.m */; };
 		E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AC353C15CCB28A004BFBBA /* background-white.png */; };
 		E9CDA5F7161293CA0097A47E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CDA5F3161293CA0097A47E /* libTestFlight.a */; };
 		E9CDA5F8161293CA0097A47E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5F4161293CA0097A47E /* README.md */; };
@@ -105,6 +118,19 @@
 		E90BC5E11579A42200342F89 /* IllumiAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IllumiAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5E21579A42200342F89 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E9186651161F6ED500F32B75 /* boris-dance-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boris-dance-blue.png"; sourceTree = "<group>"; };
+		E9186652161F6ED500F32B75 /* boris-dance-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boris-dance-red.png"; sourceTree = "<group>"; };
+		E9186653161F6ED500F32B75 /* boris-dance-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boris-dance-white.png"; sourceTree = "<group>"; };
+		E9186654161F6ED500F32B75 /* crazycolors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crazycolors.png; sourceTree = "<group>"; };
+		E9186655161F6ED500F32B75 /* fireplace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireplace.png; sourceTree = "<group>"; };
+		E9186656161F6ED500F32B75 /* lighthouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighthouse.png; sourceTree = "<group>"; };
+		E9186657161F6ED500F32B75 /* lovescene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovescene.png; sourceTree = "<group>"; };
+		E9186658161F6ED500F32B75 /* rainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rainbow.png; sourceTree = "<group>"; };
+		E9186659161F6ED500F32B75 /* sunrise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunrise.png; sourceTree = "<group>"; };
+		E918665A161F6ED500F32B75 /* sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunset.png; sourceTree = "<group>"; };
+		E9186666161F718000F32B75 /* LOOEnchantmentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentViewCell.h; path = IllumiApp/LOOEnchantmentViewCell.h; sourceTree = SOURCE_ROOT; };
+		E9186667161F718000F32B75 /* LOOEnchantmentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentViewCell.m; path = IllumiApp/LOOEnchantmentViewCell.m; sourceTree = SOURCE_ROOT; };
+		E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enchantment-bg-selected.png"; sourceTree = SOURCE_ROOT; };
 		E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
 		E92B000215F050D600EBD2F4 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
 		E92B000415F050F700EBD2F4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -129,6 +155,8 @@
 		E95BC483161CDD3C00E56DDC /* LOOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOAppDelegate.h; path = IllumiApp/LOOAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E95BC484161CE63A00E56DDC /* LOOBLELamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOBLELamp.h; path = IllumiApp/LOOBLELamp.h; sourceTree = SOURCE_ROOT; };
 		E95BC485161CE63A00E56DDC /* LOOBLELamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOBLELamp.m; path = IllumiApp/LOOBLELamp.m; sourceTree = SOURCE_ROOT; };
+		E966088E161F612600C9B462 /* LOOEnchantmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentsViewController.h; path = IllumiApp/LOOEnchantmentsViewController.h; sourceTree = SOURCE_ROOT; };
+		E966088F161F612600C9B462 /* LOOEnchantmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentsViewController.m; path = IllumiApp/LOOEnchantmentsViewController.m; sourceTree = SOURCE_ROOT; };
 		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IllumiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = IllumiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "IllumiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
@@ -170,8 +198,8 @@
 		E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause@2x.png"; sourceTree = SOURCE_ROOT; };
 		E991D03415DB49C100627CDA /* 271-dramamasks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "271-dramamasks.png"; sourceTree = SOURCE_ROOT; };
 		E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "271-dramamasks@2x.png"; sourceTree = SOURCE_ROOT; };
-		E991D03F15DB574F00627CDA /* ILLightScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILLightScene.h; path = IllumiApp/ILLightScene.h; sourceTree = SOURCE_ROOT; };
-		E991D04015DB575000627CDA /* ILLightScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILLightScene.m; path = IllumiApp/ILLightScene.m; sourceTree = SOURCE_ROOT; };
+		E991D03F15DB574F00627CDA /* LOOEnchantment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantment.h; path = IllumiApp/LOOEnchantment.h; sourceTree = SOURCE_ROOT; };
+		E991D04015DB575000627CDA /* LOOEnchantment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantment.m; path = IllumiApp/LOOEnchantment.m; sourceTree = SOURCE_ROOT; };
 		E9AC353C15CCB28A004BFBBA /* background-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-white.png"; path = "IllumiApp/background-white.png"; sourceTree = SOURCE_ROOT; };
 		E9CDA5F3161293CA0097A47E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		E9CDA5F4161293CA0097A47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -237,18 +265,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E9054BE815DC8B2200A52C2A /* Category */ = {
+		E9054BE815DC8B2200A52C2A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				E9E61A3F15CBA7C70035D49C /* UIImageView+ColorPicker.h */,
+				E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */,
 				E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */,
 				E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */,
 			);
-			name = Category;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */,
+				E9186650161F6ED500F32B75 /* enchantments-images */,
 				E985645915F173D2004EB431 /* 194-note-2.png */,
 				E985645A15F173D2004EB431 /* 194-note-2@2x.png */,
 				E991D03415DB49C100627CDA /* 271-dramamasks.png */,
@@ -315,16 +347,18 @@
 		E90BC5CA1579A42200342F89 /* IllumiApp */ = {
 			isa = PBXGroup;
 			children = (
-				E95BC473161CC6D400E56DDC /* LOOScanner */,
 				E92BFFEA15F04AF600EBD2F4 /* AudioAnalysis */,
-				E9054BE815DC8B2200A52C2A /* Category */,
-				E9C5BD35158DA23300B724BF /* UIKit */,
-				E9DBDA4F158D683200EE2B9D /* IllumiServices */,
+				E9054BE815DC8B2200A52C2A /* Categories */,
+				E9C5BD35158DA23300B724BF /* Custom UIViews */,
+				E9DBDA4F158D683200EE2B9D /* Loochi Services */,
+				E991D03E15DB4AA100627CDA /* LightViewControllers */,
 				E95BC483161CDD3C00E56DDC /* LOOAppDelegate.h */,
 				E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */,
 				E908D00915CCA382002387E1 /* LOOConnectionViewController.h */,
 				E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */,
-				E991D03E15DB4AA100627CDA /* LightViewControllers */,
+				E966088E161F612600C9B462 /* LOOEnchantmentsViewController.h */,
+				E966088F161F612600C9B462 /* LOOEnchantmentsViewController.m */,
+				E991D04315DB57DB00627CDA /* Enchantments */,
 				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
 				E90BC5CB1579A42200342F89 /* Supporting Files */,
@@ -364,6 +398,23 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		E9186650161F6ED500F32B75 /* enchantments-images */ = {
+			isa = PBXGroup;
+			children = (
+				E9186651161F6ED500F32B75 /* boris-dance-blue.png */,
+				E9186652161F6ED500F32B75 /* boris-dance-red.png */,
+				E9186653161F6ED500F32B75 /* boris-dance-white.png */,
+				E9186654161F6ED500F32B75 /* crazycolors.png */,
+				E9186655161F6ED500F32B75 /* fireplace.png */,
+				E9186656161F6ED500F32B75 /* lighthouse.png */,
+				E9186657161F6ED500F32B75 /* lovescene.png */,
+				E9186658161F6ED500F32B75 /* rainbow.png */,
+				E9186659161F6ED500F32B75 /* sunrise.png */,
+				E918665A161F6ED500F32B75 /* sunset.png */,
+			);
+			path = "enchantments-images";
+			sourceTree = SOURCE_ROOT;
 		};
 		E92BFFEA15F04AF600EBD2F4 /* AudioAnalysis */ = {
 			isa = PBXGroup;
@@ -457,22 +508,21 @@
 				E9E61A4E15CBA8010035D49C /* ILColorViewController.m */,
 				E97F239A15E85F2C003A38D9 /* ILScenesViewController.h */,
 				E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */,
-				E991D04315DB57DB00627CDA /* Scenes */,
 			);
 			name = LightViewControllers;
 			sourceTree = "<group>";
 		};
-		E991D04315DB57DB00627CDA /* Scenes */ = {
+		E991D04315DB57DB00627CDA /* Enchantments */ = {
 			isa = PBXGroup;
 			children = (
-				E991D03F15DB574F00627CDA /* ILLightScene.h */,
-				E991D04015DB575000627CDA /* ILLightScene.m */,
+				E991D03F15DB574F00627CDA /* LOOEnchantment.h */,
+				E991D04015DB575000627CDA /* LOOEnchantment.m */,
 				E97F239D15E85F3B003A38D9 /* ILFireScene.h */,
 				E97F239E15E85F3B003A38D9 /* ILFireScene.m */,
 				E907057315F01B4E001A23E5 /* ILRainbowScene.h */,
 				E907057415F01B4E001A23E5 /* ILRainbowScene.m */,
 			);
-			name = Scenes;
+			name = Enchantments;
 			sourceTree = "<group>";
 		};
 		E9ADB6FF15912E2C0061F79D /* UIImageView-GeometryConversion */ = {
@@ -484,16 +534,16 @@
 			path = "UIImageView-GeometryConversion";
 			sourceTree = "<group>";
 		};
-		E9C5BD35158DA23300B724BF /* UIKit */ = {
+		E9C5BD35158DA23300B724BF /* Custom UIViews */ = {
 			isa = PBXGroup;
 			children = (
 				E9E61A3D15CBA7C70035D49C /* CLATintedView.h */,
 				E9E61A3E15CBA7C70035D49C /* CLATintedView.m */,
-				E9E61A3F15CBA7C70035D49C /* UIImageView+ColorPicker.h */,
-				E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */,
 				E9ADB6FF15912E2C0061F79D /* UIImageView-GeometryConversion */,
+				E9186666161F718000F32B75 /* LOOEnchantmentViewCell.h */,
+				E9186667161F718000F32B75 /* LOOEnchantmentViewCell.m */,
 			);
-			name = UIKit;
+			name = "Custom UIViews";
 			sourceTree = "<group>";
 		};
 		E9CDA5F2161293CA0097A47E /* TestFlightSDK1.1 */ = {
@@ -508,9 +558,10 @@
 			path = IllumiApp/TestFlightSDK1.1;
 			sourceTree = SOURCE_ROOT;
 		};
-		E9DBDA4F158D683200EE2B9D /* IllumiServices */ = {
+		E9DBDA4F158D683200EE2B9D /* Loochi Services */ = {
 			isa = PBXGroup;
 			children = (
+				E95BC473161CC6D400E56DDC /* LOOScanner */,
 				E95BC47E161CDA8200E56DDC /* LOOLightClient.h */,
 				E95BC47C161CDA8200E56DDC /* LOOLamp.h */,
 				E95BC47D161CDA8200E56DDC /* LOOLamp.m */,
@@ -521,7 +572,7 @@
 				E95BC484161CE63A00E56DDC /* LOOBLELamp.h */,
 				E95BC485161CE63A00E56DDC /* LOOBLELamp.m */,
 			);
-			name = IllumiServices;
+			name = "Loochi Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,6 +671,17 @@
 				E9CDA5F8161293CA0097A47E /* README.md in Resources */,
 				E9CDA5F9161293CA0097A47E /* release_notes.md in Resources */,
 				E9CDA5FB161296A60097A47E /* Default-568h@2x.png in Resources */,
+				E918665B161F6ED500F32B75 /* boris-dance-blue.png in Resources */,
+				E918665C161F6ED500F32B75 /* boris-dance-red.png in Resources */,
+				E918665D161F6ED500F32B75 /* boris-dance-white.png in Resources */,
+				E918665E161F6ED500F32B75 /* crazycolors.png in Resources */,
+				E918665F161F6ED500F32B75 /* fireplace.png in Resources */,
+				E9186660161F6ED500F32B75 /* lighthouse.png in Resources */,
+				E9186661161F6ED500F32B75 /* lovescene.png in Resources */,
+				E9186662161F6ED500F32B75 /* rainbow.png in Resources */,
+				E9186663161F6ED500F32B75 /* sunrise.png in Resources */,
+				E9186664161F6ED500F32B75 /* sunset.png in Resources */,
+				E918666A161F9E1400F32B75 /* enchantment-bg-selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +729,7 @@
 				E991CE6715DB175B00627CDA /* DDTTYLogger.m in Sources */,
 				E991CE6815DB175B00627CDA /* ContextFilterLogFormatter.m in Sources */,
 				E991CE6915DB175B00627CDA /* DispatchQueueLogFormatter.m in Sources */,
-				E991D04115DB575000627CDA /* ILLightScene.m in Sources */,
+				E991D04115DB575000627CDA /* LOOEnchantment.m in Sources */,
 				E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */,
 				E97F239C15E85F2C003A38D9 /* ILScenesViewController.m in Sources */,
 				E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */,
@@ -684,6 +746,8 @@
 				E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */,
 				E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */,
 				E95BC486161CE63A00E56DDC /* LOOBLELamp.m in Sources */,
+				E9660890161F612600C9B462 /* LOOEnchantmentsViewController.m in Sources */,
+				E9186668161F718000F32B75 /* LOOEnchantmentViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

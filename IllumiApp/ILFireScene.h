@@ -6,8 +6,8 @@
 //
 //
 
-#import "ILLightScene.h"
+#import "LOOEnchantment.h"
 
-@interface ILFireScene : ILLightScene
+@interface ILFireScene : LOOEnchantment
 
 @end

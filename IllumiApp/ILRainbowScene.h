@@ -6,11 +6,11 @@
 //
 //
 
-#import "ILLightScene.h"
+#import "LOOEnchantment.h"
 
-@interface ILRainbowScene : ILLightScene
+@interface ILRainbowScene : LOOEnchantment
 
 - (id) initWithColors:(NSArray*) colors andDurationPerColor:(NSTimeInterval) duration
-       andDescription:(NSString*) description andRepeat:(BOOL) repeat;
+       andDescription:(NSString*) aDescription andImage:(UIImage*) anImage andRepeat:(BOOL) aRepeat;
 
 @end

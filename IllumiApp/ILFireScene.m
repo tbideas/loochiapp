@@ -37,6 +37,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     return @"Fire scene";
 }
 
+- (UIImage*) image
+{
+    return [UIImage imageNamed:@"fireplace.png"];
+}
+
 - (NSTimeInterval) duration
 {
     // does not matter here

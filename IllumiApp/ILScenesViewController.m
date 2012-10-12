@@ -16,7 +16,7 @@
 {
     NSTimer *sceneTimer;
     NSDate *sceneStart;
-    ILLightScene *currentScene;
+    LOOEnchantment *currentScene;
 }
 
 @property NSArray *scenes;
@@ -49,14 +49,14 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
          [UIColor purpleColor],
          [UIColor blackColor]
          ]
-                           andDurationPerColor:1 andDescription:@"Rainbow" andRepeat:YES] ];
+                           andDurationPerColor:1 andDescription:@"Rainbow" andImage:nil andRepeat:YES] ];
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
         [UIColor colorFromHexString:@"#000030"], // blue
         [UIColor colorFromHexString:@"#804000"], // orange
         [UIColor colorFromHexString:@"#808000"], // yellow
         [UIColor colorFromHexString:@"#FFFF33"] // white
-      ] andDurationPerColor:30 andDescription:@"Sunrise"  andRepeat:NO]];
+      ] andDurationPerColor:30 andDescription:@"Sunrise"  andImage:nil andRepeat:NO]];
 
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
@@ -64,21 +64,21 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
       [UIColor colorFromHexString:@"#808000"], // yellow
       [UIColor colorFromHexString:@"#804000"], // orange
       [UIColor colorFromHexString:@"#000030"],
-     ] andDurationPerColor:30 andDescription:@"Sunset" andRepeat:NO]];
+     ] andDurationPerColor:30 andDescription:@"Sunset" andImage:nil andRepeat:NO]];
 
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
       [UIColor colorFromHexString:@"#A06065"],
       [UIColor blueColor],
       [UIColor colorFromHexString:@"#A06065"],
-      ] andDurationPerColor:10 andDescription:@"Love Scene" andRepeat:YES] ];
+      ] andDurationPerColor:10 andDescription:@"Love Scene" andImage:nil andRepeat:YES] ];
 
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
       [UIColor blackColor],
       [UIColor colorFromHexString:@"#0000FF"],
       [UIColor blackColor],
-      ] andDurationPerColor:0.25 andDescription:@"Boris-Dance Blue!" andRepeat:YES] ];
+      ] andDurationPerColor:0.25 andDescription:@"Boris-Dance Blue!" andImage:nil andRepeat:YES] ];
 
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
@@ -86,14 +86,14 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
       [UIColor colorFromHexString:@"#FF0000"],
       [UIColor blackColor],
       [UIColor blackColor],
-      ] andDurationPerColor:0.1 andDescription:@"Boris-Dance Red!" andRepeat:YES] ];
+      ] andDurationPerColor:0.1 andDescription:@"Boris-Dance Red!" andImage:nil andRepeat:YES] ];
 
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
       [UIColor blackColor],
       [UIColor colorFromHexString:@"#FFD033"],
       [UIColor blackColor],
-      ] andDurationPerColor:0.15 andDescription:@"Boris-Dance White!" andRepeat:YES] ];
+      ] andDurationPerColor:0.15 andDescription:@"Boris-Dance White!" andImage:nil andRepeat:YES] ];
 
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
@@ -106,7 +106,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
       [UIColor colorFromHexString:@"#000010"], // blue
       [UIColor colorFromHexString:@"#C0C000"], // blue
       [UIColor colorFromHexString:@"#000010"], // blue
-      ] andDurationPerColor:0.5 andDescription:@"Lighthouse" andRepeat:YES] ];
+      ] andDurationPerColor:0.5 andDescription:@"Lighthouse" andImage:nil andRepeat:YES] ];
 
     [scenes addObject:
      [[ILRainbowScene alloc] initWithColors:@[
@@ -119,7 +119,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
       [UIColor greenColor],
       [UIColor redColor]
       ]
-                        andDurationPerColor:0.2 andDescription:@"Crazy Colors" andRepeat:YES] ];
+                        andDurationPerColor:0.2 andDescription:@"Crazy Colors" andImage:nil andRepeat:YES] ];
 
     self.scenes = scenes;
 }
@@ -168,7 +168,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     static NSString *CellIdentifier = @"sceneCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    ILLightScene *scene = [_scenes objectAtIndex:indexPath.row];
+    LOOEnchantment *scene = [_scenes objectAtIndex:indexPath.row];
     cell.textLabel.text  = scene.description;
     
     if (scene == currentScene) {
@@ -184,14 +184,14 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ILLightScene *scene = [_scenes objectAtIndex:indexPath.row];
+    LOOEnchantment *scene = [_scenes objectAtIndex:indexPath.row];
     [self startScene:scene];
     [tableView reloadData];
 }
 
 #pragma mark - Animation functions
 
-- (void) startScene:(ILLightScene*) scene
+- (void) startScene:(LOOEnchantment*) scene
 {
     if (sceneTimer != nil) {
         [sceneTimer invalidate];

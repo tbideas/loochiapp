@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ILLightScene : NSObject
+@interface LOOEnchantment : NSObject
 
 @property (readonly) NSString *description;
+@property (readonly) UIImage *image;
 @property (readonly) NSTimeInterval duration;
 @property (readonly) BOOL repeat;
 

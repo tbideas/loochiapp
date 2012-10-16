@@ -186,13 +186,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
-    DDLogVerbose(@"AppDelegate: didConnectPeripheral");
     [self.connectionViewController centralManager:central didConnectPeripheral:peripheral];
 }
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
-    DDLogVerbose(@"AppDelegate: didDisconnectPeripheral (%@)", error);
     [self.connectionViewController centralManager:central didDisconnectPeripheral:peripheral error:error];
 }
 

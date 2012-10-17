@@ -1,0 +1,21 @@
+{
+    "title": "Loochi v0.1 - Default enchantment book",
+    "author": "Thomas Sarlandie 2012",
+    
+    "enchantments":
+    [
+        {
+            "name":      "6500K White",
+            "image":     "lamp.png",
+            "type":      "solid",
+            "color":     "#FFFFFF"
+        },
+        {
+            "name":      "Turn off",
+            "image":     "off.png",
+            "type":      "solid",
+            "color":     "#000000"
+        }
+
+    ]
+}

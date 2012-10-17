@@ -166,7 +166,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     LOOEnchantment *enchantment = [_scenes objectAtIndex:indexPath.row];
-    cell.textLabel.text  = enchantment.description;
+    cell.textLabel.text  = enchantment.name;
     
     if (self.magicWand.castedEnchantment == enchantment) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;

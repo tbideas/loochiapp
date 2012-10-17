@@ -12,6 +12,7 @@
 #import "LOOSolidColorEnchantment.h"
 #import "ILFireScene.h"
 #import "ILRainbowScene.h"
+#import "LOOEnchantmentBook.h"
 #import "UIColor+ILColor.h"
 
 @interface LOOEnchantmentsViewController ()
@@ -55,7 +56,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     UILabel *label = (UILabel*) [cell viewWithTag:1];
     UIImageView *imageView = (UIImageView*) [cell viewWithTag:2];
     
-    label.text = enchantment.description;
+    label.text = enchantment.name;
     imageView.image = enchantment.image;
     
     return cell;
@@ -170,6 +171,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
      [[LOOSolidColorEnchantment alloc] initWithColor:[UIColor blackColor]
                                       andDescription:@"Off"
                                             andImage:[UIImage imageNamed:@"off.png"]]];
+    
+    LOOEnchantmentBook *book = [[LOOEnchantmentBook alloc] init];
+    [book readEnchantmentsFromFile:[[NSBundle mainBundle] pathForResource:@"enchantments" ofType:@"json"]];
+    [scenes addObjectsFromArray:book.enchantments];
     
     return scenes;
 }

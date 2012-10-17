@@ -57,12 +57,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     DDLogInfo(@"didFinishLaunchingWithOptions");
 
-    [TestFlight takeOff:@"e8642e72fc14638e855c49593d0bb606_MTE5NzQzMjAxMi0wOC0wOSAxNjo1OTowMy43MTMwNjI"];
+    //[TestFlight takeOff:@"e8642e72fc14638e855c49593d0bb606_MTE5NzQzMjAxMi0wOC0wOSAxNjo1OTowMy43MTMwNjI"];
 #ifdef DEBUG
     // This is disabled in production (forbidden APIs) - Used here to improve beta reporting.
-    [TestFlight setDeviceIdentifier:[(id<UIDeviceHack>)[UIDevice currentDevice] uniqueIdentifier]];
+    //[TestFlight setDeviceIdentifier:[(id<UIDeviceHack>)[UIDevice currentDevice] uniqueIdentifier]];
 #endif
-    [TestFlight passCheckpoint:@"LAUNCH"];
+    //[TestFlight passCheckpoint:@"LAUNCH"];
 
     if (!self.cbManager) {
         self.cbManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];

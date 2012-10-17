@@ -10,7 +10,7 @@
 
 @interface LOOSolidColorEnchantment ()
 
-@property (strong) NSString *description;
+@property (strong) NSString *name;
 @property (strong) UIImage *image;
 @property (assign) NSTimeInterval duration;
 @property (assign) BOOL repeat;
@@ -20,14 +20,14 @@
 
 @implementation LOOSolidColorEnchantment
 
-@synthesize description, image, duration, repeat, frequency;
+@synthesize name, image, duration, repeat, frequency;
 
 - (id)initWithColor:(UIColor*) color andDescription:(NSString*) aDescription andImage:(UIImage*) anImage;
 {
     self = [super init];
     if (self) {
         self.solidColor = color;
-        self.description = aDescription;
+        self.name = aDescription;
         self.image = anImage;
         self.repeat = YES;
         self.duration = 1.0;

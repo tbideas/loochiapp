@@ -75,7 +75,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     float red, green, blue;
     [nowColor getRed:&red green:&green blue:&blue alpha:nil];
-    DDLogVerbose(@"Effect '%@' Pos=%2.2f %.2f/%.2f/%.2f", self.castedEnchantment.description, timeInSpell, red, green, blue);
+    DDLogVerbose(@"Effect '%@' Pos=%2.2f %.2f/%.2f/%.2f", self.castedEnchantment.name, timeInSpell, red, green, blue);
     [self.enchantedLamp setColor:nowColor];
 }
 

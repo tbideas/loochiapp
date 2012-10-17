@@ -10,7 +10,7 @@
 
 @interface LOOEnchantment : NSObject
 
-@property (readonly) NSString *description;
+@property (readonly) NSString *name;
 @property (readonly) UIImage *image;
 @property (readonly) NSTimeInterval duration;
 @property (readonly) NSInteger frequency;

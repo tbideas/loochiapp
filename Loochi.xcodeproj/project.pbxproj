@@ -49,6 +49,8 @@
 		E9660890161F612600C9B462 /* LOOEnchantmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E966088F161F612600C9B462 /* LOOEnchantmentsViewController.m */; };
 		E9746BD715CBA97300C23B8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD315CBA97300C23B8D /* InfoPlist.strings */; };
 		E9746BD815CBA97300C23B8D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */; };
+		E97723F8162F53B20087BE9B /* LOOEnchantmentBook.m in Sources */ = {isa = PBXBuildFile; fileRef = E97723F7162F53B20087BE9B /* LOOEnchantmentBook.m */; };
+		E97723FB162F60E00087BE9B /* enchantments.json in Resources */ = {isa = PBXBuildFile; fileRef = E97723FA162F58410087BE9B /* enchantments.json */; };
 		E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */; };
 		E97F239C15E85F2C003A38D9 /* ILScenesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */; };
 		E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239E15E85F3B003A38D9 /* ILFireScene.m */; };
@@ -169,6 +171,9 @@
 		E966088F161F612600C9B462 /* LOOEnchantmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentsViewController.m; path = LoochiApp/LOOEnchantmentsViewController.m; sourceTree = SOURCE_ROOT; };
 		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = LoochiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = LoochiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		E97723F6162F53B20087BE9B /* LOOEnchantmentBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentBook.h; path = LoochiApp/LOOEnchantmentBook.h; sourceTree = SOURCE_ROOT; };
+		E97723F7162F53B20087BE9B /* LOOEnchantmentBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentBook.m; path = LoochiApp/LOOEnchantmentBook.m; sourceTree = SOURCE_ROOT; };
+		E97723FA162F58410087BE9B /* enchantments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = enchantments.json; sourceTree = SOURCE_ROOT; };
 		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "LoochiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
 		E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ILColor.m"; path = "LoochiApp/UIColor+ILColor.m"; sourceTree = SOURCE_ROOT; };
 		E97F239A15E85F2C003A38D9 /* ILScenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILScenesViewController.h; path = LoochiApp/ILScenesViewController.h; sourceTree = SOURCE_ROOT; };
@@ -285,6 +290,7 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E97723FA162F58410087BE9B /* enchantments.json */,
 				E92E497B162E3FFF00507717 /* Default-568h@2x.png */,
 				E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */,
 				E9186650161F6ED500F32B75 /* enchantments-images */,
@@ -532,6 +538,8 @@
 				E92E4978162E3ABE00507717 /* LOOMagicWand.m */,
 				E92E497D162E45AA00507717 /* LOOSolidColorEnchantment.h */,
 				E92E497E162E45AA00507717 /* LOOSolidColorEnchantment.m */,
+				E97723F6162F53B20087BE9B /* LOOEnchantmentBook.h */,
+				E97723F7162F53B20087BE9B /* LOOEnchantmentBook.m */,
 			);
 			name = Enchantments;
 			sourceTree = "<group>";
@@ -692,6 +700,7 @@
 				E918666A161F9E1400F32B75 /* enchantment-bg-selected.png in Resources */,
 				E92E497C162E3FFF00507717 /* Default-568h@2x.png in Resources */,
 				E92E4981162E471200507717 /* off.png in Resources */,
+				E97723FB162F60E00087BE9B /* enchantments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +769,7 @@
 				E9186668161F718000F32B75 /* LOOEnchantmentViewCell.m in Sources */,
 				E92E4979162E3ABE00507717 /* LOOMagicWand.m in Sources */,
 				E92E497F162E45AA00507717 /* LOOSolidColorEnchantment.m in Sources */,
+				E97723F8162F53B20087BE9B /* LOOEnchantmentBook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

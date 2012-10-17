@@ -32,7 +32,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     return self;
 }
 
-- (NSString*) description
+- (NSString*) name
 {
     return @"Fire scene";
 }

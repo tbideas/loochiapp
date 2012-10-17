@@ -11,7 +11,7 @@
 
 @interface ILRainbowScene ()
 
-@property NSString *description;
+@property NSString *name;
 @property UIImage *image;
 @property NSTimeInterval durationPerColor;
 @property NSArray *colors;
@@ -23,7 +23,7 @@
 @implementation ILRainbowScene
 
 // Have to synthesize the property I override.
-@synthesize description;
+@synthesize name;
 @synthesize repeat;
 @synthesize image;
 @synthesize frequency;
@@ -42,7 +42,7 @@
     if (self) {
         _colors = colors;
         _durationPerColor = duration;
-        description = aDescription;
+        name = aDescription;
         image = anImage;
         repeat = aRepeat;
         frequency = 30;

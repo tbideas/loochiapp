@@ -14,12 +14,13 @@
 @property (strong) UIImage *image;
 @property (assign) NSTimeInterval duration;
 @property (assign) BOOL repeat;
+@property (assign) NSInteger frequency;
 
 @end
 
 @implementation LOOSolidColorEnchantment
 
-@synthesize description, image, duration, repeat;
+@synthesize description, image, duration, repeat, frequency;
 
 - (id)initWithColor:(UIColor*) color andDescription:(NSString*) aDescription andImage:(UIImage*) anImage;
 {
@@ -30,6 +31,7 @@
         self.image = anImage;
         self.repeat = YES;
         self.duration = 1.0;
+        self.frequency = 1;
     }
     return self;
 }

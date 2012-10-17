@@ -16,6 +16,7 @@
 @property NSTimeInterval durationPerColor;
 @property NSArray *colors;
 @property (readwrite) BOOL repeat;
+@property (readwrite) NSInteger frequency;
 
 @end
 
@@ -25,6 +26,7 @@
 @synthesize description;
 @synthesize repeat;
 @synthesize image;
+@synthesize frequency;
 
 - (id) init
 {
@@ -43,6 +45,7 @@
         description = aDescription;
         image = anImage;
         repeat = aRepeat;
+        frequency = 30;
     }
     return self;
 }

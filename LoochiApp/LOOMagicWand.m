@@ -9,6 +9,8 @@
 #import "DDLog.h"
 #import "LOOMagicWand.h"
 
+#define MAGIC_WAND_FREQUENCY 30
+
 @interface LOOMagicWand ()
 
 @property (strong) LOOEnchantment *castedEnchantment;
@@ -34,11 +36,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     self.castedEnchantment = enchantment;
     self.enchantedLamp = lamp;
     
-    self.spellTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
+    self.spellTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/self.castedEnchantment.frequency
                                                        target:self
                                                      selector:@selector(spellMove)
                                                      userInfo:nil
-                                                        repeats:YES];
+                                                      repeats:YES];
     self.castTime = [NSDate date];
 }
 

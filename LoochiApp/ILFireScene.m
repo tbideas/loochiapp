@@ -48,6 +48,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     return 42;
 }
 
+- (NSInteger)frequency
+{
+    return 30;
+}
+
 #define ARC4RANDOM_MAX      0x100000000
 #define RANDF() ((double)arc4random() / ARC4RANDOM_MAX)
 

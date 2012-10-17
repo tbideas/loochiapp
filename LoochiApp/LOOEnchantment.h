@@ -13,6 +13,7 @@
 @property (readonly) NSString *description;
 @property (readonly) UIImage *image;
 @property (readonly) NSTimeInterval duration;
+@property (readonly) NSInteger frequency;
 @property (readonly) BOOL repeat;
 
 - (UIColor*) colorForTime:(NSTimeInterval)timeInAnimation;

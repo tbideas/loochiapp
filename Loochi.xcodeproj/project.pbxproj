@@ -39,8 +39,6 @@
 		E92BFFF415F04F2F00EBD2F4 /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */; };
 		E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */; };
 		E92BFFFF15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */; };
-		E95992D9162E2F49006B0B06 /* LoochiApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */; };
-		E95992DC162E2F74006B0B06 /* LoochiAppTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E95992DB162E2F74006B0B06 /* LoochiAppTests-Info.plist */; };
 		E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */; };
 		E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47D161CDA8200E56DDC /* LOOLamp.m */; };
 		E95BC486161CE63A00E56DDC /* LOOBLELamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC485161CE63A00E56DDC /* LOOBLELamp.m */; };
@@ -72,8 +70,6 @@
 		E991D04115DB575000627CDA /* LOOEnchantment.m in Sources */ = {isa = PBXBuildFile; fileRef = E991D04015DB575000627CDA /* LOOEnchantment.m */; };
 		E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AC353C15CCB28A004BFBBA /* background-white.png */; };
 		E9CDA5F7161293CA0097A47E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CDA5F3161293CA0097A47E /* libTestFlight.a */; };
-		E9CDA5F8161293CA0097A47E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5F4161293CA0097A47E /* README.md */; };
-		E9CDA5F9161293CA0097A47E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5F5161293CA0097A47E /* release_notes.md */; };
 		E9CDA5FB161296A60097A47E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5FA161296A60097A47E /* Default-568h@2x.png */; };
 		E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */; };
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
@@ -90,7 +86,7 @@
 		E9E61A6215CBA83F0035D49C /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */; };
 		E9E61A6315CBA83F0035D49C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5D15CBA83F0035D49C /* Icon.png */; };
 		E9E61A6415CBA83F0035D49C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5E15CBA83F0035D49C /* Icon@2x.png */; };
-		E9E61A6715CBA8AB0035D49C /* CLightAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */; };
+		E9E61A6715CBA8AB0035D49C /* LoochiAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A6615CBA8AB0035D49C /* LoochiAppTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,8 +229,8 @@
 		E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "LoochiApp/Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A5D15CBA83F0035D49C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = LoochiApp/Icon.png; sourceTree = SOURCE_ROOT; };
 		E9E61A5E15CBA83F0035D49C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "LoochiApp/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
-		E9E61A6515CBA8AB0035D49C /* CLightAppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLightAppTests.h; path = LoochiAppTests/CLightAppTests.h; sourceTree = SOURCE_ROOT; };
-		E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLightAppTests.m; path = LoochiAppTests/CLightAppTests.m; sourceTree = SOURCE_ROOT; };
+		E9E61A6515CBA8AB0035D49C /* LoochiAppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoochiAppTests.h; path = LoochiAppTests/LoochiAppTests.h; sourceTree = SOURCE_ROOT; };
+		E9E61A6615CBA8AB0035D49C /* LoochiAppTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoochiAppTests.m; path = LoochiAppTests/LoochiAppTests.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,8 +381,8 @@
 		E90BC5E81579A42200342F89 /* LoochiAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9E61A6515CBA8AB0035D49C /* CLightAppTests.h */,
-				E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */,
+				E9E61A6515CBA8AB0035D49C /* LoochiAppTests.h */,
+				E9E61A6615CBA8AB0035D49C /* LoochiAppTests.m */,
 				E90BC5E91579A42200342F89 /* Supporting Files */,
 			);
 			name = LoochiAppTests;
@@ -670,8 +666,6 @@
 				E991D03715DB49C100627CDA /* 271-dramamasks@2x.png in Resources */,
 				E985645B15F173D2004EB431 /* 194-note-2.png in Resources */,
 				E985645C15F173D2004EB431 /* 194-note-2@2x.png in Resources */,
-				E9CDA5F8161293CA0097A47E /* README.md in Resources */,
-				E9CDA5F9161293CA0097A47E /* release_notes.md in Resources */,
 				E9CDA5FB161296A60097A47E /* Default-568h@2x.png in Resources */,
 				E918665B161F6ED500F32B75 /* boris-dance-blue.png in Resources */,
 				E918665C161F6ED500F32B75 /* boris-dance-red.png in Resources */,
@@ -684,8 +678,6 @@
 				E9186663161F6ED500F32B75 /* sunrise.png in Resources */,
 				E9186664161F6ED500F32B75 /* sunset.png in Resources */,
 				E918666A161F9E1400F32B75 /* enchantment-bg-selected.png in Resources */,
-				E95992D9162E2F49006B0B06 /* LoochiApp-Info.plist in Resources */,
-				E95992DC162E2F74006B0B06 /* LoochiAppTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,7 +751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E61A6715CBA8AB0035D49C /* CLightAppTests.m in Sources */,
+				E9E61A6715CBA8AB0035D49C /* LoochiAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

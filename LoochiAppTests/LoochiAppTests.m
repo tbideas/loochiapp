@@ -1,14 +1,14 @@
 //
-//  CLightAppTests.m
-//  CLightAppTests
+//  LoochiAppTests.m
+//  LoochiAppTests
 //
 //  Created by Thomas SARLANDIE on 01/06/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CLightAppTests.h"
+#import "LoochiAppTests.h"
 
-@implementation CLightAppTests
+@implementation LoochiAppTests
 
 - (void)setUp
 {

@@ -1,6 +1,6 @@
-[submodule "IllumiApp/UIImageView-GeometryConversion"]
-	path = IllumiApp/UIImageView-GeometryConversion
+[submodule "LoochiApp/UIImageView-GeometryConversion"]
+	path = LoochiApp/UIImageView-GeometryConversion
 	url = https://github.com/sarfata/UIImageView-GeometryConversion.git
-[submodule "IllumiApp/CocoaLumberjack"]
-	path = IllumiApp/CocoaLumberjack
+[submodule "LoochiApp/CocoaLumberjack"]
+	path = LoochiApp/CocoaLumberjack
 	url = https://github.com/robbiehanson/CocoaLumberjack.git

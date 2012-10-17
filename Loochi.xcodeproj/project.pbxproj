@@ -104,15 +104,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E907057315F01B4E001A23E5 /* ILRainbowScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILRainbowScene.h; path = IllumiApp/ILRainbowScene.h; sourceTree = SOURCE_ROOT; };
-		E907057415F01B4E001A23E5 /* ILRainbowScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILRainbowScene.m; path = IllumiApp/ILRainbowScene.m; sourceTree = SOURCE_ROOT; };
+		E907057315F01B4E001A23E5 /* ILRainbowScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILRainbowScene.h; path = LoochiApp/ILRainbowScene.h; sourceTree = SOURCE_ROOT; };
+		E907057415F01B4E001A23E5 /* ILRainbowScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILRainbowScene.m; path = LoochiApp/ILRainbowScene.m; sourceTree = SOURCE_ROOT; };
 		E908CFFC15CCA011002387E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E908CFFD15CCA011002387E1 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
-		E908D00915CCA382002387E1 /* LOOConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOConnectionViewController.h; path = IllumiApp/LOOConnectionViewController.h; sourceTree = SOURCE_ROOT; };
+		E908D00915CCA382002387E1 /* LOOConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOConnectionViewController.h; path = LoochiApp/LOOConnectionViewController.h; sourceTree = SOURCE_ROOT; };
 		E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "low_contrast_linen_@2X.png"; sourceTree = SOURCE_ROOT; };
 		E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = low_contrast_linen.png; sourceTree = SOURCE_ROOT; };
 		E90A65E616165AD00085EE8A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		E90A65EC16165F8C0085EE8A /* LOOUDPScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPScanner.m; path = IllumiApp/LOOUDPScanner.m; sourceTree = SOURCE_ROOT; };
+		E90A65EC16165F8C0085EE8A /* LOOUDPScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPScanner.m; path = LoochiApp/LOOUDPScanner.m; sourceTree = SOURCE_ROOT; };
 		E90BC5C01579A42200342F89 /* LoochiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoochiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,18 +130,18 @@
 		E9186658161F6ED500F32B75 /* rainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rainbow.png; sourceTree = "<group>"; };
 		E9186659161F6ED500F32B75 /* sunrise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunrise.png; sourceTree = "<group>"; };
 		E918665A161F6ED500F32B75 /* sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunset.png; sourceTree = "<group>"; };
-		E9186666161F718000F32B75 /* LOOEnchantmentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentViewCell.h; path = IllumiApp/LOOEnchantmentViewCell.h; sourceTree = SOURCE_ROOT; };
-		E9186667161F718000F32B75 /* LOOEnchantmentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentViewCell.m; path = IllumiApp/LOOEnchantmentViewCell.m; sourceTree = SOURCE_ROOT; };
+		E9186666161F718000F32B75 /* LOOEnchantmentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentViewCell.h; path = LoochiApp/LOOEnchantmentViewCell.h; sourceTree = SOURCE_ROOT; };
+		E9186667161F718000F32B75 /* LOOEnchantmentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentViewCell.m; path = LoochiApp/LOOEnchantmentViewCell.m; sourceTree = SOURCE_ROOT; };
 		E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enchantment-bg-selected.png"; sourceTree = SOURCE_ROOT; };
 		E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
 		E92B000215F050D600EBD2F4 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
 		E92B000415F050F700EBD2F4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E92B000615F0812E00EBD2F4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E92B000715F0812E00EBD2F4 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
-		E92BFFEC15F04B3800EBD2F4 /* LOOSoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOSoundViewController.h; path = IllumiApp/AudioAnalysis/LOOSoundViewController.h; sourceTree = SOURCE_ROOT; };
-		E92BFFED15F04B3800EBD2F4 /* LOOSoundViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LOOSoundViewController.mm; path = IllumiApp/AudioAnalysis/LOOSoundViewController.mm; sourceTree = SOURCE_ROOT; };
-		E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FFTBufferManager.cpp; path = IllumiApp/AudioAnalysis/FFTBufferManager.cpp; sourceTree = SOURCE_ROOT; };
-		E92BFFF315F04F2F00EBD2F4 /* FFTBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFTBufferManager.h; path = IllumiApp/AudioAnalysis/FFTBufferManager.h; sourceTree = SOURCE_ROOT; };
+		E92BFFEC15F04B3800EBD2F4 /* LOOSoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOSoundViewController.h; path = LoochiApp/AudioAnalysis/LOOSoundViewController.h; sourceTree = SOURCE_ROOT; };
+		E92BFFED15F04B3800EBD2F4 /* LOOSoundViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LOOSoundViewController.mm; path = LoochiApp/AudioAnalysis/LOOSoundViewController.mm; sourceTree = SOURCE_ROOT; };
+		E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FFTBufferManager.cpp; path = LoochiApp/AudioAnalysis/FFTBufferManager.cpp; sourceTree = SOURCE_ROOT; };
+		E92BFFF315F04F2F00EBD2F4 /* FFTBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFTBufferManager.h; path = LoochiApp/AudioAnalysis/FFTBufferManager.h; sourceTree = SOURCE_ROOT; };
 		E92BFFF615F04F5F00EBD2F4 /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
 		E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
 		E92BFFF815F04F5F00EBD2F4 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
@@ -150,28 +150,28 @@
 		E92BFFFB15F04F5F00EBD2F4 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
 		E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
-		E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiApp-Info.plist"; path = "IllumiApp/LoochiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E95992DA162E2F53006B0B06 /* LoochiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoochiApp-Prefix.pch"; path = "IllumiApp/LoochiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiApp-Info.plist"; path = "LoochiApp/LoochiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E95992DA162E2F53006B0B06 /* LoochiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoochiApp-Prefix.pch"; path = "LoochiApp/LoochiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		E95992DB162E2F74006B0B06 /* LoochiAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiAppTests-Info.plist"; path = "LoochiAppTests/LoochiAppTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOConnectionViewController.m; path = IllumiApp/LOOConnectionViewController.m; sourceTree = SOURCE_ROOT; };
-		E95BC47C161CDA8200E56DDC /* LOOLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLamp.h; path = IllumiApp/LOOLamp.h; sourceTree = SOURCE_ROOT; };
-		E95BC47D161CDA8200E56DDC /* LOOLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOLamp.m; path = IllumiApp/LOOLamp.m; sourceTree = SOURCE_ROOT; };
-		E95BC47E161CDA8200E56DDC /* LOOLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLightClient.h; path = IllumiApp/LOOLightClient.h; sourceTree = SOURCE_ROOT; };
-		E95BC483161CDD3C00E56DDC /* LOOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOAppDelegate.h; path = IllumiApp/LOOAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		E95BC484161CE63A00E56DDC /* LOOBLELamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOBLELamp.h; path = IllumiApp/LOOBLELamp.h; sourceTree = SOURCE_ROOT; };
-		E95BC485161CE63A00E56DDC /* LOOBLELamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOBLELamp.m; path = IllumiApp/LOOBLELamp.m; sourceTree = SOURCE_ROOT; };
-		E966088E161F612600C9B462 /* LOOEnchantmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentsViewController.h; path = IllumiApp/LOOEnchantmentsViewController.h; sourceTree = SOURCE_ROOT; };
-		E966088F161F612600C9B462 /* LOOEnchantmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentsViewController.m; path = IllumiApp/LOOEnchantmentsViewController.m; sourceTree = SOURCE_ROOT; };
-		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IllumiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = IllumiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "IllumiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
-		E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ILColor.m"; path = "IllumiApp/UIColor+ILColor.m"; sourceTree = SOURCE_ROOT; };
-		E97F239A15E85F2C003A38D9 /* ILScenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILScenesViewController.h; path = IllumiApp/ILScenesViewController.h; sourceTree = SOURCE_ROOT; };
-		E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILScenesViewController.m; path = IllumiApp/ILScenesViewController.m; sourceTree = SOURCE_ROOT; };
-		E97F239D15E85F3B003A38D9 /* ILFireScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILFireScene.h; path = IllumiApp/ILFireScene.h; sourceTree = SOURCE_ROOT; };
-		E97F239E15E85F3B003A38D9 /* ILFireScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILFireScene.m; path = IllumiApp/ILFireScene.m; sourceTree = SOURCE_ROOT; };
-		E985645615F170BD004EB431 /* DCRejectionFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCRejectionFilter.h; path = IllumiApp/AudioAnalysis/DCRejectionFilter.h; sourceTree = SOURCE_ROOT; };
-		E985645715F1710F004EB431 /* DCRejectionFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DCRejectionFilter.mm; path = IllumiApp/AudioAnalysis/DCRejectionFilter.mm; sourceTree = SOURCE_ROOT; };
+		E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOConnectionViewController.m; path = LoochiApp/LOOConnectionViewController.m; sourceTree = SOURCE_ROOT; };
+		E95BC47C161CDA8200E56DDC /* LOOLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLamp.h; path = LoochiApp/LOOLamp.h; sourceTree = SOURCE_ROOT; };
+		E95BC47D161CDA8200E56DDC /* LOOLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOLamp.m; path = LoochiApp/LOOLamp.m; sourceTree = SOURCE_ROOT; };
+		E95BC47E161CDA8200E56DDC /* LOOLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLightClient.h; path = LoochiApp/LOOLightClient.h; sourceTree = SOURCE_ROOT; };
+		E95BC483161CDD3C00E56DDC /* LOOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOAppDelegate.h; path = LoochiApp/LOOAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E95BC484161CE63A00E56DDC /* LOOBLELamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOBLELamp.h; path = LoochiApp/LOOBLELamp.h; sourceTree = SOURCE_ROOT; };
+		E95BC485161CE63A00E56DDC /* LOOBLELamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOBLELamp.m; path = LoochiApp/LOOBLELamp.m; sourceTree = SOURCE_ROOT; };
+		E966088E161F612600C9B462 /* LOOEnchantmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentsViewController.h; path = LoochiApp/LOOEnchantmentsViewController.h; sourceTree = SOURCE_ROOT; };
+		E966088F161F612600C9B462 /* LOOEnchantmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentsViewController.m; path = LoochiApp/LOOEnchantmentsViewController.m; sourceTree = SOURCE_ROOT; };
+		E9746BD415CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = LoochiApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		E9746BD615CBA97300C23B8D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = LoochiApp/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "LoochiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
+		E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ILColor.m"; path = "LoochiApp/UIColor+ILColor.m"; sourceTree = SOURCE_ROOT; };
+		E97F239A15E85F2C003A38D9 /* ILScenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILScenesViewController.h; path = LoochiApp/ILScenesViewController.h; sourceTree = SOURCE_ROOT; };
+		E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILScenesViewController.m; path = LoochiApp/ILScenesViewController.m; sourceTree = SOURCE_ROOT; };
+		E97F239D15E85F3B003A38D9 /* ILFireScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILFireScene.h; path = LoochiApp/ILFireScene.h; sourceTree = SOURCE_ROOT; };
+		E97F239E15E85F3B003A38D9 /* ILFireScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILFireScene.m; path = LoochiApp/ILFireScene.m; sourceTree = SOURCE_ROOT; };
+		E985645615F170BD004EB431 /* DCRejectionFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCRejectionFilter.h; path = LoochiApp/AudioAnalysis/DCRejectionFilter.h; sourceTree = SOURCE_ROOT; };
+		E985645715F1710F004EB431 /* DCRejectionFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DCRejectionFilter.mm; path = LoochiApp/AudioAnalysis/DCRejectionFilter.mm; sourceTree = SOURCE_ROOT; };
 		E985645915F173D2004EB431 /* 194-note-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2.png"; sourceTree = SOURCE_ROOT; };
 		E985645A15F173D2004EB431 /* 194-note-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2@2x.png"; sourceTree = SOURCE_ROOT; };
 		E98E050B15DADB8C00DC0C1B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
@@ -203,36 +203,36 @@
 		E991D03115DB444E00627CDA /* 29-circle-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-circle-pause@2x.png"; sourceTree = SOURCE_ROOT; };
 		E991D03415DB49C100627CDA /* 271-dramamasks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "271-dramamasks.png"; sourceTree = SOURCE_ROOT; };
 		E991D03515DB49C100627CDA /* 271-dramamasks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "271-dramamasks@2x.png"; sourceTree = SOURCE_ROOT; };
-		E991D03F15DB574F00627CDA /* LOOEnchantment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantment.h; path = IllumiApp/LOOEnchantment.h; sourceTree = SOURCE_ROOT; };
-		E991D04015DB575000627CDA /* LOOEnchantment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantment.m; path = IllumiApp/LOOEnchantment.m; sourceTree = SOURCE_ROOT; };
-		E9AC353C15CCB28A004BFBBA /* background-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-white.png"; path = "IllumiApp/background-white.png"; sourceTree = SOURCE_ROOT; };
+		E991D03F15DB574F00627CDA /* LOOEnchantment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantment.h; path = LoochiApp/LOOEnchantment.h; sourceTree = SOURCE_ROOT; };
+		E991D04015DB575000627CDA /* LOOEnchantment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantment.m; path = LoochiApp/LOOEnchantment.m; sourceTree = SOURCE_ROOT; };
+		E9AC353C15CCB28A004BFBBA /* background-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-white.png"; path = "LoochiApp/background-white.png"; sourceTree = SOURCE_ROOT; };
 		E9CDA5F3161293CA0097A47E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		E9CDA5F4161293CA0097A47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E9CDA5F5161293CA0097A47E /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
 		E9CDA5F6161293CA0097A47E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		E9CDA5FA161296A60097A47E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPThread.m; path = IllumiApp/LOOUDPThread.m; sourceTree = SOURCE_ROOT; };
-		E9E2C57915E8B1C400C4B5D1 /* LOOUDPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPThread.h; path = IllumiApp/LOOUDPThread.h; sourceTree = SOURCE_ROOT; };
-		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
-		E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+GeometryConversion.m"; path = "IllumiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.m"; sourceTree = SOURCE_ROOT; };
-		E9E61A3D15CBA7C70035D49C /* CLATintedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLATintedView.h; path = IllumiApp/CLATintedView.h; sourceTree = SOURCE_ROOT; };
-		E9E61A3E15CBA7C70035D49C /* CLATintedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLATintedView.m; path = IllumiApp/CLATintedView.m; sourceTree = SOURCE_ROOT; };
-		E9E61A3F15CBA7C70035D49C /* UIImageView+ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ColorPicker.h"; path = "IllumiApp/UIImageView+ColorPicker.h"; sourceTree = SOURCE_ROOT; };
-		E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ColorPicker.m"; path = "IllumiApp/UIImageView+ColorPicker.m"; sourceTree = SOURCE_ROOT; };
-		E9E61A4315CBA7DB0035D49C /* LOOUDPLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPLamp.h; path = IllumiApp/LOOUDPLamp.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPLamp.m; path = IllumiApp/LOOUDPLamp.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4515CBA7DB0035D49C /* LOOUDPScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPScanner.h; path = IllumiApp/LOOUDPScanner.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOAppDelegate.m; path = IllumiApp/LOOAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4D15CBA8010035D49C /* ILColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILColorViewController.h; path = IllumiApp/ILColorViewController.h; sourceTree = SOURCE_ROOT; };
-		E9E61A4E15CBA8010035D49C /* ILColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILColorViewController.m; path = IllumiApp/ILColorViewController.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = IllumiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		E9E61A5615CBA8200035D49C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = IllumiApp/main.m; sourceTree = SOURCE_ROOT; };
-		E9E61A5915CBA83F0035D49C /* background-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-color.png"; path = "IllumiApp/background-color.png"; sourceTree = SOURCE_ROOT; };
-		E9E61A5A15CBA83F0035D49C /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshair.png; path = IllumiApp/crosshair.png; sourceTree = SOURCE_ROOT; };
-		E9E61A5B15CBA83F0035D49C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "IllumiApp/Icon-72.png"; sourceTree = SOURCE_ROOT; };
-		E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "IllumiApp/Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
-		E9E61A5D15CBA83F0035D49C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = IllumiApp/Icon.png; sourceTree = SOURCE_ROOT; };
-		E9E61A5E15CBA83F0035D49C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "IllumiApp/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPThread.m; path = LoochiApp/LOOUDPThread.m; sourceTree = SOURCE_ROOT; };
+		E9E2C57915E8B1C400C4B5D1 /* LOOUDPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPThread.h; path = LoochiApp/LOOUDPThread.h; sourceTree = SOURCE_ROOT; };
+		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "LoochiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
+		E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+GeometryConversion.m"; path = "LoochiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.m"; sourceTree = SOURCE_ROOT; };
+		E9E61A3D15CBA7C70035D49C /* CLATintedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLATintedView.h; path = LoochiApp/CLATintedView.h; sourceTree = SOURCE_ROOT; };
+		E9E61A3E15CBA7C70035D49C /* CLATintedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLATintedView.m; path = LoochiApp/CLATintedView.m; sourceTree = SOURCE_ROOT; };
+		E9E61A3F15CBA7C70035D49C /* UIImageView+ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ColorPicker.h"; path = "LoochiApp/UIImageView+ColorPicker.h"; sourceTree = SOURCE_ROOT; };
+		E9E61A4015CBA7C70035D49C /* UIImageView+ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ColorPicker.m"; path = "LoochiApp/UIImageView+ColorPicker.m"; sourceTree = SOURCE_ROOT; };
+		E9E61A4315CBA7DB0035D49C /* LOOUDPLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPLamp.h; path = LoochiApp/LOOUDPLamp.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPLamp.m; path = LoochiApp/LOOUDPLamp.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4515CBA7DB0035D49C /* LOOUDPScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPScanner.h; path = LoochiApp/LOOUDPScanner.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOAppDelegate.m; path = LoochiApp/LOOAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4D15CBA8010035D49C /* ILColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILColorViewController.h; path = LoochiApp/ILColorViewController.h; sourceTree = SOURCE_ROOT; };
+		E9E61A4E15CBA8010035D49C /* ILColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILColorViewController.m; path = LoochiApp/ILColorViewController.m; sourceTree = SOURCE_ROOT; };
+		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = LoochiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		E9E61A5615CBA8200035D49C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LoochiApp/main.m; sourceTree = SOURCE_ROOT; };
+		E9E61A5915CBA83F0035D49C /* background-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-color.png"; path = "LoochiApp/background-color.png"; sourceTree = SOURCE_ROOT; };
+		E9E61A5A15CBA83F0035D49C /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshair.png; path = LoochiApp/crosshair.png; sourceTree = SOURCE_ROOT; };
+		E9E61A5B15CBA83F0035D49C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "LoochiApp/Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		E9E61A5C15CBA83F0035D49C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "LoochiApp/Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
+		E9E61A5D15CBA83F0035D49C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = LoochiApp/Icon.png; sourceTree = SOURCE_ROOT; };
+		E9E61A5E15CBA83F0035D49C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "LoochiApp/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A6515CBA8AB0035D49C /* CLightAppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLightAppTests.h; path = LoochiAppTests/CLightAppTests.h; sourceTree = SOURCE_ROOT; };
 		E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLightAppTests.m; path = LoochiAppTests/CLightAppTests.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -314,7 +314,7 @@
 				E9CDA5FA161296A60097A47E /* Default-568h@2x.png */,
 				E908CFFC15CCA011002387E1 /* README.md */,
 				E908CFFD15CCA011002387E1 /* TODO.md */,
-				E90BC5CA1579A42200342F89 /* IllumiApp */,
+				E90BC5CA1579A42200342F89 /* LoochiApp */,
 				E90BC5E81579A42200342F89 /* LoochiAppTests */,
 				E90BC5C31579A42200342F89 /* Frameworks */,
 				E90BC5C11579A42200342F89 /* Products */,
@@ -346,7 +346,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E90BC5CA1579A42200342F89 /* IllumiApp */ = {
+		E90BC5CA1579A42200342F89 /* LoochiApp */ = {
 			isa = PBXGroup;
 			children = (
 				E92BFFEA15F04AF600EBD2F4 /* AudioAnalysis */,
@@ -368,7 +368,7 @@
 				E9CDA5F2161293CA0097A47E /* TestFlightSDK1.1 */,
 				E991CC0815DB175A00627CDA /* CocoaLumberjack */,
 			);
-			name = IllumiApp;
+			name = LoochiApp;
 			path = CLightApp;
 			sourceTree = "<group>";
 		};
@@ -447,7 +447,7 @@
 				E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */,
 			);
 			name = iPublicUtility;
-			path = IllumiApp/AudioAnalysis/iPublicUtility;
+			path = LoochiApp/AudioAnalysis/iPublicUtility;
 			sourceTree = SOURCE_ROOT;
 		};
 		E95BC473161CC6D400E56DDC /* LOOScanner */ = {
@@ -470,7 +470,7 @@
 				E991CC3115DB175A00627CDA /* README.markdown */,
 			);
 			name = CocoaLumberjack;
-			path = IllumiApp/CocoaLumberjack;
+			path = LoochiApp/CocoaLumberjack;
 			sourceTree = SOURCE_ROOT;
 		};
 		E991CC2015DB175A00627CDA /* Lumberjack */ = {
@@ -557,7 +557,7 @@
 				E9CDA5F6161293CA0097A47E /* TestFlight.h */,
 			);
 			name = TestFlightSDK1.1;
-			path = IllumiApp/TestFlightSDK1.1;
+			path = LoochiApp/TestFlightSDK1.1;
 			sourceTree = SOURCE_ROOT;
 		};
 		E9DBDA4F158D683200EE2B9D /* Loochi Services */ = {
@@ -842,12 +842,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/IllumiApp/LoochiApp-Info.plist";
+				GCC_PREFIX_HEADER = "LoochiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/LoochiApp/LoochiApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.1\"",
+					"\"$(SRCROOT)/LoochiApp/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -860,12 +860,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/IllumiApp/LoochiApp-Info.plist";
+				GCC_PREFIX_HEADER = "LoochiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/LoochiApp/LoochiApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/IllumiApp/TestFlightSDK1.1\"",
+					"\"$(SRCROOT)/LoochiApp/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -877,14 +877,14 @@
 		E90BC5F71579A42200342F89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IllumiApp.app/IllumiApp";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoochiApp.app/IllumiApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
-				INFOPLIST_FILE = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Users/thomas/work/IllumiApp/LoochiAppTests/LoochiAppTests-Info.plist";
+				GCC_PREFIX_HEADER = "LoochiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Users/thomas/work/LoochiApp/LoochiAppTests/LoochiAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -894,14 +894,14 @@
 		E90BC5F81579A42200342F89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IllumiApp.app/IllumiApp";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoochiApp.app/IllumiApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
-				INFOPLIST_FILE = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Users/thomas/work/IllumiApp/LoochiAppTests/LoochiAppTests-Info.plist";
+				GCC_PREFIX_HEADER = "LoochiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Users/thomas/work/LoochiApp/LoochiAppTests/LoochiAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

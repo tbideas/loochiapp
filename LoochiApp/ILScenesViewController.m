@@ -11,15 +11,12 @@
 #import "ILRainbowScene.h"
 #import "UIColor+ILColor.h"
 #import "DDLog.h"
+#import "LOOMagicWand.h"
 
 @interface ILScenesViewController ()
-{
-    NSTimer *sceneTimer;
-    NSDate *sceneStart;
-    LOOEnchantment *currentScene;
-}
 
 @property NSArray *scenes;
+@property LOOMagicWand *magicWand;
 
 @end
 
@@ -147,7 +144,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-    [self stopScene];
+    [self.magicWand dispellEnchantment];
 }
 
 #pragma mark - Table view data source
@@ -168,10 +165,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     static NSString *CellIdentifier = @"sceneCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    LOOEnchantment *scene = [_scenes objectAtIndex:indexPath.row];
-    cell.textLabel.text  = scene.description;
+    LOOEnchantment *enchantment = [_scenes objectAtIndex:indexPath.row];
+    cell.textLabel.text  = enchantment.description;
     
-    if (scene == currentScene) {
+    if (self.magicWand.castedEnchantment == enchantment) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else {
@@ -184,61 +181,13 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LOOEnchantment *scene = [_scenes objectAtIndex:indexPath.row];
-    [self startScene:scene];
+    if (!self.magicWand) {
+        self.magicWand = [[LOOMagicWand alloc] init];
+    }
+    
+    LOOEnchantment *enchantment = [_scenes objectAtIndex:indexPath.row];
+    [self.magicWand castEnchantment:enchantment onLamp:self.lamp];
     [tableView reloadData];
-}
-
-#pragma mark - Animation functions
-
-- (void) startScene:(LOOEnchantment*) scene
-{
-    if (sceneTimer != nil) {
-        [sceneTimer invalidate];
-        sceneTimer = nil;
-    }
-    
-    currentScene = scene;
-    sceneTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(animateScene) userInfo:nil repeats:YES];
-    sceneStart = [NSDate date];
-    DDLogVerbose(@"Starting scene: %@", scene.description);
-}
-
-- (void) animateScene
-{
-    NSTimeInterval scenePosition = [[NSDate date] timeIntervalSinceDate:sceneStart];
-    if (scenePosition >= currentScene.duration) {
-        if (currentScene.repeat) {
-            // If we have reached the end - re-set the beginning date correctly
-            sceneStart = [NSDate dateWithTimeInterval:currentScene.duration - scenePosition sinceDate:[NSDate date]];
-            
-            scenePosition = [[NSDate date] timeIntervalSinceDate:sceneStart];
-
-            DDLogVerbose(@"Looping animation. start=%f position=%f", [sceneStart timeIntervalSinceReferenceDate], scenePosition);
-        }
-        else {
-            [sceneTimer invalidate];
-            sceneTimer = nil;
-            currentScene = nil;
-            return;
-        }
-    }
-
-    UIColor *nowColor = [currentScene colorForTime:scenePosition];
-    
-    float red, green, blue;
-    [nowColor getRed:&red green:&green blue:&blue alpha:nil];
-    DDLogVerbose(@"Effect '%@' Pos=%2.2f %.2f/%.2f/%.2f", currentScene.description, scenePosition, red, green, blue);
-    [self.lamp setColor:nowColor];
-    [self.colorView setBackgroundColor:nowColor];
-}
-
-- (void) stopScene
-{
-    [sceneTimer invalidate];
-    sceneTimer = nil;
-    [self.lamp setColor:[UIColor blackColor]];
-    currentScene = nil;
 }
 
 @end

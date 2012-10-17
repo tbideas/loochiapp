@@ -39,6 +39,8 @@
 		E92BFFF415F04F2F00EBD2F4 /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */; };
 		E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */; };
 		E92BFFFF15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */; };
+		E92E4979162E3ABE00507717 /* LOOMagicWand.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E4978162E3ABE00507717 /* LOOMagicWand.m */; };
+		E92E497C162E3FFF00507717 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92E497B162E3FFF00507717 /* Default-568h@2x.png */; };
 		E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */; };
 		E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47D161CDA8200E56DDC /* LOOLamp.m */; };
 		E95BC486161CE63A00E56DDC /* LOOBLELamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC485161CE63A00E56DDC /* LOOBLELamp.m */; };
@@ -70,7 +72,6 @@
 		E991D04115DB575000627CDA /* LOOEnchantment.m in Sources */ = {isa = PBXBuildFile; fileRef = E991D04015DB575000627CDA /* LOOEnchantment.m */; };
 		E9AC353D15CCB28A004BFBBA /* background-white.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AC353C15CCB28A004BFBBA /* background-white.png */; };
 		E9CDA5F7161293CA0097A47E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CDA5F3161293CA0097A47E /* libTestFlight.a */; };
-		E9CDA5FB161296A60097A47E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9CDA5FA161296A60097A47E /* Default-568h@2x.png */; };
 		E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */; };
 		E9E61A3C15CBA7AA0035D49C /* UIImageView+GeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3B15CBA7AA0035D49C /* UIImageView+GeometryConversion.m */; };
 		E9E61A4115CBA7C70035D49C /* CLATintedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A3E15CBA7C70035D49C /* CLATintedView.m */; };
@@ -146,6 +147,9 @@
 		E92BFFFB15F04F5F00EBD2F4 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
 		E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		E92E4977162E3ABE00507717 /* LOOMagicWand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOMagicWand.h; path = LoochiApp/LOOMagicWand.h; sourceTree = SOURCE_ROOT; };
+		E92E4978162E3ABE00507717 /* LOOMagicWand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOMagicWand.m; path = LoochiApp/LOOMagicWand.m; sourceTree = SOURCE_ROOT; };
+		E92E497B162E3FFF00507717 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiApp-Info.plist"; path = "LoochiApp/LoochiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E95992DA162E2F53006B0B06 /* LoochiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoochiApp-Prefix.pch"; path = "LoochiApp/LoochiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		E95992DB162E2F74006B0B06 /* LoochiAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiAppTests-Info.plist"; path = "LoochiAppTests/LoochiAppTests-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -206,7 +210,6 @@
 		E9CDA5F4161293CA0097A47E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E9CDA5F5161293CA0097A47E /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
 		E9CDA5F6161293CA0097A47E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
-		E9CDA5FA161296A60097A47E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		E9E2C57615E8845100C4B5D1 /* LOOUDPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPThread.m; path = LoochiApp/LOOUDPThread.m; sourceTree = SOURCE_ROOT; };
 		E9E2C57915E8B1C400C4B5D1 /* LOOUDPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOUDPThread.h; path = LoochiApp/LOOUDPThread.h; sourceTree = SOURCE_ROOT; };
 		E9E61A3A15CBA7A00035D49C /* UIImageView+GeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+GeometryConversion.h"; path = "LoochiApp/UIImageView-GeometryConversion/UIImageView+GeometryConversion.h"; sourceTree = SOURCE_ROOT; };
@@ -277,7 +280,7 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E9CDA5FA161296A60097A47E /* Default-568h@2x.png */,
+				E92E497B162E3FFF00507717 /* Default-568h@2x.png */,
 				E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */,
 				E9186650161F6ED500F32B75 /* enchantments-images */,
 				E985645915F173D2004EB431 /* 194-note-2.png */,
@@ -519,6 +522,8 @@
 				E97F239E15E85F3B003A38D9 /* ILFireScene.m */,
 				E907057315F01B4E001A23E5 /* ILRainbowScene.h */,
 				E907057415F01B4E001A23E5 /* ILRainbowScene.m */,
+				E92E4977162E3ABE00507717 /* LOOMagicWand.h */,
+				E92E4978162E3ABE00507717 /* LOOMagicWand.m */,
 			);
 			name = Enchantments;
 			sourceTree = "<group>";
@@ -666,7 +671,6 @@
 				E991D03715DB49C100627CDA /* 271-dramamasks@2x.png in Resources */,
 				E985645B15F173D2004EB431 /* 194-note-2.png in Resources */,
 				E985645C15F173D2004EB431 /* 194-note-2@2x.png in Resources */,
-				E9CDA5FB161296A60097A47E /* Default-568h@2x.png in Resources */,
 				E918665B161F6ED500F32B75 /* boris-dance-blue.png in Resources */,
 				E918665C161F6ED500F32B75 /* boris-dance-red.png in Resources */,
 				E918665D161F6ED500F32B75 /* boris-dance-white.png in Resources */,
@@ -678,6 +682,7 @@
 				E9186663161F6ED500F32B75 /* sunrise.png in Resources */,
 				E9186664161F6ED500F32B75 /* sunset.png in Resources */,
 				E918666A161F9E1400F32B75 /* enchantment-bg-selected.png in Resources */,
+				E92E497C162E3FFF00507717 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +749,7 @@
 				E95BC486161CE63A00E56DDC /* LOOBLELamp.m in Sources */,
 				E9660890161F612600C9B462 /* LOOEnchantmentsViewController.m in Sources */,
 				E9186668161F718000F32B75 /* LOOEnchantmentViewCell.m in Sources */,
+				E92E4979162E3ABE00507717 /* LOOMagicWand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

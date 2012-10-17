@@ -9,6 +9,7 @@
 #import "DDLog.h"
 #import "LOOEnchantmentsViewController.h"
 #import "LOOMagicWand.h"
+#import "LOOSolidColorEnchantment.h"
 #import "ILFireScene.h"
 #import "ILRainbowScene.h"
 #import "UIColor+ILColor.h"
@@ -164,6 +165,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
                              andDescription:@"Crazy Colors"
                                    andImage:[UIImage imageNamed:@"crazycolors.png"]
                                   andRepeat:YES] ];
+    
+    [scenes addObject:
+     [[LOOSolidColorEnchantment alloc] initWithColor:[UIColor blackColor]
+                                      andDescription:@"Off"
+                                            andImage:[UIImage imageNamed:@"off.png"]]];
+    
     return scenes;
 }
 @end

@@ -39,6 +39,8 @@
 		E92BFFF415F04F2F00EBD2F4 /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF215F04F2F00EBD2F4 /* FFTBufferManager.cpp */; };
 		E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFF715F04F5F00EBD2F4 /* CADebugMacros.cpp */; };
 		E92BFFFF15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFA15F04F5F00EBD2F4 /* CAStreamBasicDescription.cpp */; };
+		E95992D9162E2F49006B0B06 /* LoochiApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */; };
+		E95992DC162E2F74006B0B06 /* LoochiAppTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E95992DB162E2F74006B0B06 /* LoochiAppTests-Info.plist */; };
 		E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */; };
 		E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47D161CDA8200E56DDC /* LOOLamp.m */; };
 		E95BC486161CE63A00E56DDC /* LOOBLELamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC485161CE63A00E56DDC /* LOOBLELamp.m */; };
@@ -111,11 +113,11 @@
 		E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = low_contrast_linen.png; sourceTree = SOURCE_ROOT; };
 		E90A65E616165AD00085EE8A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		E90A65EC16165F8C0085EE8A /* LOOUDPScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOUDPScanner.m; path = IllumiApp/LOOUDPScanner.m; sourceTree = SOURCE_ROOT; };
-		E90BC5C01579A42200342F89 /* IllumiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IllumiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90BC5C01579A42200342F89 /* LoochiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoochiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5C41579A42200342F89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E90BC5C61579A42200342F89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E90BC5C81579A42200342F89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E90BC5E11579A42200342F89 /* IllumiAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IllumiAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90BC5E11579A42200342F89 /* LoochiAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoochiAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90BC5E21579A42200342F89 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E90BC5FC1579AC0D00342F89 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E9186651161F6ED500F32B75 /* boris-dance-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boris-dance-blue.png"; sourceTree = "<group>"; };
@@ -148,6 +150,9 @@
 		E92BFFFB15F04F5F00EBD2F4 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
 		E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		E92BFFFD15F04F5F00EBD2F4 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiApp-Info.plist"; path = "IllumiApp/LoochiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E95992DA162E2F53006B0B06 /* LoochiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoochiApp-Prefix.pch"; path = "IllumiApp/LoochiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E95992DB162E2F74006B0B06 /* LoochiAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiAppTests-Info.plist"; path = "IllumiAppTests/LoochiAppTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOConnectionViewController.m; path = IllumiApp/LOOConnectionViewController.m; sourceTree = SOURCE_ROOT; };
 		E95BC47C161CDA8200E56DDC /* LOOLamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOLamp.h; path = IllumiApp/LOOLamp.h; sourceTree = SOURCE_ROOT; };
 		E95BC47D161CDA8200E56DDC /* LOOLamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOLamp.m; path = IllumiApp/LOOLamp.m; sourceTree = SOURCE_ROOT; };
@@ -221,8 +226,6 @@
 		E9E61A4D15CBA8010035D49C /* ILColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILColorViewController.h; path = IllumiApp/ILColorViewController.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4E15CBA8010035D49C /* ILColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILColorViewController.m; path = IllumiApp/ILColorViewController.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = IllumiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		E9E61A5415CBA8200035D49C /* IllumiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IllumiApp-Info.plist"; path = "IllumiApp/IllumiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E9E61A5515CBA8200035D49C /* IllumiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "IllumiApp-Prefix.pch"; path = "IllumiApp/IllumiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		E9E61A5615CBA8200035D49C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = IllumiApp/main.m; sourceTree = SOURCE_ROOT; };
 		E9E61A5915CBA83F0035D49C /* background-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-color.png"; path = "IllumiApp/background-color.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A5A15CBA83F0035D49C /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshair.png; path = IllumiApp/crosshair.png; sourceTree = SOURCE_ROOT; };
@@ -232,7 +235,6 @@
 		E9E61A5E15CBA83F0035D49C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "IllumiApp/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A6515CBA8AB0035D49C /* CLightAppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLightAppTests.h; path = IllumiAppTests/CLightAppTests.h; sourceTree = SOURCE_ROOT; };
 		E9E61A6615CBA8AB0035D49C /* CLightAppTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLightAppTests.m; path = IllumiAppTests/CLightAppTests.m; sourceTree = SOURCE_ROOT; };
-		E9E61A6815CBA8B60035D49C /* IllumiAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IllumiAppTests-Info.plist"; path = "IllumiAppTests/IllumiAppTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,8 +324,8 @@
 		E90BC5C11579A42200342F89 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E90BC5C01579A42200342F89 /* IllumiApp.app */,
-				E90BC5E11579A42200342F89 /* IllumiAppTests.octest */,
+				E90BC5C01579A42200342F89 /* LoochiApp.app */,
+				E90BC5E11579A42200342F89 /* LoochiAppTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,8 +375,8 @@
 		E90BC5CB1579A42200342F89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9E61A5415CBA8200035D49C /* IllumiApp-Info.plist */,
-				E9E61A5515CBA8200035D49C /* IllumiApp-Prefix.pch */,
+				E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */,
+				E95992DA162E2F53006B0B06 /* LoochiApp-Prefix.pch */,
 				E9E61A5615CBA8200035D49C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -394,7 +396,7 @@
 		E90BC5E91579A42200342F89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9E61A6815CBA8B60035D49C /* IllumiAppTests-Info.plist */,
+				E95992DB162E2F74006B0B06 /* LoochiAppTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -592,7 +594,7 @@
 			);
 			name = LoochiApp;
 			productName = CLightApp;
-			productReference = E90BC5C01579A42200342F89 /* IllumiApp.app */;
+			productReference = E90BC5C01579A42200342F89 /* LoochiApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E90BC5E01579A42200342F89 /* LoochiAppTests */ = {
@@ -611,7 +613,7 @@
 			);
 			name = LoochiAppTests;
 			productName = CLightAppTests;
-			productReference = E90BC5E11579A42200342F89 /* IllumiAppTests.octest */;
+			productReference = E90BC5E11579A42200342F89 /* LoochiAppTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -622,7 +624,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "Illumi" */;
+			buildConfigurationList = E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "Loochi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -682,6 +684,8 @@
 				E9186663161F6ED500F32B75 /* sunrise.png in Resources */,
 				E9186664161F6ED500F32B75 /* sunset.png in Resources */,
 				E918666A161F9E1400F32B75 /* enchantment-bg-selected.png in Resources */,
+				E95992D9162E2F49006B0B06 /* LoochiApp-Info.plist in Resources */,
+				E95992DC162E2F74006B0B06 /* LoochiAppTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,8 +842,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
-				INFOPLIST_FILE = "IllumiApp/IllumiApp-Info.plist";
+				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/IllumiApp/LoochiApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -856,8 +860,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
-				INFOPLIST_FILE = "IllumiApp/IllumiApp-Info.plist";
+				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/IllumiApp/LoochiApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,8 +883,8 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
-				INFOPLIST_FILE = "IllumiAppTests/IllumiAppTests-Info.plist";
+				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Users/thomas/work/IllumiApp/IllumiAppTests/LoochiAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -896,8 +900,8 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IllumiApp/IllumiApp-Prefix.pch";
-				INFOPLIST_FILE = "IllumiAppTests/IllumiAppTests-Info.plist";
+				GCC_PREFIX_HEADER = "IllumiApp/LoochiApp-Prefix.pch";
+				INFOPLIST_FILE = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Users/thomas/work/IllumiApp/IllumiAppTests/LoochiAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -907,7 +911,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "Illumi" */ = {
+		E90BC5BA1579A42200342F89 /* Build configuration list for PBXProject "Loochi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E90BC5F11579A42200342F89 /* Debug */,

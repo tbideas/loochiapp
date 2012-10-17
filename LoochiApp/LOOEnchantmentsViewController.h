@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LOOLightClient.h"
 
-@interface LOOEnchantmentsViewController : UICollectionViewController
+@interface LOOEnchantmentsViewController : UICollectionViewController<LOOLightClient>
+
+@property (nonatomic, retain) LOOLamp *lamp;
 
 @end

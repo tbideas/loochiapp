@@ -129,7 +129,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 -(void)setLampOnViewControllers:(LOOLamp*)lamp
 {
-    if ([self.window.rootViewController isKindOfClass:[UITabBarController class]])
+    if ([self.window.rootViewController respondsToSelector:@selector(setLamp:)]) {
+        id<LOOLightClient> lampClient = (id<LOOLightClient>) self.window.rootViewController;
+        [lampClient setLamp:lamp];
+    }
+    /* Old code - to be removed sometime soon coz we are not using a tabbar anymore */
+    else if ([self.window.rootViewController isKindOfClass:[UITabBarController class]])
     {
         UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
         for (UIViewController *vc in tabBarController.viewControllers)

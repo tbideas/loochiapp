@@ -8,6 +8,7 @@
 
 #import "DDLog.h"
 #import "LOOEnchantmentsViewController.h"
+#import "LOOMagicWand.h"
 #import "ILFireScene.h"
 #import "ILRainbowScene.h"
 #import "UIColor+ILColor.h"
@@ -15,7 +16,7 @@
 @interface LOOEnchantmentsViewController ()
 
 @property (strong) NSArray *enchantments;
-
+@property (strong) LOOMagicWand *magicWand;
 @end
 
 @implementation LOOEnchantmentsViewController
@@ -23,7 +24,13 @@
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)viewDidLoad {
-    self.enchantments = [self createSceneEnchantments];
+    if (!self.enchantments) {
+        self.enchantments = [self createSceneEnchantments];
+    }
+
+    if (!self.magicWand) {
+        self.magicWand = [[LOOMagicWand alloc] init];
+    }
 }
 
 #pragma mark UICollectionViewDatasource
@@ -56,7 +63,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #pragma mark UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    DDLogVerbose(@"didSelectItemAtIndexPath: %i", indexPath.row);
+    LOOEnchantment *enchantment = (LOOEnchantment*) self.enchantments[indexPath.row];
+    
+    [self.magicWand castEnchantment:enchantment onLamp:self.lamp];
 }
 
 #pragma mark Where we cook the enchantments

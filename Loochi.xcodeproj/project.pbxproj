@@ -310,7 +310,6 @@
 		E90BC5B51579A42200342F89 = {
 			isa = PBXGroup;
 			children = (
-				E90A65E616165AD00085EE8A /* CoreBluetooth.framework */,
 				E9CDA5FA161296A60097A47E /* Default-568h@2x.png */,
 				E908CFFC15CCA011002387E1 /* README.md */,
 				E908CFFD15CCA011002387E1 /* TODO.md */,
@@ -333,6 +332,7 @@
 		E90BC5C31579A42200342F89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E90A65E616165AD00085EE8A /* CoreBluetooth.framework */,
 				E92B000615F0812E00EBD2F4 /* AudioToolbox.framework */,
 				E92B000715F0812E00EBD2F4 /* AudioUnit.framework */,
 				E92B000415F050F700EBD2F4 /* Accelerate.framework */,

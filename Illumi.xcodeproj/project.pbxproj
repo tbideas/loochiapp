@@ -578,9 +578,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E90BC5BF1579A42200342F89 /* IllumiApp */ = {
+		E90BC5BF1579A42200342F89 /* LoochiApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiApp" */;
+			buildConfigurationList = E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "LoochiApp" */;
 			buildPhases = (
 				E90BC5BC1579A42200342F89 /* Sources */,
 				E90BC5BD1579A42200342F89 /* Frameworks */,
@@ -590,14 +590,14 @@
 			);
 			dependencies = (
 			);
-			name = IllumiApp;
+			name = LoochiApp;
 			productName = CLightApp;
 			productReference = E90BC5C01579A42200342F89 /* IllumiApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E90BC5E01579A42200342F89 /* IllumiAppTests */ = {
+		E90BC5E01579A42200342F89 /* LoochiAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiAppTests" */;
+			buildConfigurationList = E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "LoochiAppTests" */;
 			buildPhases = (
 				E90BC5DC1579A42200342F89 /* Sources */,
 				E90BC5DD1579A42200342F89 /* Frameworks */,
@@ -609,7 +609,7 @@
 			dependencies = (
 				E90BC5E71579A42200342F89 /* PBXTargetDependency */,
 			);
-			name = IllumiAppTests;
+			name = LoochiAppTests;
 			productName = CLightAppTests;
 			productReference = E90BC5E11579A42200342F89 /* IllumiAppTests.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -635,8 +635,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E90BC5BF1579A42200342F89 /* IllumiApp */,
-				E90BC5E01579A42200342F89 /* IllumiAppTests */,
+				E90BC5BF1579A42200342F89 /* LoochiApp */,
+				E90BC5E01579A42200342F89 /* LoochiAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -764,7 +764,7 @@
 /* Begin PBXTargetDependency section */
 		E90BC5E71579A42200342F89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E90BC5BF1579A42200342F89 /* IllumiApp */;
+			target = E90BC5BF1579A42200342F89 /* LoochiApp */;
 			targetProxy = E90BC5E61579A42200342F89 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -916,7 +916,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiApp" */ = {
+		E90BC5F31579A42200342F89 /* Build configuration list for PBXNativeTarget "LoochiApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E90BC5F41579A42200342F89 /* Debug */,
@@ -925,7 +925,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "IllumiAppTests" */ = {
+		E90BC5F61579A42200342F89 /* Build configuration list for PBXNativeTarget "LoochiAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E90BC5F71579A42200342F89 /* Debug */,

@@ -8,6 +8,7 @@
 
 #import "ILFireScene.h"
 #import "UIColor+ILColor.h"
+#import "DDLog.h"
 
 @interface ILFireScene ()
 {
@@ -25,32 +26,17 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     self = [super init];
     if (self) {
+        self.name = @"Fire Scene";
+        self.image = [UIImage imageNamed:@"fireplace.png"];
+        self.duration = 42;
+        self.repeat = YES;
+        self.frequency = 30;
+        
         baseColor = [UIColor colorFromHexString:@"#FF8000"];
         brightColor = [UIColor colorFromHexString:@"#FFFF30"];
         brightness = 0;
     }
     return self;
-}
-
-- (NSString*) name
-{
-    return @"Fire scene";
-}
-
-- (UIImage*) image
-{
-    return [UIImage imageNamed:@"fireplace.png"];
-}
-
-- (NSTimeInterval) duration
-{
-    // does not matter here
-    return 42;
-}
-
-- (NSInteger)frequency
-{
-    return 30;
 }
 
 #define ARC4RANDOM_MAX      0x100000000

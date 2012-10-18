@@ -10,11 +10,11 @@
 
 @interface LOOEnchantment : NSObject
 
-@property (readonly) NSString *name;
-@property (readonly) UIImage *image;
-@property (readonly) NSTimeInterval duration;
-@property (readonly) NSInteger frequency;
-@property (readonly) BOOL repeat;
+@property (strong) NSString *name;
+@property (strong) UIImage *image;
+@property (assign) NSTimeInterval duration;
+@property (assign) NSInteger frequency;
+@property (assign) BOOL repeat;
 
 - (UIColor*) colorForTime:(NSTimeInterval)timeInAnimation;
 

@@ -8,30 +8,26 @@
 
 #import "LOOSolidColorEnchantment.h"
 
-@interface LOOSolidColorEnchantment ()
-
-@property (strong) NSString *name;
-@property (strong) UIImage *image;
-@property (assign) NSTimeInterval duration;
-@property (assign) BOOL repeat;
-@property (assign) NSInteger frequency;
-
-@end
-
 @implementation LOOSolidColorEnchantment
 
-@synthesize name, image, duration, repeat, frequency;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.repeat = YES;
+        self.duration = 1.0;
+        self.frequency = 1;
+    }
+    return self;
+}
 
 - (id)initWithColor:(UIColor*) color andDescription:(NSString*) aDescription andImage:(UIImage*) anImage;
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         self.solidColor = color;
         self.name = aDescription;
         self.image = anImage;
-        self.repeat = YES;
-        self.duration = 1.0;
-        self.frequency = 1;
     }
     return self;
 }

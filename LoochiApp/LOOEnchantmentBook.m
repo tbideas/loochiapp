@@ -53,10 +53,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         return NO;
     }
 
-    return [self readSpellsFromJSonEnchantmentBook:jsonObject];
+    return [self readEnchantmentsFromDictionary:jsonObject];
 }
 
-- (BOOL)readSpellsFromJSonEnchantmentBook:(NSDictionary*) spellBook
+- (BOOL)readEnchantmentsFromDictionary:(NSDictionary*) spellBook
 {
     if (spellBook[@"enchantments"] == nil || ![spellBook[@"enchantments"] isKindOfClass:[NSArray class]]) {
         DDLogWarn(@"No enchantments in enchantment book.");

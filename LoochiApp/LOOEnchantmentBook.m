@@ -10,6 +10,8 @@
 #import "DDLog.h"
 #import "LOOEnchantment.h"
 #import "LOOSolidColorEnchantment.h"
+#import "LOOGradientColorEnchantment.h"
+#import "LOOSequenceEnchantment.h"
 #import "UIColor+ILColor.h"
 
 @interface LOOEnchantmentBook ()
@@ -49,7 +51,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     id jsonObject = [NSJSONSerialization JSONObjectWithData:fileContent options:0 error:&error];
 
     if (jsonObject == nil || ![jsonObject isKindOfClass:[NSDictionary class]]) {
-        DDLogWarn(@"Invalid spellbook content of type: %@", [jsonObject class]);
+        DDLogWarn(@"Invalid spellbook content of type: %@ (%@)", [jsonObject class], error);
         return NO;
     }
 
@@ -62,20 +64,29 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         DDLogWarn(@"No enchantments in enchantment book.");
         return NO;
     }
-    int readEnchantments = 0;
-    NSArray *newEnchantments = spellBook[@"enchantments"];
-    for (id item in newEnchantments) {
+    
+    NSArray *newEnchantments = [self createEnchantmentsFromJSonArray:spellBook[@"enchantments"]];
+    DDLogVerbose(@"Read %i enchantments from enchantment book.", [newEnchantments count]);
+    
+    [self.enchantments addObjectsFromArray:newEnchantments];
+
+    return YES;
+}
+
+- (NSArray*) createEnchantmentsFromJSonArray:(NSArray*) array
+{
+    NSMutableArray *newEnchantments = [[NSMutableArray alloc] initWithCapacity:[array count]];
+    
+    for (id item in array) {
         if ([item isKindOfClass:[NSDictionary class]]) {
             LOOEnchantment *e = [self createEnchantmentFromJSonDictionary:item];
-            [(NSMutableArray*)self.enchantments addObject:e];
-            readEnchantments++;
+            [newEnchantments addObject:e];
         }
         else {
             DDLogWarn(@"Found an item in enchantments that is not a dictionnary. (%@)", item);
         }
     }
-    DDLogVerbose(@"Read %i enchantments from enchantment book.", readEnchantments);
-    return YES;
+    return newEnchantments;
 }
 
 - (LOOEnchantment*)createEnchantmentFromJSonDictionary:(NSDictionary*) dict
@@ -83,11 +94,43 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     LOOEnchantment *e;
     
     if ([dict[@"type"] isEqualToString:@"solid"]) {
-        e = [[LOOSolidColorEnchantment alloc] initWithColor:[UIColor colorFromHexString:dict[@"color"]]
-                                             andDescription:dict[@"name"]
-                                                   andImage:[UIImage imageNamed:dict[@"image"]]];
+        LOOSolidColorEnchantment *solid = [[LOOSolidColorEnchantment alloc] init];
+        
+        NSAssert(dict[@"color"], @"Missing required parameters color");
+
+        solid.solidColor = [UIColor colorFromHexString:dict[@"color"]];
+        e = solid;
+    }
+    else if ([dict[@"type"] isEqualToString:@"gradient"]) {
+        LOOGradientColorEnchantment *gradient = [[LOOGradientColorEnchantment alloc] init];
+
+        NSAssert(dict[@"startColor"] && dict[@"endColor"], @"Missing required parameters startColor and endColor");
+        
+        gradient.startColor = [UIColor colorFromHexString:dict[@"startColor"]];
+        gradient.endColor = [UIColor colorFromHexString:dict[@"endColor"]];
+        e = gradient;
+    }
+    else if ([dict[@"type"] isEqualToString:@"sequence"]) {
+        LOOSequenceEnchantment *sequence = [[LOOSequenceEnchantment alloc] init];
+        
+        NSAssert(dict[@"sequence"], @"Missing required parameter sequence");
+        
+        if (dict[@"sequence"])
+            sequence.enchantments = [self createEnchantmentsFromJSonArray:dict[@"sequence"]];
+        e = sequence;
+    }
+    else {
+        NSAssert(false, @"Unknown enchantment type: %@", dict[@"type"]);
     }
     
+    if (dict[@"name"])
+        e.name = dict[@"name"];
+    if (dict[@"image"])
+        e.image = [UIImage imageNamed:dict[@"image"]];
+    if (dict[@"duration"])
+        e.duration = [dict[@"duration"] floatValue];
+    if (dict[@"repeat"])
+        e.repeat  = [dict[@"repeat"] boolValue];
     return e;
 }
 

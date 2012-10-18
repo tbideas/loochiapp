@@ -4,18 +4,204 @@
     
     "enchantments":
     [
-        {
-            "name":      "6500K White",
-            "image":     "lamp.png",
-            "type":      "solid",
-            "color":     "#FFFFFF"
-        },
-        {
-            "name":      "Turn off",
-            "image":     "off.png",
-            "type":      "solid",
-            "color":     "#000000"
-        }
+     {
+     "name":      "6500K White",
+     "image":     "white-light.png",
+     "type":      "solid",
+     "color":     "#FFFFFF"
+     },
+     
+     {
+     "name":      "5000K White",
+     "image":     "yellow-light.png",
+     "type":      "solid",
+     "color":     "#FFC030"
+     },
+     
+     {
+     "name":      "Turn off",
+     "image":     "off.png",
+     "type":      "solid",
+     "color":     "#000000"
+     },
+     
+     {
+     "name":    "Rainbow",
+     "image":   "rainbow.png",
+     "type":    "sequence",
+     "repeat":  "true",
+     "sequence":
+     [
+      { "duration": 1, "type": "gradient", "startColor": "#FF0000", "endColor": "#FF8000" },
+      { "duration": 1, "type": "gradient", "startColor": "#FF8000", "endColor": "#FFFF00" },
+      { "duration": 1, "type": "gradient", "startColor": "#FFFF00", "endColor": "#00FF00" },
+      { "duration": 1, "type": "gradient", "startColor": "#00FF00", "endColor": "#0000FF" },
+      { "duration": 1, "type": "gradient", "startColor": "#0000FF", "endColor": "#4B0082" },
+      { "duration": 1, "type": "gradient", "startColor": "#4B0082", "endColor": "#800080" },
+      { "duration": 1, "type": "gradient", "startColor": "#800080", "endColor": "#FF0000" }
+     ]
+     },
+     
+     {
+     "name":    "Sunrise",
+     "type":     "sequence",
+     "image":   "sunrise.png",
+     "sequence":
+     [
+      { "duration": 30, "type": "gradient", "startColor": "#000030", "endColor": "#804000" },
+      { "duration": 30, "type": "gradient", "startColor": "#804000", "endColor": "#808000" },
+      { "duration": 30, "type": "gradient", "startColor": "#808000", "endColor": "#FFFF33" }
+     ]
+     },
+
+     {
+     "name":    "Sunset",
+     "image":   "sunset.png",
+     "type":     "sequence",
+     "sequence":
+     [
+      { "duration": 30, "type": "gradient", "startColor": "#FFFF33", "endColor": "#808000" },
+      { "duration": 30, "type": "gradient", "startColor": "#808000", "endColor": "#804000" },
+      { "duration": 30, "type": "gradient", "startColor": "#804000", "endColor": "#000030" }
+      ]
+     },
+
+     {
+     "name":    "Love Scene",
+     "image":   "lovescene.png",
+     "type":     "sequence",
+     "repeat":  "true",
+     "sequence":
+     [
+      { "duration": 10, "type": "gradient", "startColor": "#A06065", "endColor": "#0000FF" },
+      { "duration": 10, "type": "gradient", "startColor": "#0000FF", "endColor": "#A06065" }
+      ]
+     },
+
+     {
+     "name":     "Boris Dance Blue",
+     "image":    "boris-dance-blue.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 0.25, "type": "gradient", "startColor": "#000000", "endColor": "#0000FF" },
+      { "duration": 0.25, "type": "gradient", "startColor": "#0000FF", "endColor": "#000000" }
+      ]
+     },
+
+     {
+     "name":     "Boris Dance Red",
+     "image":    "boris-dance-red.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 0.1, "type": "gradient", "startColor": "#000000", "endColor": "#FF0000" },
+      { "duration": 0.1, "type": "gradient", "startColor": "#FF0000", "endColor": "#000000" },
+      { "duration": 0.2, "type": "solid", "color": "#000000" },
+      ]
+     },
+
+     {
+     "name":     "Lighthouse",
+     "image":    "lighthouse.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 4, "type": "solid", "color": "#000010" },
+      { "duration": 0.25, "type": "gradient", "startColor": "#000010", "endColor": "#C0C000" },
+      { "duration": 0.25, "type": "gradient", "startColor": "#C0C000", "endColor": "#000010" }
+      ]
+     },
+
+     {
+     "name":     "Jungle",
+     "image":    "jungle.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 1, "type": "gradient", "startColor": "#004000", "endColor": "#008000" },
+      { "duration": 1, "type": "gradient", "startColor": "#008000", "endColor": "#208000" },
+      { "duration": 1, "type": "gradient", "startColor": "#208000", "endColor": "#20F030" },
+      { "duration": 1, "type": "gradient", "startColor": "#20F030", "endColor": "#008030" },
+      { "duration": 1, "type": "gradient", "startColor": "#208030", "endColor": "#008030" },
+      { "duration": 1, "type": "gradient", "startColor": "#008030", "endColor": "#004000" }
+      ]
+     },
+     
+     {
+     "name":     "Source",
+     "image":    "water-source.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 0.2, "type": "gradient", "startColor": "#000030", "endColor": "#0000FF" },
+      { "duration": 0.2, "type": "gradient", "startColor": "#0000FF", "endColor": "#0040FF" },
+      { "duration": 0.2, "type": "gradient", "startColor": "#0040FF", "endColor": "#000530" },
+      { "duration": 0.2, "type": "gradient", "startColor": "#000530", "endColor": "#000030" }
+      ]
+     },
+     
+     {
+     "name":     "Lava",
+     "image":    "lava.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 2, "type": "gradient", "startColor": "#400000", "endColor": "#FF4000" },
+      { "duration": 2, "type": "gradient", "startColor": "#FF4000", "endColor": "#FF2000" },
+      { "duration": 2, "type": "gradient", "startColor": "#FF2000", "endColor": "#804000" },
+      { "duration": 2, "type": "gradient", "startColor": "#804000", "endColor": "#400000" }
+      ]
+     },
+     
+     {
+     "name":     "Police",
+     "image":    "police-lights.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 0.1, "type": "gradient", "startColor": "#000000", "endColor": "#0000FF" },
+      { "duration": 0.3, "type": "solid", "color": "#0000FF" },
+      { "duration": 0.1, "type": "gradient", "startColor": "#0000FF", "endColor": "#000000" },
+      { "duration": 0.1, "type": "gradient", "startColor": "#000000", "endColor": "#FF0000" },
+      { "duration": 0.3, "type": "solid", "color": "#FF0000" },
+      { "duration": 0.1, "type": "gradient", "startColor": "#FF0000", "endColor": "#000000" }
+      ]
+     },
+     
+     {
+     "name":     "Stroboscope",
+     "image":    "boris-dance-white.png",
+     "type":     "sequence",
+     "repeat":   "true",
+     "sequence":
+     [
+      { "duration": 0.2, "type": "solid", "color": "#000000" },
+      { "duration": 0.05, "type": "solid", "color": "#FFFFFF" }
+      ]
+     },
+
+     {
+     "name":    "Crazy Colors",
+     "image":   "crazycolors.png",
+     "type":    "sequence",
+     "repeat":  "true",
+     "sequence":
+     [
+      { "duration": 0.2, "type": "gradient", "startColor": "#FF0000", "endColor": "#00FF00" },
+      { "duration": 0.2, "type": "gradient", "startColor": "#00FF00", "endColor": "#FFFF00" },
+      { "duration": 0.2, "type": "gradient", "startColor": "#FFFF00", "endColor": "#0000FF" },
+      { "duration": 0.2, "type": "gradient", "startColor": "#0000FF", "endColor": "#00FF00" },
+      { "duration": 0.2, "type": "gradient", "startColor": "#00FF00", "endColor": "#FF0000" }
+      ]
+     }
 
     ]
 }

@@ -75,107 +75,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (NSArray*) createSceneEnchantments {
     NSMutableArray *scenes = [[NSMutableArray alloc] initWithCapacity:10];
     
-    [scenes addObject:[[ILFireScene alloc] init]];
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor blackColor],
-      [UIColor redColor],
-      [UIColor orangeColor],
-      [UIColor yellowColor],
-      [UIColor greenColor],
-      [UIColor blueColor],
-      [UIColor colorWithRed:(float)0x4B/0xFF green:0x00/0xFF blue:(float)0x82/0xFF alpha:1],
-      [UIColor purpleColor],
-      [UIColor blackColor]
-      ]
-                        andDurationPerColor:1 andDescription:@"Rainbow" andImage:[UIImage imageNamed:@"rainbow.png"] andRepeat:YES] ];
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor colorFromHexString:@"#000030"], // blue
-      [UIColor colorFromHexString:@"#804000"], // orange
-      [UIColor colorFromHexString:@"#808000"], // yellow
-      [UIColor colorFromHexString:@"#FFFF33"] // white
-      ] andDurationPerColor:30 andDescription:@"Sunrise"  andImage:[UIImage imageNamed:@"sunrise.png"] andRepeat:NO]];
-    
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor colorFromHexString:@"#FFFF33"],
-      [UIColor colorFromHexString:@"#808000"], // yellow
-      [UIColor colorFromHexString:@"#804000"], // orange
-      [UIColor colorFromHexString:@"#000030"],
-      ] andDurationPerColor:30 andDescription:@"Sunset" andImage:[UIImage imageNamed:@"sunset.png"] andRepeat:NO]];
-    
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor colorFromHexString:@"#A06065"],
-      [UIColor blueColor],
-      [UIColor colorFromHexString:@"#A06065"],
-      ] andDurationPerColor:10 andDescription:@"Love Scene" andImage:[UIImage imageNamed:@"lovescene.png"] andRepeat:YES] ];
-    
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor blackColor],
-      [UIColor colorFromHexString:@"#0000FF"],
-      [UIColor blackColor],
-      ] andDurationPerColor:0.25 andDescription:@"Boris-Dance Blue!" andImage:[UIImage imageNamed:@"boris-dance-blue.png"] andRepeat:YES] ];
-    
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor blackColor],
-      [UIColor colorFromHexString:@"#FF0000"],
-      [UIColor blackColor],
-      [UIColor blackColor],
-      ] andDurationPerColor:0.1 andDescription:@"Boris-Dance Red!" andImage:[UIImage imageNamed:@"boris-dance-red.png"] andRepeat:YES] ];
-    
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor blackColor],
-      [UIColor colorFromHexString:@"#FFD033"],
-      [UIColor blackColor],
-      ] andDurationPerColor:0.15 andDescription:@"Boris-Dance White!" andImage:[UIImage imageNamed:@"boris-dance-white.png"] andRepeat:YES] ];
-    
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor colorFromHexString:@"#000010"], // blue
-      [UIColor colorFromHexString:@"#000010"], // blue
-      [UIColor colorFromHexString:@"#000010"], // blue
-      [UIColor colorFromHexString:@"#000010"], // blue
-      [UIColor colorFromHexString:@"#000010"], // blue
-      [UIColor colorFromHexString:@"#000010"], // blue
-      [UIColor colorFromHexString:@"#000010"], // blue
-      [UIColor colorFromHexString:@"#C0C000"], // blue
-      [UIColor colorFromHexString:@"#000010"], // blue
-      ]
-                        andDurationPerColor:0.5
-                             andDescription:@"Lighthouse"
-                                   andImage:[UIImage imageNamed:@"lighthouse.png"]
-                                  andRepeat:YES] ];
-    
-    [scenes addObject:
-     [[ILRainbowScene alloc] initWithColors:@[
-      [UIColor redColor],
-      [UIColor blueColor],
-      [UIColor yellowColor],
-      [UIColor purpleColor],
-      [UIColor orangeColor],
-      [UIColor colorWithRed:(float)0x4B/0xFF green:0x00/0xFF blue:(float)0x82/0xFF alpha:1],
-      [UIColor greenColor],
-      [UIColor redColor]
-      ]
-                        andDurationPerColor:0.2
-                             andDescription:@"Crazy Colors"
-                                   andImage:[UIImage imageNamed:@"crazycolors.png"]
-                                  andRepeat:YES] ];
-    
-    [scenes addObject:
-     [[LOOSolidColorEnchantment alloc] initWithColor:[UIColor blackColor]
-                                      andDescription:@"Off"
-                                            andImage:[UIImage imageNamed:@"off.png"]]];
-    
     LOOEnchantmentBook *book = [[LOOEnchantmentBook alloc] init];
     [book readEnchantmentsFromFile:[[NSBundle mainBundle] pathForResource:@"enchantments" ofType:@"json"]];
     [scenes addObjectsFromArray:book.enchantments];
+
+    [scenes addObject:[[ILFireScene alloc] init]];
     
+
     return scenes;
 }
 @end

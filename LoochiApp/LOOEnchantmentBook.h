@@ -10,7 +10,7 @@
 
 @interface LOOEnchantmentBook : NSObject
 
-@property (strong, readonly) NSArray *enchantments;
+@property (strong, readonly) NSMutableArray *enchantments;
 
 - (BOOL)readEnchantmentsFromFile:(NSString*)filePath;
 

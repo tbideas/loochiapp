@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E907057515F01B4E001A23E5 /* ILRainbowScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E907057415F01B4E001A23E5 /* ILRainbowScene.m */; };
 		E908D00F15CCA3A0002387E1 /* low_contrast_linen_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00D15CCA3A0002387E1 /* low_contrast_linen_@2X.png */; };
 		E908D01015CCA3A0002387E1 /* low_contrast_linen.png in Resources */ = {isa = PBXBuildFile; fileRef = E908D00E15CCA3A0002387E1 /* low_contrast_linen.png */; };
 		E90A65E716165AD00085EE8A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90A65E616165AD00085EE8A /* CoreBluetooth.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -54,7 +53,6 @@
 		E97723FE162F80450087BE9B /* LOOSequenceEnchantment.m in Sources */ = {isa = PBXBuildFile; fileRef = E97723FD162F80450087BE9B /* LOOSequenceEnchantment.m */; };
 		E9772401162F89B70087BE9B /* LOOGradientColorEnchantment.m in Sources */ = {isa = PBXBuildFile; fileRef = E9772400162F89B70087BE9B /* LOOGradientColorEnchantment.m */; };
 		E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */; };
-		E97F239C15E85F2C003A38D9 /* ILScenesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */; };
 		E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F239E15E85F3B003A38D9 /* ILFireScene.m */; };
 		E985645815F1710F004EB431 /* DCRejectionFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E985645715F1710F004EB431 /* DCRejectionFilter.mm */; };
 		E985645B15F173D2004EB431 /* 194-note-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E985645915F173D2004EB431 /* 194-note-2.png */; };
@@ -113,8 +111,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E907057315F01B4E001A23E5 /* ILRainbowScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILRainbowScene.h; path = LoochiApp/ILRainbowScene.h; sourceTree = SOURCE_ROOT; };
-		E907057415F01B4E001A23E5 /* ILRainbowScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILRainbowScene.m; path = LoochiApp/ILRainbowScene.m; sourceTree = SOURCE_ROOT; };
 		E908CFFC15CCA011002387E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E908CFFD15CCA011002387E1 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
 		E908D00915CCA382002387E1 /* LOOConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOConnectionViewController.h; path = LoochiApp/LOOConnectionViewController.h; sourceTree = SOURCE_ROOT; };
@@ -188,8 +184,6 @@
 		E9772400162F89B70087BE9B /* LOOGradientColorEnchantment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOGradientColorEnchantment.m; path = LoochiApp/LOOGradientColorEnchantment.m; sourceTree = SOURCE_ROOT; };
 		E97F239515E85EF4003A38D9 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ILColor.h"; path = "LoochiApp/UIColor+ILColor.h"; sourceTree = SOURCE_ROOT; };
 		E97F239615E85EF4003A38D9 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ILColor.m"; path = "LoochiApp/UIColor+ILColor.m"; sourceTree = SOURCE_ROOT; };
-		E97F239A15E85F2C003A38D9 /* ILScenesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILScenesViewController.h; path = LoochiApp/ILScenesViewController.h; sourceTree = SOURCE_ROOT; };
-		E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILScenesViewController.m; path = LoochiApp/ILScenesViewController.m; sourceTree = SOURCE_ROOT; };
 		E97F239D15E85F3B003A38D9 /* ILFireScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ILFireScene.h; path = LoochiApp/ILFireScene.h; sourceTree = SOURCE_ROOT; };
 		E97F239E15E85F3B003A38D9 /* ILFireScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ILFireScene.m; path = LoochiApp/ILFireScene.m; sourceTree = SOURCE_ROOT; };
 		E985645615F170BD004EB431 /* DCRejectionFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCRejectionFilter.h; path = LoochiApp/AudioAnalysis/DCRejectionFilter.h; sourceTree = SOURCE_ROOT; };
@@ -543,8 +537,6 @@
 			children = (
 				E9E61A4D15CBA8010035D49C /* ILColorViewController.h */,
 				E9E61A4E15CBA8010035D49C /* ILColorViewController.m */,
-				E97F239A15E85F2C003A38D9 /* ILScenesViewController.h */,
-				E97F239B15E85F2C003A38D9 /* ILScenesViewController.m */,
 			);
 			name = LightViewControllers;
 			sourceTree = "<group>";
@@ -560,8 +552,6 @@
 				E991D04015DB575000627CDA /* LOOEnchantment.m */,
 				E97F239D15E85F3B003A38D9 /* ILFireScene.h */,
 				E97F239E15E85F3B003A38D9 /* ILFireScene.m */,
-				E907057315F01B4E001A23E5 /* ILRainbowScene.h */,
-				E907057415F01B4E001A23E5 /* ILRainbowScene.m */,
 				E97723FC162F80450087BE9B /* LOOSequenceEnchantment.h */,
 				E97723FD162F80450087BE9B /* LOOSequenceEnchantment.m */,
 				E92E497D162E45AA00507717 /* LOOSolidColorEnchantment.h */,
@@ -784,10 +774,8 @@
 				E991CE6915DB175B00627CDA /* DispatchQueueLogFormatter.m in Sources */,
 				E991D04115DB575000627CDA /* LOOEnchantment.m in Sources */,
 				E97F239715E85EF4003A38D9 /* UIColor+ILColor.m in Sources */,
-				E97F239C15E85F2C003A38D9 /* ILScenesViewController.m in Sources */,
 				E97F239F15E85F3B003A38D9 /* ILFireScene.m in Sources */,
 				E9E2C57715E8845100C4B5D1 /* LOOUDPThread.m in Sources */,
-				E907057515F01B4E001A23E5 /* ILRainbowScene.m in Sources */,
 				E92BFFEE15F04B3800EBD2F4 /* LOOSoundViewController.mm in Sources */,
 				E92BFFF415F04F2F00EBD2F4 /* FFTBufferManager.cpp in Sources */,
 				E92BFFFE15F04F5F00EBD2F4 /* CADebugMacros.cpp in Sources */,

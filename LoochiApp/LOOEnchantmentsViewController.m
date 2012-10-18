@@ -9,9 +9,7 @@
 #import "DDLog.h"
 #import "LOOEnchantmentsViewController.h"
 #import "LOOMagicWand.h"
-#import "LOOSolidColorEnchantment.h"
 #import "ILFireScene.h"
-#import "ILRainbowScene.h"
 #import "LOOEnchantmentBook.h"
 #import "UIColor+ILColor.h"
 

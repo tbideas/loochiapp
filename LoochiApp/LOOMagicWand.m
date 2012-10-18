@@ -22,7 +22,7 @@
 
 @implementation LOOMagicWand
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (void)castEnchantment:(LOOEnchantment*)enchantment onLamp:(LOOLamp*) lamp
 {
@@ -36,7 +36,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     self.castedEnchantment = enchantment;
     self.enchantedLamp = lamp;
     
-    self.spellTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/self.castedEnchantment.frequency
+    self.spellTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 /* /self.castedEnchantment.frequency*/
                                                        target:self
                                                      selector:@selector(spellMove)
                                                      userInfo:nil

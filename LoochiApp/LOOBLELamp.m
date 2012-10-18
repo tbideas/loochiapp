@@ -20,7 +20,7 @@
 
 @implementation LOOBLELamp
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (id) initWithPeripheral:(CBPeripheral*)connectedPeripheral
 {

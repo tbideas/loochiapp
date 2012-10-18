@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "LOOConnectionViewController.h"
-#import "ILColorViewController.h"
+#import "LOOColorPickerViewController.h"
 
 @interface LOOAppDelegate : UIResponder <UIApplicationDelegate, LOOConnectionDelegate>
 

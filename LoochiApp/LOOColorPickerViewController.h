@@ -10,10 +10,11 @@
 #import "LOOLamp.h"
 #import "LOOLightClient.h"
 
-@interface ILColorViewController : UIViewController<LOOLightClient>
+@interface LOOColorPickerViewController : UIViewController<LOOLightClient>
 
 @property (nonatomic, retain) LOOLamp* lamp;
 
--(IBAction)turnOffTheLight:(id)sender;
+- (IBAction)turnOffTheLight:(id)sender;
+- (IBAction)doneButton:(id)sender;
 
 @end

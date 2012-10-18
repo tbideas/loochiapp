@@ -12,6 +12,7 @@
 #import "LOOSolidColorEnchantment.h"
 #import "LOOGradientColorEnchantment.h"
 #import "LOOSequenceEnchantment.h"
+#import "LOOStoryboardEnchantment.h"
 #import "UIColor+ILColor.h"
 
 @interface LOOEnchantmentBook ()
@@ -118,6 +119,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         if (dict[@"sequence"])
             sequence.enchantments = [self createEnchantmentsFromJSonArray:dict[@"sequence"]];
         e = sequence;
+    }
+    else if ([dict[@"type"] isEqualToString:@"storyboard"]) {
+        LOOStoryboardEnchantment *storyboardEnchantment = [[LOOStoryboardEnchantment alloc] init];
+        
+        if (dict[@"segue-name"])
+            storyboardEnchantment.segueName = dict[@"segue-name"];
+        e = storyboardEnchantment;
     }
     else {
         NSAssert(false, @"Unknown enchantment type: %@", dict[@"type"]);

@@ -26,6 +26,13 @@
      },
      
      {
+     "name":        "RGB Color picker",
+     "image":       "palette.png",
+     "type":        "storyboard",
+     "segue-name":   "colorpicker"
+     },
+     
+     {
      "name":    "Rainbow",
      "image":   "rainbow.png",
      "type":    "sequence",

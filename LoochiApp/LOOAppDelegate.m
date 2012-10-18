@@ -88,8 +88,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         self.connectionViewController.delegate = self;
         self.connectionViewController.cbCentralManager = self.cbManager;
     }
-    [self.window.rootViewController presentModalViewController:self.connectionViewController
-                                                      animated:_animateConnectionViewApperance];
+    [self.window.rootViewController presentViewController:self.connectionViewController animated:_animateConnectionViewApperance completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -101,8 +100,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     // We do this to make sure that the associated network sockets are closed on resign
     // and restarted on becomeActive.
     
-    if (self.window.rootViewController.modalViewController != nil) {
-        [self.window.rootViewController dismissModalViewControllerAnimated:NO];
+    if (self.window.rootViewController.presentedViewController != nil) {
+        [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
 
         // Do not animate because we want the user to think it stayed there.
         _animateConnectionViewApperance = NO;
@@ -124,7 +123,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [self setLampOnViewControllers:lamp];
     
-    [self.window.rootViewController dismissModalViewControllerAnimated:YES];
+    [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)setLampOnViewControllers:(LOOLamp*)lamp

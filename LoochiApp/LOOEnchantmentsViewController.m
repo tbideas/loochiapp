@@ -12,10 +12,13 @@
 #import "ILFireScene.h"
 #import "LOOEnchantmentBook.h"
 #import "UIColor+ILColor.h"
+#import "LOOStoryboardEnchantment.h"
+
 
 @interface LOOEnchantmentsViewController ()
 
 @property (strong) NSArray *enchantments;
+
 @property (strong) LOOMagicWand *magicWand;
 @end
 
@@ -33,10 +36,16 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController respondsToSelector:@selector(setLamp:)]) {
+        [segue.destinationViewController setLamp:self.lamp];
+    }
+}
+
 #pragma mark UICollectionViewDatasource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)collectionView {
-    // _data is a class member variable that contains one array per section.
     return 1;
 }
 
@@ -65,7 +74,14 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     LOOEnchantment *enchantment = (LOOEnchantment*) self.enchantments[indexPath.row];
     
-    [self.magicWand castEnchantment:enchantment onLamp:self.lamp];
+    if ([enchantment isKindOfClass:[LOOStoryboardEnchantment class]]) {
+        [self.magicWand dispellEnchantment];
+        LOOStoryboardEnchantment *storyboardEnchantment = (LOOStoryboardEnchantment*) enchantment;
+        [self performSegueWithIdentifier:storyboardEnchantment.segueName sender:nil];
+    }
+    else {
+        [self.magicWand castEnchantment:enchantment onLamp:self.lamp];
+    }
 }
 
 #pragma mark Where we cook the enchantments
@@ -79,7 +95,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [scenes addObject:[[ILFireScene alloc] init]];
     
-
     return scenes;
 }
+
 @end

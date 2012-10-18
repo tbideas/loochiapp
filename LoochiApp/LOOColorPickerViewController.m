@@ -6,12 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ILColorViewController.h"
+#import "LOOColorPickerViewController.h"
 #import "UIImageView+ColorPicker.h"
 #import "CLATintedView.h"
 #import "UIColor+ILColor.h"
+#import "DDLog.h"
 
-@interface ILColorViewController ()
+@interface LOOColorPickerViewController ()
 {
     UIPopoverController *_popoverController;
     CLATintedView *_crosshairView;
@@ -29,12 +30,13 @@
 @property (weak) IBOutlet UISlider *greenSlider;
 @property (weak) IBOutlet UISlider *blueSlider;
 @property (weak) IBOutlet UIImageView *imageView;
+@property (weak) IBOutlet UINavigationItem *titleItem;
 
 @end
 
-@implementation ILColorViewController
+@implementation LOOColorPickerViewController
 
-static const int ddLogLevel = LOG_LEVEL_WARN;
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - View lifecycle
 
@@ -42,7 +44,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"low_contrast_linen.png"]];
     
-
+    self.navigationItem.title = @"";
+    
     _crosshairView = [[CLATintedView alloc] initWithImage:[UIImage imageNamed:@"crosshair.png"]];
     _crosshairView.bounds = CGRectMake(0, 0, 50, 50);
     _crosshairView.alpha = 0;
@@ -105,6 +108,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     self.blueSlider.value = 0;
     
     [self rgbValueUpdated:self];
+}
+
+- (IBAction)doneButton:(id)sender
+{
+    DDLogVerbose(@"Trying to dismiss view controller");
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark Touch event handlers
@@ -306,7 +315,9 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         self.blueSlider.value = blue;
         
         [self rgbValueUpdated:nil];
-    }    
+    }
+    
+    self.titleItem.title = [NSString stringWithFormat:@"#%02X%02X%02X", (int)(red * 255), (int)(green * 255), (int)(blue * 255)];
 }
 
 @end

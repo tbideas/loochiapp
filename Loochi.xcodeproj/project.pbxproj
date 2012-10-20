@@ -85,7 +85,6 @@
 		E9E61A4715CBA7DB0035D49C /* LOOUDPLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4415CBA7DB0035D49C /* LOOUDPLamp.m */; };
 		E9E61A5015CBA8010035D49C /* LOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */; };
 		E9E61A5215CBA8010035D49C /* LOOColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A4E15CBA8010035D49C /* LOOColorPickerViewController.m */; };
-		E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */; };
 		E9E61A5815CBA8200035D49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A5615CBA8200035D49C /* main.m */; };
 		E9E61A5F15CBA83F0035D49C /* background-color.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5915CBA83F0035D49C /* background-color.png */; };
 		E9E61A6015CBA83F0035D49C /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E61A5A15CBA83F0035D49C /* crosshair.png */; };
@@ -239,7 +238,6 @@
 		E9E61A4A15CBA8010035D49C /* LOOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOAppDelegate.m; path = LoochiApp/LOOAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		E9E61A4D15CBA8010035D49C /* LOOColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOColorPickerViewController.h; path = LoochiApp/LOOColorPickerViewController.h; sourceTree = SOURCE_ROOT; };
 		E9E61A4E15CBA8010035D49C /* LOOColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOColorPickerViewController.m; path = LoochiApp/LOOColorPickerViewController.m; sourceTree = SOURCE_ROOT; };
-		E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LargeStoryboard.storyboard; path = LoochiApp/LargeStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		E9E61A5615CBA8200035D49C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LoochiApp/main.m; sourceTree = SOURCE_ROOT; };
 		E9E61A5915CBA83F0035D49C /* background-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-color.png"; path = "LoochiApp/background-color.png"; sourceTree = SOURCE_ROOT; };
 		E9E61A5A15CBA83F0035D49C /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshair.png; path = LoochiApp/crosshair.png; sourceTree = SOURCE_ROOT; };
@@ -371,7 +369,6 @@
 				E9E61A4D15CBA8010035D49C /* LOOColorPickerViewController.h */,
 				E9E61A4E15CBA8010035D49C /* LOOColorPickerViewController.m */,
 				E991D04315DB57DB00627CDA /* Enchantments */,
-				E9E61A4F15CBA8010035D49C /* LargeStoryboard.storyboard */,
 				E9746BD515CBA97300C23B8D /* MainStoryboard.storyboard */,
 				E90BC5CB1579A42200342F89 /* Supporting Files */,
 				E908470315928FE2003746E6 /* Resources */,
@@ -665,7 +662,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E61A5315CBA8010035D49C /* LargeStoryboard.storyboard in Resources */,
 				E9E61A5F15CBA83F0035D49C /* background-color.png in Resources */,
 				E9E61A6015CBA83F0035D49C /* crosshair.png in Resources */,
 				E9E61A6115CBA83F0035D49C /* Icon-72.png in Resources */,

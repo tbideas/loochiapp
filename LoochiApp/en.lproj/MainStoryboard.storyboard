@@ -17,8 +17,8 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sM0-Ia-LYd">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="238" id="hRk-uV-gdw"/>
-                                    <constraint firstAttribute="height" constant="22" id="kxl-dQ-iZn"/>
+                                    <constraint firstAttribute="height" constant="23" id="Pc2-Hj-d5c"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" type="user" id="hRk-uV-gdw"/>
                                 </constraints>
                                 <color key="minimumTrackTintColor" red="0.72845193614130432" green="0.01872680290433135" blue="0.12218298918940082" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -27,7 +27,7 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3dm-AA-IPm">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="ncY-Wl-6iS"/>
+                                    <constraint firstAttribute="height" constant="23" id="vnK-BM-aVk"/>
                                 </constraints>
                                 <color key="minimumTrackTintColor" red="0.2823529541" green="0.5411764979" blue="0.2039215714" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -35,6 +35,9 @@
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-lb-EtY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pHA-nc-eUU"/>
+                                </constraints>
                                 <connections>
                                     <action selector="rgbValueUpdated:" destination="2" eventType="valueChanged" id="hNi-7n-HEu"/>
                                 </connections>
@@ -42,6 +45,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfb-ON-MPL">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="WRL-aR-S9C"/>
+                                    <constraint firstAttribute="height" constant="68" id="yVt-jZ-QaE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" image="29-circle-pause.png">
@@ -57,7 +61,7 @@
                             </button>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="Th5-ey-Mjj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="iLc-Oe-CKV"/>
+                                    <constraint firstAttribute="height" constant="43" id="THr-rj-0aS"/>
                                 </constraints>
                                 <items>
                                     <navigationItem id="gV8-Bf-lS3">
@@ -73,14 +77,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bfb-ON-MPL" secondAttribute="bottom" constant="20" type="user" id="3HS-Jm-ZM6"/>
-                            <constraint firstItem="sM0-Ia-LYd" firstAttribute="top" secondItem="UXi-XI-QPl" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="3z2-uv-hTA"/>
+                            <constraint firstItem="sM0-Ia-LYd" firstAttribute="top" secondItem="UXi-XI-QPl" secondAttribute="bottom" constant="10" type="user" id="3z2-uv-hTA"/>
                             <constraint firstItem="sM0-Ia-LYd" firstAttribute="leading" secondItem="bfb-ON-MPL" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="4pR-cw-jim"/>
                             <constraint firstItem="3dm-AA-IPm" firstAttribute="centerX" secondItem="sM0-Ia-LYd" secondAttribute="centerX" type="user" id="BGg-r4-tWd"/>
-                            <constraint firstItem="3dm-AA-IPm" firstAttribute="centerY" secondItem="bfb-ON-MPL" secondAttribute="centerY" type="default" id="DE2-Dj-boa"/>
                             <constraint firstItem="Th5-ey-Mjj" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Ef9-D2-HW5"/>
                             <constraint firstItem="UXi-XI-QPl" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="F8x-SG-ozE"/>
                             <constraint firstItem="UXi-XI-QPl" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="user" id="Fgd-Me-ctx"/>
-                            <constraint firstItem="sM0-Ia-LYd" firstAttribute="top" secondItem="UXi-XI-QPl" secondAttribute="bottom" constant="8" type="user" id="KMG-K6-4qT"/>
                             <constraint firstItem="UXi-XI-QPl" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="user" id="Pd9-vh-9dp"/>
                             <constraint firstItem="sM0-Ia-LYd" firstAttribute="leading" secondItem="bfb-ON-MPL" secondAttribute="trailing" constant="8" type="user" id="Q9f-PW-PG2"/>
                             <constraint firstItem="WKb-lb-EtY" firstAttribute="width" secondItem="sM0-Ia-LYd" secondAttribute="width" type="user" id="SkY-XB-qmS"/>
@@ -91,11 +93,12 @@
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WKb-lb-EtY" secondAttribute="bottom" constant="20" type="user" id="bGY-Tl-DZ1"/>
                             <constraint firstItem="WKb-lb-EtY" firstAttribute="width" secondItem="3dm-AA-IPm" secondAttribute="width" type="user" id="di3-am-YlG"/>
                             <constraint firstItem="3dm-AA-IPm" firstAttribute="top" secondItem="sM0-Ia-LYd" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="gW1-rp-Fax"/>
+                            <constraint firstItem="bfb-ON-MPL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="10" type="user" id="koa-sJ-x0i"/>
                             <constraint firstAttribute="bottom" secondItem="WKb-lb-EtY" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="nd1-BW-K3R"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sM0-Ia-LYd" secondAttribute="trailing" constant="20" type="user" id="orW-t6-HLR"/>
+                            <constraint firstAttribute="trailing" secondItem="sM0-Ia-LYd" secondAttribute="trailing" constant="20" type="user" id="orW-t6-HLR"/>
                             <constraint firstItem="WKb-lb-EtY" firstAttribute="top" secondItem="3dm-AA-IPm" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="p0U-HI-znf"/>
                             <constraint firstItem="Th5-ey-Mjj" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="qkC-4R-cWj"/>
-                            <constraint firstItem="bfb-ON-MPL" firstAttribute="top" secondItem="UXi-XI-QPl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sYU-hu-NKP"/>
+                            <constraint firstItem="bfb-ON-MPL" firstAttribute="top" secondItem="UXi-XI-QPl" secondAttribute="bottom" constant="10" type="user" id="sYU-hu-NKP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Colors" image="98-palette.png" id="Thr-xg-b1g"/>
@@ -192,12 +195,14 @@
                         <constraints>
                             <constraint firstItem="QOq-Ws-Lei" firstAttribute="bottom" secondItem="Z11-uJ-Qhr" secondAttribute="bottom" type="user" id="9sE-OI-SLC"/>
                             <constraint firstItem="QOq-Ws-Lei" firstAttribute="leading" secondItem="Z11-uJ-Qhr" secondAttribute="leading" type="default" id="Jx8-s1-Vop"/>
-                            <constraint firstAttribute="bottom" secondItem="2AC-JQ-3Ne" secondAttribute="bottom" constant="36" id="NZ0-7W-1V2"/>
+                            <constraint firstItem="2AC-JQ-3Ne" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Z11-uJ-Qhr" secondAttribute="top" constant="143" type="user" id="M3H-zP-3i5"/>
                             <constraint firstItem="QOq-Ws-Lei" firstAttribute="trailing" secondItem="Z11-uJ-Qhr" secondAttribute="trailing" type="default" id="RM5-VB-2Ce"/>
                             <constraint firstItem="2AC-JQ-3Ne" firstAttribute="centerX" secondItem="QOq-Ws-Lei" secondAttribute="centerX" type="default" id="Rqw-VS-69g"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2AC-JQ-3Ne" secondAttribute="bottom" constant="36" type="user" id="ecl-FD-3HA"/>
                             <constraint firstAttribute="bottom" secondItem="V8K-cZ-V6F" secondAttribute="bottom" constant="38" id="eeJ-lc-bfT"/>
+                            <constraint firstItem="2AC-JQ-3Ne" firstAttribute="top" secondItem="Z11-uJ-Qhr" secondAttribute="top" constant="143" type="user" id="euW-SR-stj"/>
                             <constraint firstItem="QOq-Ws-Lei" firstAttribute="top" secondItem="Z11-uJ-Qhr" secondAttribute="top" constant="-20" type="user" id="k6o-za-PzZ"/>
+                            <constraint firstAttribute="bottom" secondItem="2AC-JQ-3Ne" secondAttribute="bottom" constant="280" type="user" id="lLf-YJ-gm2"/>
                             <constraint firstItem="QOq-Ws-Lei" firstAttribute="bottom" secondItem="Z11-uJ-Qhr" secondAttribute="bottom" type="user" id="rtR-qw-v8t"/>
                             <constraint firstAttribute="trailing" secondItem="V8K-cZ-V6F" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zFk-lM-R85"/>
                         </constraints>
@@ -238,9 +243,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="194-note-2.png" width="23" height="23"/>
+        <image name="194-note-2.png" width="16" height="16"/>
         <image name="29-circle-pause.png" width="28" height="28"/>
-        <image name="98-palette.png" width="24" height="20"/>
+        <image name="98-palette.png" width="16" height="16"/>
         <image name="Default-568h@2x.png" width="640" height="1136"/>
         <image name="background-color.png" width="1024" height="1024"/>
     </resources>
@@ -249,7 +254,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOColorPickerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="doneButton:"/>
-                <relationship kind="action" name="rgbValueUpdated:"/>
                 <relationship kind="action" name="turnOffTheLight:"/>
                 <relationship kind="outlet" name="blueSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="greenSlider" candidateClass="UISlider"/>
@@ -290,9 +294,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

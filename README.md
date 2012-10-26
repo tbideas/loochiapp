@@ -1,9 +1,15 @@
-IllumiApp
+LoochiApp
 =========
 
-iOS Application for the Illumi lamp.
+This project contains the iOS Application for the Loochi lamp.
 
 Check it out at [http://www.tbideas.com]!
+
+## License
+
+    Copyright 2012 - TBIdeas.com
+    Distributed under the CC-BY-SA license.
+    http://creativecommons.org/licenses/by-sa/3.0/
 
 ## Cloning the code
 

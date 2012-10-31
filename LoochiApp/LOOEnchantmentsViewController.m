@@ -38,8 +38,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.destinationViewController respondsToSelector:@selector(setLamp:)]) {
-        [segue.destinationViewController setLamp:self.lamp];
+    id targetViewController = segue.destinationViewController;
+    
+    if ([targetViewController isKindOfClass:[UINavigationController class]])
+        targetViewController = ((UINavigationController*)targetViewController).topViewController;
+    
+    if ([targetViewController respondsToSelector:@selector(setLamp:)]) {
+        [targetViewController setLamp:self.lamp];
     }
 }
 

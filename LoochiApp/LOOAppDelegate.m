@@ -68,6 +68,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         self.cbManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     }
     
+    // Appearance customization
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    
     return YES;
 }
 

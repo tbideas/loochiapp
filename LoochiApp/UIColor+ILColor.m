@@ -10,6 +10,14 @@
 
 @implementation UIColor (ILColor)
 
+- (NSString *)colorInHexString
+{
+    CGFloat red, green, blue, alpha;
+    [self getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    return [NSString stringWithFormat:@"#%02X%02X%02X", (int)(red * 255), (int)(green * 255), (int)(blue * 255)];
+}
+
 + (UIColor*) colorByInterpolatingFrom:(UIColor*) colorA to:(UIColor*) colorB at:(float)position
 {
     CGFloat redA, greenA, blueA;

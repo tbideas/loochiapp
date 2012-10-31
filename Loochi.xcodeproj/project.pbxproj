@@ -42,6 +42,12 @@
 		E92E497C162E3FFF00507717 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92E497B162E3FFF00507717 /* Default-568h@2x.png */; };
 		E92E497F162E45AA00507717 /* LOOSolidColorEnchantment.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E497E162E45AA00507717 /* LOOSolidColorEnchantment.m */; };
 		E92E4981162E471200507717 /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = E92E4980162E471200507717 /* off.png */; };
+		E94182F2164044B7004BA19E /* LOOEnchantmentEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94182F1164044B7004BA19E /* LOOEnchantmentEditorViewController.m */; };
+		E94182F416404B79004BA19E /* anim-editor.png in Resources */ = {isa = PBXBuildFile; fileRef = E94182F316404B79004BA19E /* anim-editor.png */; };
+		E94183071640A2E7004BA19E /* LOOEnchantmentDetailsEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94183061640A2E7004BA19E /* LOOEnchantmentDetailsEditorViewController.m */; };
+		E94183111640E1FE004BA19E /* hue-scale.png in Resources */ = {isa = PBXBuildFile; fileRef = E94183101640E1FE004BA19E /* hue-scale.png */; };
+		E94183151640E282004BA19E /* 19-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = E94183131640E282004BA19E /* 19-clock.png */; };
+		E94183161640E282004BA19E /* 19-clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E94183141640E282004BA19E /* 19-clock@2x.png */; };
 		E95BC478161CC84000E56DDC /* LOOConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC477161CC84000E56DDC /* LOOConnectionViewController.m */; };
 		E95BC481161CDA8200E56DDC /* LOOLamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC47D161CDA8200E56DDC /* LOOLamp.m */; };
 		E95BC486161CE63A00E56DDC /* LOOBLELamp.m in Sources */ = {isa = PBXBuildFile; fileRef = E95BC485161CE63A00E56DDC /* LOOBLELamp.m */; };
@@ -156,6 +162,14 @@
 		E92E497D162E45AA00507717 /* LOOSolidColorEnchantment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOSolidColorEnchantment.h; path = LoochiApp/LOOSolidColorEnchantment.h; sourceTree = SOURCE_ROOT; };
 		E92E497E162E45AA00507717 /* LOOSolidColorEnchantment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOSolidColorEnchantment.m; path = LoochiApp/LOOSolidColorEnchantment.m; sourceTree = SOURCE_ROOT; };
 		E92E4980162E471200507717 /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
+		E94182F0164044B7004BA19E /* LOOEnchantmentEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentEditorViewController.h; path = LoochiApp/EnchantmentEditor/LOOEnchantmentEditorViewController.h; sourceTree = SOURCE_ROOT; };
+		E94182F1164044B7004BA19E /* LOOEnchantmentEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentEditorViewController.m; path = LoochiApp/EnchantmentEditor/LOOEnchantmentEditorViewController.m; sourceTree = SOURCE_ROOT; };
+		E94182F316404B79004BA19E /* anim-editor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anim-editor.png"; sourceTree = "<group>"; };
+		E94183051640A2E7004BA19E /* LOOEnchantmentDetailsEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentDetailsEditorViewController.h; path = LoochiApp/EnchantmentEditor/LOOEnchantmentDetailsEditorViewController.h; sourceTree = SOURCE_ROOT; };
+		E94183061640A2E7004BA19E /* LOOEnchantmentDetailsEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentDetailsEditorViewController.m; path = LoochiApp/EnchantmentEditor/LOOEnchantmentDetailsEditorViewController.m; sourceTree = SOURCE_ROOT; };
+		E94183101640E1FE004BA19E /* hue-scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hue-scale.png"; sourceTree = SOURCE_ROOT; };
+		E94183131640E282004BA19E /* 19-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-clock.png"; sourceTree = SOURCE_ROOT; };
+		E94183141640E282004BA19E /* 19-clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-clock@2x.png"; sourceTree = SOURCE_ROOT; };
 		E95992D8162E2F49006B0B06 /* LoochiApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiApp-Info.plist"; path = "LoochiApp/LoochiApp-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E95992DA162E2F53006B0B06 /* LoochiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoochiApp-Prefix.pch"; path = "LoochiApp/LoochiApp-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		E95992DB162E2F74006B0B06 /* LoochiAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoochiAppTests-Info.plist"; path = "LoochiAppTests/LoochiAppTests-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -293,6 +307,9 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E94183131640E282004BA19E /* 19-clock.png */,
+				E94183141640E282004BA19E /* 19-clock@2x.png */,
+				E94183101640E1FE004BA19E /* hue-scale.png */,
 				E97723FA162F58410087BE9B /* enchantments.json */,
 				E92E497B162E3FFF00507717 /* Default-568h@2x.png */,
 				E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */,
@@ -356,6 +373,7 @@
 		E90BC5CA1579A42200342F89 /* LoochiApp */ = {
 			isa = PBXGroup;
 			children = (
+				E94182EE1640448A004BA19E /* EnchantmentEditor */,
 				E92BFFEA15F04AF600EBD2F4 /* AudioAnalysis */,
 				E9054BE815DC8B2200A52C2A /* Categories */,
 				E9C5BD35158DA23300B724BF /* Custom UIViews */,
@@ -411,6 +429,7 @@
 		E9186650161F6ED500F32B75 /* enchantments-images */ = {
 			isa = PBXGroup;
 			children = (
+				E94182F316404B79004BA19E /* anim-editor.png */,
 				E9891AB2162FEE4F003BC557 /* palette.png */,
 				E9DE691F162F92F80086F28A /* white-light.png */,
 				E9DE6920162F92F80086F28A /* yellow-light.png */,
@@ -464,6 +483,17 @@
 			name = iPublicUtility;
 			path = LoochiApp/AudioAnalysis/iPublicUtility;
 			sourceTree = SOURCE_ROOT;
+		};
+		E94182EE1640448A004BA19E /* EnchantmentEditor */ = {
+			isa = PBXGroup;
+			children = (
+				E94183051640A2E7004BA19E /* LOOEnchantmentDetailsEditorViewController.h */,
+				E94183061640A2E7004BA19E /* LOOEnchantmentDetailsEditorViewController.m */,
+				E94182F0164044B7004BA19E /* LOOEnchantmentEditorViewController.h */,
+				E94182F1164044B7004BA19E /* LOOEnchantmentEditorViewController.m */,
+			);
+			name = EnchantmentEditor;
+			sourceTree = "<group>";
 		};
 		E95BC473161CC6D400E56DDC /* LOOScanner */ = {
 			isa = PBXGroup;
@@ -698,6 +728,10 @@
 				E9DE6921162F92F80086F28A /* white-light.png in Resources */,
 				E9DE6922162F92F80086F28A /* yellow-light.png in Resources */,
 				E9891AB3162FEE4F003BC557 /* palette.png in Resources */,
+				E94182F416404B79004BA19E /* anim-editor.png in Resources */,
+				E94183111640E1FE004BA19E /* hue-scale.png in Resources */,
+				E94183151640E282004BA19E /* 19-clock.png in Resources */,
+				E94183161640E282004BA19E /* 19-clock@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +802,8 @@
 				E97723FE162F80450087BE9B /* LOOSequenceEnchantment.m in Sources */,
 				E9772401162F89B70087BE9B /* LOOGradientColorEnchantment.m in Sources */,
 				E9891AB7162FF032003BC557 /* LOOStoryboardEnchantment.m in Sources */,
+				E94182F2164044B7004BA19E /* LOOEnchantmentEditorViewController.m in Sources */,
+				E94183071640A2E7004BA19E /* LOOEnchantmentDetailsEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,8 +17,6 @@
 
 @interface LOOEnchantmentBook ()
 
-@property (strong, readwrite) NSMutableArray *enchantments;
-
 @end
 
 @implementation LOOEnchantmentBook
@@ -141,5 +139,49 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         e.repeat  = [dict[@"repeat"] boolValue];
     return e;
 }
+
+- (NSArray*)generateEnchantmentsJsonArray:(NSArray*) enchantments
+{
+    NSMutableArray *jsonArray = [[NSMutableArray alloc] initWithCapacity:[self.enchantments count]];
+    
+    for (LOOEnchantment *e in self.enchantments) {
+        // We only support writing LOOGradientColorEnchantment for now
+        if ([e isKindOfClass:[LOOGradientColorEnchantment class]]) {
+            LOOGradientColorEnchantment *ge = (LOOGradientColorEnchantment*) e;
+            NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+            d[@"type"] = @"gradient";
+            d[@"duration"] = [NSNumber numberWithFloat:ge.duration];
+            d[@"startColor"] = [ge.startColor colorInHexString];
+            d[@"endColor"] = [ge.endColor colorInHexString];
+            
+            [jsonArray addObject:d];
+        }
+    }
+    return jsonArray;
+}
+
+- (BOOL)writeEnchantmentsToFile:(NSString*)filePath
+{
+    NSMutableDictionary *jsonBook = [[NSMutableDictionary alloc] init];
+    jsonBook[@"title"] = [NSString stringWithFormat:@"Saved enchantment on %@", [NSDate date]];
+    jsonBook[@"author"] = [NSString stringWithFormat:@"%@ %@(%@)",
+                           [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"],
+                           [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"],
+                           [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    jsonBook[@"enchantments"] = [self generateEnchantmentsJsonArray:self.enchantments];
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonBook options:0 error:&error];
+    if (jsonData == nil) {
+        DDLogWarn(@"Unable to prepare json data: %@", error);
+        return NO;
+    }
+
+    DDLogVerbose(@"Writing json data: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+    [jsonData writeToFile:filePath atomically:YES];
+    
+    return YES;
+}
+
 
 @end

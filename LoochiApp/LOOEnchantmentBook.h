@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LOOEnchantment.h"
 
 @interface LOOEnchantmentBook : NSObject
 
-@property (strong, readonly) NSMutableArray *enchantments;
+@property (strong) NSMutableArray *enchantments;
 
 - (BOOL)readEnchantmentsFromFile:(NSString*)filePath;
+- (BOOL)writeEnchantmentsToFile:(NSString*)filePath;
 
 @end

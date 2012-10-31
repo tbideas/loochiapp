@@ -22,7 +22,7 @@
 
 @implementation LOOMagicWand
 
-static const int ddLogLevel = LOG_LEVEL_WARN;
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)castEnchantment:(LOOEnchantment*)enchantment onLamp:(LOOLamp*) lamp
 {

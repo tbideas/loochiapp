@@ -33,6 +33,13 @@
      },
      
      {
+     "name":        "Animation Editor",
+     "image":       "anim-editor.png",
+     "type":        "storyboard",
+     "segue-name":  "enchantment-editor"
+     },
+     
+     {
      "name":    "Rainbow",
      "image":   "rainbow.png",
      "type":    "sequence",

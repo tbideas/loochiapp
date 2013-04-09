@@ -38,6 +38,9 @@
     
     [self.startColorHue setMinimumTrackImage:nonResizableBackground forState:UIControlStateNormal];
     [self.startColorHue setMaximumTrackImage:nonResizableBackground forState:UIControlStateNormal];
+
+    [self.endColorHue setMinimumTrackImage:nonResizableBackground forState:UIControlStateNormal];
+    [self.endColorHue setMaximumTrackImage:nonResizableBackground forState:UIControlStateNormal];
 }
 
 - (void)addRoundedCornerOnView:(UIView*) view

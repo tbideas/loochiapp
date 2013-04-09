@@ -13,8 +13,6 @@
 
 @property (strong) CBPeripheral *peripheral;
 @property (strong) CBCharacteristic *rgbChar;
-@property (assign) BOOL writeInProgress;
-@property (strong) UIColor *nextWrite;
 
 @end
 
@@ -40,8 +38,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
             }
         }
         
-        self.writeInProgress = NO;
-        
         if (!self.rgbChar) {
             DDLogWarn(@"Unable to find RGB characteristic");
         }
@@ -61,36 +57,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     rgb[2] = fblue * 255;
     
     DDLogVerbose(@"Writing %x %x %x on BLE module", rgb[0], rgb[1], rgb[2]);
-    [self.peripheral writeValue:[NSData dataWithBytes:rgb length:3] forCharacteristic:self.rgbChar type:CBCharacteristicWriteWithResponse];
-    self.writeInProgress = YES;
+    [self.peripheral writeValue:[NSData dataWithBytes:rgb length:3] forCharacteristic:self.rgbChar type:CBCharacteristicWriteWithoutResponse];
 }
 
 - (void) setColor:(UIColor*) color
 {
-    /* 
-     * We implement a very simple depth=1 buffer to avoid writing a new value until the previous one has been sent.
-     */
-    if (self.writeInProgress == NO) {
-        DDLogVerbose(@"setColor immediate: %@", color);
-        [self performWrite:color];
-    }
-    else {
-        DDLogVerbose(@"setColor buffered: %@", color);
-        self.nextWrite = color;
-    }
-}
-
-#pragma mark CBPeripheralDelegate
-
-- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
-{
-    DDLogVerbose(@"Write ack.");
-    self.writeInProgress = NO;
-    if (self.nextWrite) {
-        DDLogVerbose(@"De-buffering value");
-        [self performWrite:self.nextWrite];
-        self.nextWrite = nil;
-    }
+    [self performWrite:color];
 }
 
 @end

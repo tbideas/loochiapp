@@ -11,7 +11,7 @@
 	<key>CFBundleIconFiles</key>
 	<array/>
 	<key>CFBundleIdentifier</key>
-	<string>com.tbideas.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.tbideas.loochi</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>5.1</string>
 	<key>CFBundleName</key>

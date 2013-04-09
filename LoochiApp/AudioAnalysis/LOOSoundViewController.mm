@@ -25,8 +25,13 @@
     AudioBufferList*            drawABL;
 	int32_t*					l_fftData;
     
+    SInt32*						fftData;
+	NSUInteger					fftLength;
+
     DCRejectionFilter*          dcFilter;
     FFTBufferManager*			fftBufferManager;
+    
+    NSTimer *drawTimer;
 }
 
 @end
@@ -57,19 +62,73 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"low_contrast_linen.png"]]];
     [self audioInit];
+    
+    drawTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateSpectrum) userInfo:nil repeats:YES];
 }
 
-- (void)viewDidUnload
+- (void)updateSpectrum
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    if (fftBufferManager->HasNewAudioData())
+	{
+		if (fftBufferManager->ComputeFFT(l_fftData))
+		{
+			[self setFFTData:l_fftData length:fftBufferManager->GetNumberFrames() / 2];
+
+            UISlider *sliders[] = { self.slider1, self.slider2, self.slider3, self.slider4, self.slider5, self.slider6 };
+            NSInteger frequencies[] = { 0, 500, 1000, 1500, 2000, 2500, 3000 };
+            for (int i = 0; i < 6; i ++) {
+                sliders[i].value = [self computeAverageFFTMagnitudeBetween:frequencies[i] andMaxFrequency:frequencies[i + 1]];
+            }
+            UIColor *color = [UIColor colorWithRed:sliders[2].value green:sliders[1].value blue:sliders[0].value alpha:1.0];
+            [self.lamp setColor:color];
+        }
+		else
+        {
+            DDLogWarn(@"Error computing fft data");
+        }
+	}
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (CGFloat) computeAverageFFTMagnitudeBetween:(NSInteger)minFrequency andMaxFrequency:(NSInteger)maxFrequency
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    NSInteger minIndex, maxIndex;
+    CGFloat magnitude = 0;
+    
+    minIndex = (CGFloat)minFrequency / 22050 * fftLength;
+    maxIndex = (CGFloat)maxFrequency / 22050 * fftLength;
+
+    for (NSInteger i = minIndex; i < maxIndex; i++) {
+        SInt8 fft_l, fft_r;
+        CGFloat fft_l_fl, fft_r_fl;
+        CGFloat interpVal;
+        
+        fft_l = (fftData[(int)i*2] & 0xFF000000) >> 24;
+        fft_r = (fftData[(int)i*2 + 1] & 0xFF000000) >> 24;
+        fft_l_fl = (CGFloat)(fft_l + 80) / 64.;
+        fft_r_fl = (CGFloat)(fft_r + 80) / 64.;
+        interpVal = fft_l_fl * 0.5 + fft_r_fl * 0.5;
+        
+        interpVal = CLAMP(0., interpVal, 1.);
+        
+        magnitude += interpVal;
+    }
+    
+    magnitude /= maxIndex - minIndex;
+    
+    //DDLogVerbose(@"Magnitude between %i and %i - %.3f", minFrequency, maxFrequency, magnitude);
+    return magnitude;
 }
 
+
+- (void)setFFTData:(int32_t *)FFTDATA length:(NSUInteger)LENGTH
+{
+	if (LENGTH != fftLength)
+	{
+		fftLength = LENGTH;
+		fftData = (SInt32 *)(realloc(fftData, LENGTH * sizeof(SInt32)));
+	}
+	memmove(fftData, FFTDATA, fftLength * sizeof(Float32));
+}
 
 
 #pragma mark Audio management
@@ -320,13 +379,17 @@ static OSStatus	PerformThru(
 							UInt32 						inNumberFrames,
 							AudioBufferList 			*ioData)
 {
-    DDLogCVerbose(@"performThru - timestamp=%f numberFrames=%lu", inTimeStamp->mSampleTime, inNumberFrames);
+    //DDLogCVerbose(@"performThru - timestamp=%f numberFrames=%lu", inTimeStamp->mSampleTime, inNumberFrames);
     
     LOOSoundViewController *THIS = (__bridge LOOSoundViewController *)inRefCon;
 	OSStatus err = AudioUnitRender(THIS->rioUnit, ioActionFlags, inTimeStamp, 1, inNumberFrames, ioData);
 	if (err) { printf("PerformThru: error %d\n", (int)err); return err; }
 	
-	return err;
+		
+    if (THIS->fftBufferManager->NeedsNewAudioData())
+        THIS->fftBufferManager->GrabAudioData(ioData);
+	
+	return 0;
 }
 
 

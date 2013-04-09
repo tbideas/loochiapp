@@ -34,6 +34,13 @@
      
      {
      "name":        "Animation Editor",
+     "image":       "music-processor.png",
+     "type":        "storyboard",
+     "segue-name":  "music"
+     },
+
+     {
+     "name":        "Animation Editor",
      "image":       "anim-editor.png",
      "type":        "storyboard",
      "segue-name":  "enchantment-editor"

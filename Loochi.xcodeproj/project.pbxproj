@@ -30,6 +30,9 @@
 		E9186664161F6ED500F32B75 /* sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = E918665A161F6ED500F32B75 /* sunset.png */; };
 		E9186668161F718000F32B75 /* LOOEnchantmentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9186667161F718000F32B75 /* LOOEnchantmentViewCell.m */; };
 		E918666A161F9E1400F32B75 /* enchantment-bg-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */; };
+		E921963D1714CE9100DD3AB5 /* music-processor.png in Resources */ = {isa = PBXBuildFile; fileRef = E921963C1714CE9100DD3AB5 /* music-processor.png */; };
+		E92196401714CF8E00DD3AB5 /* 194-note-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E921963E1714CF8E00DD3AB5 /* 194-note-2.png */; };
+		E92196411714CF8E00DD3AB5 /* 194-note-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E921963F1714CF8E00DD3AB5 /* 194-note-2@2x.png */; };
 		E92B000015F04F5F00EBD2F4 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92BFFFC15F04F5F00EBD2F4 /* CAXException.cpp */; };
 		E92B000315F050D600EBD2F4 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */; };
 		E92B000515F050F700EBD2F4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92B000415F050F700EBD2F4 /* Accelerate.framework */; };
@@ -139,6 +142,9 @@
 		E9186666161F718000F32B75 /* LOOEnchantmentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOOEnchantmentViewCell.h; path = LoochiApp/LOOEnchantmentViewCell.h; sourceTree = SOURCE_ROOT; };
 		E9186667161F718000F32B75 /* LOOEnchantmentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOOEnchantmentViewCell.m; path = LoochiApp/LOOEnchantmentViewCell.m; sourceTree = SOURCE_ROOT; };
 		E9186669161F9E1400F32B75 /* enchantment-bg-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enchantment-bg-selected.png"; sourceTree = SOURCE_ROOT; };
+		E921963C1714CE9100DD3AB5 /* music-processor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-processor.png"; sourceTree = "<group>"; };
+		E921963E1714CF8E00DD3AB5 /* 194-note-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2.png"; sourceTree = SOURCE_ROOT; };
+		E921963F1714CF8E00DD3AB5 /* 194-note-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2@2x.png"; sourceTree = SOURCE_ROOT; };
 		E92B000115F050D600EBD2F4 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
 		E92B000215F050D600EBD2F4 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
 		E92B000415F050F700EBD2F4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -307,6 +313,8 @@
 		E908470315928FE2003746E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E921963E1714CF8E00DD3AB5 /* 194-note-2.png */,
+				E921963F1714CF8E00DD3AB5 /* 194-note-2@2x.png */,
 				E94183131640E282004BA19E /* 19-clock.png */,
 				E94183141640E282004BA19E /* 19-clock@2x.png */,
 				E94183101640E1FE004BA19E /* hue-scale.png */,
@@ -429,6 +437,7 @@
 		E9186650161F6ED500F32B75 /* enchantments-images */ = {
 			isa = PBXGroup;
 			children = (
+				E921963C1714CE9100DD3AB5 /* music-processor.png */,
 				E94182F316404B79004BA19E /* anim-editor.png */,
 				E9891AB2162FEE4F003BC557 /* palette.png */,
 				E9DE691F162F92F80086F28A /* white-light.png */,
@@ -732,6 +741,9 @@
 				E94183111640E1FE004BA19E /* hue-scale.png in Resources */,
 				E94183151640E282004BA19E /* 19-clock.png in Resources */,
 				E94183161640E282004BA19E /* 19-clock@2x.png in Resources */,
+				E921963D1714CE9100DD3AB5 /* music-processor.png in Resources */,
+				E92196401714CF8E00DD3AB5 /* 194-note-2.png in Resources */,
+				E92196411714CF8E00DD3AB5 /* 194-note-2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,7 +883,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
@@ -896,7 +908,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xvb-Cj-GWO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xvb-Cj-GWO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Color Picker View Controller - Colors-->
@@ -161,6 +161,7 @@
                     <connections>
                         <segue destination="2" kind="modal" identifier="colorpicker" modalTransitionStyle="crossDissolve" id="4Bw-Lf-2Gs"/>
                         <segue destination="SNF-gW-xaz" kind="modal" identifier="enchantment-editor" id="cpf-Zg-TUh"/>
+                        <segue destination="cuc-zA-NKO" kind="modal" identifier="music" id="oAS-5T-GAF"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9k-w7-oNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,14 +465,46 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZZG-ez-EWD"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lML-LM-iud"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3NW-bV-L8S"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="80c-Yl-raO"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DNa-Xv-RQQ"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ofG-OF-Wwx"/>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0eM-qg-6Yf" firstAttribute="centerX" secondItem="OzD-Ly-U3T" secondAttribute="centerX" type="default" id="ZKU-J7-Tgr"/>
+                            <constraint firstAttribute="trailing" secondItem="3NW-bV-L8S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BPQ-3p-ebP"/>
+                            <constraint firstItem="lML-LM-iud" firstAttribute="leading" secondItem="OzD-Ly-U3T" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ezp-yZ-hZz"/>
+                            <constraint firstItem="ZZG-ez-EWD" firstAttribute="top" secondItem="OzD-Ly-U3T" secondAttribute="top" constant="35" id="GVY-Bc-uxl"/>
+                            <constraint firstAttribute="trailing" secondItem="DNa-Xv-RQQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Gd4-SM-XrA"/>
+                            <constraint firstItem="DNa-Xv-RQQ" firstAttribute="leading" secondItem="OzD-Ly-U3T" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Igg-0a-xwW"/>
+                            <constraint firstItem="80c-Yl-raO" firstAttribute="leading" secondItem="OzD-Ly-U3T" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Iv4-Fp-hDF"/>
+                            <constraint firstAttribute="trailing" secondItem="ofG-OF-Wwx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Kh1-sI-JA9"/>
+                            <constraint firstItem="3NW-bV-L8S" firstAttribute="top" secondItem="lML-LM-iud" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MDm-b2-DFn"/>
+                            <constraint firstItem="lML-LM-iud" firstAttribute="top" secondItem="ZZG-ez-EWD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NXz-B0-Z5T"/>
+                            <constraint firstItem="ZZG-ez-EWD" firstAttribute="leading" secondItem="OzD-Ly-U3T" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Nri-E9-HPw"/>
+                            <constraint firstAttribute="trailing" secondItem="80c-Yl-raO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RQK-qq-Q6J"/>
+                            <constraint firstItem="ofG-OF-Wwx" firstAttribute="centerX" secondItem="0eM-qg-6Yf" secondAttribute="centerX" type="default" id="gd0-Tb-Zkl"/>
+                            <constraint firstItem="80c-Yl-raO" firstAttribute="top" secondItem="3NW-bV-L8S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iog-4g-KEw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZZG-ez-EWD" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k2b-oJ-SE3"/>
+                            <constraint firstAttribute="trailing" secondItem="lML-LM-iud" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qzB-Jq-4cj"/>
+                            <constraint firstItem="DNa-Xv-RQQ" firstAttribute="top" secondItem="80c-Yl-raO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tHr-hU-t0M"/>
+                            <constraint firstItem="3NW-bV-L8S" firstAttribute="leading" secondItem="OzD-Ly-U3T" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="u6u-br-B1t"/>
+                            <constraint firstItem="ofG-OF-Wwx" firstAttribute="top" secondItem="DNa-Xv-RQQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xoY-DE-FLt"/>
                             <constraint firstAttribute="bottom" secondItem="0eM-qg-6Yf" secondAttribute="bottom" constant="85" id="yEL-aH-eO6"/>
+                            <constraint firstItem="ofG-OF-Wwx" firstAttribute="leading" secondItem="OzD-Ly-U3T" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="z9B-V4-6uD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Music" image="194-note-2.png" id="Che-kr-qKo"/>
+                    <connections>
+                        <outlet property="slider1" destination="ZZG-ez-EWD" id="t05-rn-J4C"/>
+                        <outlet property="slider2" destination="lML-LM-iud" id="pKq-qA-1Sl"/>
+                        <outlet property="slider3" destination="3NW-bV-L8S" id="2Uj-4x-WzS"/>
+                        <outlet property="slider4" destination="80c-Yl-raO" id="6fb-MB-L0Y"/>
+                        <outlet property="slider5" destination="DNa-Xv-RQQ" id="fk0-Xg-FpX"/>
+                        <outlet property="slider6" destination="ofG-OF-Wwx" id="sSo-zk-YEZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r7-WE-0S7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -486,6 +519,90 @@
         <image name="Default-568h@2x.png" width="640" height="1136"/>
         <image name="background-color.png" width="1024" height="1024"/>
     </resources>
+    <classes>
+        <class className="LOOColorPickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOColorPickerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButton:"/>
+                <relationship kind="action" name="turnOffTheLight:"/>
+                <relationship kind="outlet" name="blueSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="greenSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="redSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="titleItem" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="LOOConnectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOConnectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="useADemoIllumi:"/>
+            </relationships>
+        </class>
+        <class className="LOOEnchantmentDetailsEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOEnchantmentDetailsEditorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="durationChanged:"/>
+                <relationship kind="action" name="firstColorChanged:"/>
+                <relationship kind="action" name="secondColorChanged:"/>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="durationSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="endColorBrightness" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="endColorHue" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="endColorSaturation" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="endColorView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="startColorBrightness" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="startColorHue" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="startColorSaturation" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="startColorView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="LOOEnchantmentEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOEnchantmentEditorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addButton:"/>
+                <relationship kind="action" name="doneButton:"/>
+                <relationship kind="action" name="editButton:"/>
+                <relationship kind="action" name="playButton:"/>
+                <relationship kind="action" name="shareButton:"/>
+                <relationship kind="outlet" name="enchantmentsTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LOOEnchantmentViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOEnchantmentViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="LOOEnchantmentsViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOEnchantmentsViewController.h"/>
+        </class>
+        <class className="LOOSoundViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOOSoundViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="slider1" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="slider2" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="slider3" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="slider4" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="slider5" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="slider6" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
